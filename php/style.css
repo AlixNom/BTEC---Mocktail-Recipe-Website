@@ -15,7 +15,6 @@
   padding-bottom: 20;
 }
 body{
-  height: 100vh;
   background:
   url(https://source.unsplash.com/random/?mocktail) no-repeat;
   background-size: cover;
@@ -35,7 +34,8 @@ body{
   z-index:1;
 }
 .image{
-  background:white;
+  background:black;
+  z-index:100;
 }
 .form{
   background: #424242;
