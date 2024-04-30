@@ -15,7 +15,15 @@
   padding-bottom: 20;
 }
 body{
-  background: #a9b3a3;
+  height: 100vh;
+  background:
+  url(https://source.unsplash.com/random/?mocktail) no-repeat;
+  background-size: cover;
+  background-position:center;
+  z-index: -1;
+  
+  
+
 }
 .login{
   display: flex;
@@ -24,6 +32,10 @@ body{
   min-height: 90vh;
   padding-top: 50;
   padding-bottom: 50;
+  z-index:1;
+}
+.image{
+  background:white;
 }
 .form{
   background: #424242;
@@ -36,11 +48,13 @@ body{
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-              0 30px 50px 10px rgba(0,0,0,0.5);
+              0 30px 50px 30px rgba(0,0,0,0.7);
+  z-index:1;
 }
 .form-box{
   width: 650px;
   margin: 0px 10px;
+  z-index:1;
 }
 .form-box h3{
   font-size: 25px;
@@ -48,12 +62,14 @@ body{
   padding-bottom: 10px;
   border-bottom: 1px solid #363636;
   margin-bottom: 10px;
+  z-index:1;
 }
 .form-box form .field{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
   width:60%;
+  z-index:1;
 }
 
 .form-box form .input input{
@@ -66,7 +82,8 @@ body{
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   outline: none;
-  color:#363636
+  color:#363636;
+  z-index:1;
 }
 
 .button{
@@ -88,6 +105,7 @@ body{
   -o-transition:  all .3s;
   margin-top: 10px;
   padding: 0px 10px;
+  z-index:1;
 }
 .button:hover{
   opacity: 0.8;
@@ -103,4 +121,5 @@ body{
   justify-content:space-around;
   line-height: 60px;
   z-index: 100;
+  z-index:1;
 }
