@@ -18,13 +18,6 @@
         <div class="nav-links">
             <a href="login.php">Login</a>
             <a href="register.php">Not a Member?</a>
-    <div class="nav">
-        <div class="logo">
-            Logo
-        </div>
-        <div class="nav-links">
-            <a href="login.php">Login</a>
-            <a href="register.php">Not a Member?</a>
         </div>
     </div>
     <div class="header">
