@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +10,8 @@
 </head>
 
 <body>
-    <div class="nav">
+    <?php
+    echo"<div class="nav">
         <div class="logo">
             Logo
         </div>
@@ -39,7 +43,8 @@
                 </form>
             </div>
         </div>
-    <!--<a href="subscribe.html">Subscribe</a>-->
+    <!--<a href="subscribe.html">Subscribe</a>-->"
+    ?>
 </body>
 </html>
 <script type="text/javascript" src="onload.js"></script>
