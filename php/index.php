@@ -30,8 +30,6 @@
     <div class="header">
         <h1>Homepage</h1>
         </div>
-        
-        </div>
         ';
         ?>
 </body>
