@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@ session_start();
 
 <body>
     <?php
+    include 'includes/connDB.php';
     echo"<div class='nav'>
         <div class='logo'>
             Logo
