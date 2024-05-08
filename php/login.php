@@ -16,8 +16,8 @@ session_start();
             Logo
         </div>
         <div class='nav-links'>
-            <a href='Index.html'>Homepage</a>
-            <a href='register.html'>Register</a>
+            <a href='Index.php'>Homepage</a>
+            <a href='register.php'>Register</a>
         </div>
     
     </div>
@@ -38,12 +38,12 @@ session_start();
                         <input type='submit' name='submit' class='button'value='Login' required>
                     </div>
                     <div class='links'>
-                        Not a member yet? <a href='register.html'>Join our community</a>
+                        Not a member yet? <a href='register.php'>Join our community</a>
                     </div>
                 </form>
             </div>
         </div>
-    <!--<a href='subscribe.html'>Subscribe</a>-->";
+    <!--<a href='subscribe.php'>Subscribe</a>-->";
     ?>
 </body>
 </html>

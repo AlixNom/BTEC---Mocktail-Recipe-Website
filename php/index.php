@@ -7,18 +7,22 @@
     <title>Login</title>
 </head>
 <body>
+    <?php
+    echo'
     <div class="nav">
         <div class="logo">
             Logo
         </div>
         <div class="nav-links">
-            <a href="login.html">Login</a>
-            <a href="register.html">Not a Member?</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Not a Member?</a>
         </div>
     </div>
     <div class="header">
         <h1>Homepage</h1>
         </div>
+        '
+        ?>
 </body>
 
 </html>

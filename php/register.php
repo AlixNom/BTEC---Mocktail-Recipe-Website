@@ -6,12 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    echo'
     <div class="nav">
         <div class="logo">
             <p>Logo</p>
         </div>
-        <div class="nav-links"><a href="Index.html">Homepage</a>
-            <a href="login.html">Login</a>
+        <div class="nav-links"><a href="Index.php">Homepage</a>
+            <a href="login.php">Login</a>
         </div>
         
     </div>
@@ -50,10 +52,12 @@
                     <input type="submit" name="submit" class="button"value="Register" required>
                 </div>
                 <div class="links">
-                    Already have a member? <a href="login.html">Login</a>
+                    Already have a member? <a href="login.php">Login</a>
                 </div>
             </form>
         </div>
     </div>
+    '
+    ?>
 </body>
 </html>
