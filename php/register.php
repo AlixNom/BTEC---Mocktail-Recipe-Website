@@ -56,12 +56,8 @@
                 </div>
             </form>
         </div>
-<<<<<<< Updated upstream
     </div>
-    '
-=======
-    </div>';
->>>>>>> Stashed changes
+    ';
     ?>
 </body>
 </html>

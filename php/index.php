@@ -34,7 +34,7 @@
         <h1>Homepage</h1>
 <<<<<<< Updated upstream
         </div>
-        '
+        ';
         ?>
 =======
         </div>"
