@@ -34,10 +34,6 @@
                     <input type="text" name="email" id="email" required>
                 </div>
                 <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required>
-                </div>
-                <div class="field input">
                     <label for="dob">Date of Birth</label>
                     <input type="date" name="dob" id="dob"  required>
                 </div>
