@@ -43,7 +43,7 @@ session_start();
                 </form>
             </div>
         </div>
-    <!--<a href='subscribe.html'>Subscribe</a>-->"
+    <!--<a href='subscribe.html'>Subscribe</a>-->";
     ?>
 </body>
 </html>
