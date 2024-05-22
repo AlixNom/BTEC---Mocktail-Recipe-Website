@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    require('includes/ConnDB.php');
+    include'includes/ConnDB.php';
 //request or post?
         if(isset($_REQUEST['uname'])) {
             $uname = stripslashes($_REQUEST['uname']);
@@ -25,14 +25,14 @@
                      VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob'),'" . md5($password) . "'";
             $result   = mysqli_query($conn, $query);
             if ($result) {
-                echo "<div class='form'>
+                echo "<div class='login'>
                       <h3>You are registered successfully.</h3><br/>
                       <p class='link'>Click here to <a href='login.php'>Login</a></p>
                       </div>";
             } else {
-                echo "<div class='form'>
+                echo "<div class='login'>
                       <h3>Required fields are missing.</h3><br/>
-                      <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                      <p class='link'>Click here to <a href='register.php'>registration</a> again.</p>
                       </div>";
             }
         } else {
