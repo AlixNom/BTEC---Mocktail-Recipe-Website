@@ -9,17 +9,17 @@
     <?php
     include'includes/ConnDB.php';
 //request or post?
-        if(isset($_REQUEST['uname'])) {
-            $uname = stripslashes($_REQUEST['uname']);
+        if(isset($_POST['uname'])) {
+            $uname = stripslashes($_POST['uname']);
             $uname = mysqli_real_escape_string($conn, $uname);
-            $name = stripslashes($_REQUEST['name']);
+            $name = stripslashes($_POST['name']);
             $name = mysqli_real_escape_string($conn, $name);
-            $surname = stripslashes($_REQUEST['surname']);
+            $surname = stripslashes($_POST['surname']);
             $surname = mysqli_real_escape_string($conn, $surname);
-            $email = stripslashes($_REQUEST['email']);
+            $email = stripslashes($_POST['email']);
             $email = mysqli_real_escape_string($conn, $email);
             $dob = date("Y-m-d H:i:s");
-            $password = stripslashes($_REQUEST['password']);
+            $password = stripslashes($_POST['password']);
             $password = mysqli_real_escape_string($conn, $password);
             $query = "INSERT INTO mocktail_users (uname, name, surname, email, dob, password)
                      VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')";
