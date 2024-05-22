@@ -22,13 +22,17 @@
         <div class="form form-box">
             <h3>Register</h3>
             <form action="" method="post">
+            <div class="field input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="userName" required>
+                </div>
                 <div class="field input">
                     <label for="firstName">First Name</label>
                     <input type="text" name="firstName" id="firstName" required>
                 </div>
                 <div class="field input">
                     <label for="surname">Surname</label>
-                    <input type="text" name="surname" id="surname" required>
+                    <input type="text" name="surname" id="surName" required>
                 </div>
                 <div class="field input">
                     <label for="email">Email</label>
