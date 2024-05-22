@@ -21,8 +21,7 @@
             $dob = date("Y-m-d H:i:s");
             $password = stripslashes($_POST['password']);
             $password = mysqli_real_escape_string($conn, $password);
-            $query = "INSERT INTO mocktail_users (uname, name, surname, email, dob, password)
-                     VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')";
+            $query = "INSERT INTO mocktail_users (uname, name, surname, email, dob, password) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')";
             $result   = mysqli_query($conn, $query);
             if ($result) {
                 echo "<div class='login'>
