@@ -22,7 +22,7 @@
         <div class="form form-box">
             <h3>Register</h3>
             <form action="" method="post">
-            <div class="field input">
+                <div class="field input">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="userName" required>
                 </div>
