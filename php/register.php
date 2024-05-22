@@ -3,12 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 <body>
     <?php
-
-    echo'
+    require('ConnDB');
+        if(isset($_REQUEST['uname'])) {
+            $uname = stripslashes($_REQUEST['uname']);
+            $uname = mysqli_real_escape_string($conn, $uname);
+            $name = stripslashes($_REQUEST['name']);
+            $name = mysqli_real_escape_string($conn, $name);
+            $surname = stripslashes($_REQUEST['surname']);
+            $surname = mysqli_real_escape_string($conn, $surname);
+            $email = stripslashes($_REQUEST['email']);
+            $email = mysqli_real_escape_string($conn, $email);
+            $dob = date("Y-m-d H:i:s");
+            $password = stripslashes($_REQUEST['password']);
+            $password = mysqli_real_escape_string($conn, $password);
+            $query    = "INSERT into `mocktail_users` (uname, name, surname, email, dob, password)
+                     VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob'),'" . md5($password) . "'";
+        }
+    ?>
     <div class="nav">
         <div class="logo">
             <p>Logo</p>
@@ -24,7 +39,7 @@
             <form action="" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="userName" required>
+                    <input type="text" name="username" id="userName" required autocomplete="off">
                 </div>
                 <div class="field input">
                     <label for="firstName">First Name</label>
@@ -58,7 +73,9 @@
             </form>
         </div>
     </div>
-    ';
+    <?php
+    
     ?>
+    
 </body>
 </html>
