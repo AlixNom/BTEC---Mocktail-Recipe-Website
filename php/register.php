@@ -21,7 +21,7 @@
             $dob = date("Y-m-d H:i:s");
             $password = stripslashes($_REQUEST['password']);
             $password = mysqli_real_escape_string($conn, $password);
-            $query    = "INSERT into `mocktail_users` (uname, name, surname, email, dob, password)
+            $query    = "INSERT INTO mocktail_users (uname, name, surname, email, dob, password)
                      VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')";
             $result   = mysqli_query($conn, $query);
             if ($result) {
@@ -35,7 +35,7 @@
                       <p class='link'>Click here to <a href='register.php'>registration</a> again.</p>
                       </div>";
             }
-        } else {
+            } else {
     ?>
 
     <!---might be better to separate the form and validation--->
