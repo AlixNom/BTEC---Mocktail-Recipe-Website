@@ -22,7 +22,9 @@
             $password = mysqli_real_escape_string($conn, $password);
             $query    = "INSERT into `mocktail_users` (uname, name, surname, email, dob, password)
                      VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob'),'" . md5($password) . "'";
-        }
+            $result   = mysqli_query($conn, $query);
+        
+        } else {
     ?>
     <div class="nav">
         <div class="logo">
@@ -74,7 +76,7 @@
         </div>
     </div>
     <?php
-    
+        }
     ?>
     
 </body>
