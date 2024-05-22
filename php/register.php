@@ -31,7 +31,7 @@
                     <input type="text" name="firstName" id="firstName" required>
                 </div>
                 <div class="field input">
-                    <label for="surname">Surname</label>
+                    <label for="surname">Last Name</label>
                     <input type="text" name="surname" id="surName" required>
                 </div>
                 <div class="field input">
