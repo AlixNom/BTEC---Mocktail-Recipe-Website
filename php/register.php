@@ -22,7 +22,7 @@
             $password = stripslashes($_REQUEST['password']);
             $password = mysqli_real_escape_string($conn, $password);
             $query    = "INSERT into `mocktail_users` (uname, name, surname, email, dob, password)
-                     VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob'),'" . md5($password) . "'";
+                     VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob','" . md5($password) . "')";
             $result   = mysqli_query($conn, $query);
             if ($result) {
                 echo "<div class='login'>
@@ -51,7 +51,7 @@
     <div class="login">
         <div class="form form-box">
             <h3>Register</h3>
-            <form action="" method="post">
+            <form action="self" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="userName" required autocomplete="off">
