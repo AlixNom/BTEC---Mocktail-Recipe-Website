@@ -24,11 +24,21 @@
             $query    = "INSERT into `mocktail_users` (uname, name, surname, email, dob, password)
                      VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob'),'" . md5($password) . "'";
             $result   = mysqli_query($conn, $query);
-        
+            if ($result) {
+                echo "<div class='form'>
+                      <h3>You are registered successfully.</h3><br/>
+                      <p class='link'>Click here to <a href='login.php'>Login</a></p>
+                      </div>";
+            } else {
+                echo "<div class='form'>
+                      <h3>Required fields are missing.</h3><br/>
+                      <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                      </div>";
+            }
         } else {
     ?>
 
-    //might be better to separate the form and validation
+    <!---might be better to separate the form and validation--->
     <div class="nav">
         <div class="logo">
             <p>Logo</p>
