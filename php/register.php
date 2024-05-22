@@ -8,6 +8,7 @@
 <body>
     <?php
     require('includes/ConnDB.php');
+//request or post?
         if(isset($_REQUEST['uname'])) {
             $uname = stripslashes($_REQUEST['uname']);
             $uname = mysqli_real_escape_string($conn, $uname);
@@ -26,6 +27,8 @@
         
         } else {
     ?>
+
+    //might be better to separate the form and validation
     <div class="nav">
         <div class="logo">
             <p>Logo</p>
