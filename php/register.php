@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    require('../include/ConnDB.php');
+    require('../includes/ConnBD.php');
         if(isset($_REQUEST['uname'])) {
             $uname = stripslashes($_REQUEST['uname']);
             $uname = mysqli_real_escape_string($conn, $uname);
