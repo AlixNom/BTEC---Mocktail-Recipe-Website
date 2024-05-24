@@ -14,7 +14,7 @@
             $uname = mysqli_real_escape_string($conn, $uname);
             $name = stripslashes($_POST['firstName']);
             $name = mysqli_real_escape_string($conn, $name);
-            $surname = stripslashes($_POST['surName']);
+            $surname = stripslashes($_POST['surname']);
             $surname = mysqli_real_escape_string($conn, $surname);
             $email = stripslashes($_POST['email']);
             $email = mysqli_real_escape_string($conn, $email);
