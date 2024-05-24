@@ -10,11 +10,11 @@
     include'includes/ConnDB.php';
 //request or post?
         if(isset($_POST['uname'])) {
-            $uname = stripslashes($_POST['uname']);
+            $uname = stripslashes($_POST['username']);
             $uname = mysqli_real_escape_string($conn, $uname);
-            $name = stripslashes($_POST['name']);
+            $name = stripslashes($_POST['firstName']);
             $name = mysqli_real_escape_string($conn, $name);
-            $surname = stripslashes($_POST['surname']);
+            $surname = stripslashes($_POST['surName']);
             $surname = mysqli_real_escape_string($conn, $surname);
             $email = stripslashes($_POST['email']);
             $email = mysqli_real_escape_string($conn, $email);
@@ -23,6 +23,8 @@
             $password = mysqli_real_escape_string($conn, $password);
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob, password) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')");
             $result   = mysqli_query($conn, $query);
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ssssds", $uname, $name, $surname, $email, $dob, $socials);
             if ($result) {
                 echo "<div class='login'>
                       <h3>You are registered successfully.</h3><br/>
