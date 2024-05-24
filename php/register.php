@@ -21,7 +21,6 @@
             $dob = date("Y-m-d H:i:s");
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
             $result   = mysqli_query($conn, $query);
-            $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssssds", $uname, $name, $surname, $email, $dob, $socials);
             if ($result) {
                 echo "<div class='login'>
