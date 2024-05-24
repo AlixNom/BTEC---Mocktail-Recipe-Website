@@ -19,7 +19,7 @@
             $email = stripslashes($_POST['email']);
             $email = mysqli_real_escape_string($conn, $email);
             $dob = date("Y-m-d H:i:s");
-            $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob, password) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob', '" . md5($password) . "')");
+            $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
             $result   = mysqli_query($conn, $query);
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssssds", $uname, $name, $surname, $email, $dob, $socials);
