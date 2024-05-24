@@ -8,7 +8,7 @@
 <body>
     <?php
     include'includes/ConnDB.php';
-//request or post?
+//request or post? test
         if(isset($_POST['username'])) {
             $uname = stripslashes($_POST['username']);
             $uname = mysqli_real_escape_string($conn, $uname);
