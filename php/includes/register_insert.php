@@ -21,7 +21,7 @@
             $dob = date("Y-m-d H:i:s");
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
             $result = mysqli_query($conn, $query);
-            $result->bind_param("ssssd", $uname, $name, $surname, $email, $dob);
+            $result->bind_param("sssss", $uname, $name, $surname, $email, $dob);
             if ($result) {
                 header("Location: login.php");
             } else {
