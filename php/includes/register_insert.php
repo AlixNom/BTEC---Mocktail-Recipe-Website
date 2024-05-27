@@ -20,7 +20,7 @@
             $email = mysqli_real_escape_string($conn, $email);
             $dob = date("Y-m-d H:i:s");
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
-            $stmt = $conn->prepare($sql);
+            $stmt = $conn->prepare($query);
             $stmt->bind_param("ssss", $uname, $name, $surname, $email, $dob);
             $stmt->execute();
             $stmt->store_result();
