@@ -22,9 +22,7 @@
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
             $stmt = $conn->prepare($query);
             $stmt->bind_param("ssss", $uname, $name, $surname, $email, $dob);
-            $stmt->execute();
-            $stmt->store_result();
-            if ($stmt->num_rows > 0) {
+            if ($stmt->execute()) {
                 header("Location: login.php");
             } else {
                 echo "ERROR: Missing Fields" . $sql . "<br>" . $conn->error;
