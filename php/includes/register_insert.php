@@ -20,18 +20,16 @@
             $email = mysqli_real_escape_string($conn, $email);
             $dob = date("Y-m-d H:i:s");
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
-            $result   = mysqli_query($conn, $query);
+            //$result   = mysqli_query($conn, $query);
             $stmt->bind_param("ssssds", $uname, $name, $surname, $email, $dob, $socials);
-            if ($result) {
+            if ($query->execute()) {
                 header("Location: login.php");
-                exit;
             } else {
                 echo "ERROR: Missing Fields" . $sql . "<br>" . $conn->error;
             }
             } else {
 
             header("Location: register.html");
-            exit;
         }
     ?>
 </body>
