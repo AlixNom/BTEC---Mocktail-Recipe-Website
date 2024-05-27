@@ -24,7 +24,7 @@
             $result->bind_param("ssss", $uname, $name, $surname, $email, $dob);
             $result->execute();
             $result->store_result();
-            if ($result) {
+            if ($result->num_rows > 0) {
                 header("Location: login.php");
             } else {
                 echo "ERROR: Missing Fields" . $sql . "<br>" . $conn->error;
