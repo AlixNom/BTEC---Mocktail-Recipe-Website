@@ -19,7 +19,7 @@ session_start();
         </div>
         <div class='nav-links'>
             <a href='Index.php'>Homepage</a>
-            <a href='register.php'>Register</a>
+            <a href='register.html'>Register</a>
         </div>
     
     </div>
