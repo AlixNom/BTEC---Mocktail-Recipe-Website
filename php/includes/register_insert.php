@@ -25,7 +25,7 @@
             if ($result) {
                 header("Location: login.php");
             } else {
-                echo "ERROR: Missing Fields" . $sql . "<br>" . $conn->error;
+                echo "ERROR: Missing Fields" . $query . "<br>" . $conn->error;
             }
             } else {
 
