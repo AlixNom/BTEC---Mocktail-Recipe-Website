@@ -20,15 +20,9 @@
             $email = mysqli_real_escape_string($conn, $email);
             $dob = date("Y-m-d H:i:s");
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
-<<<<<<< HEAD
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
-            if ($stmt->execute()) {
-=======
             $result = mysqli_query($conn, $query);
-            $result->bind_param("ssssd", $uname, $name, $surname, $email, $dob);
+            $result->bind_param("sssss", $uname, $name, $surname, $email, $dob);
             if ($result) {
->>>>>>> parent of 691d39b (.)
                 header("Location: login.php");
             } else {
                 echo "ERROR: Missing Fields" . $sql . "<br>" . $conn->error;
