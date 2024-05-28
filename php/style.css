@@ -15,6 +15,9 @@
   padding-bottom: 20;
 }
 
+.alert{
+  background: #ffdb9b;
+}
 body{
   background:
   url(https://source.unsplash.com/random/?mocktail) no-repeat;
