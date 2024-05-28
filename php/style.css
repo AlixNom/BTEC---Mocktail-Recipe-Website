@@ -15,7 +15,7 @@
   padding-bottom: 20;
 }
 
-.alert{
+.alert .alert-warning{
   background: #ffdb9b;
 }
 body{
