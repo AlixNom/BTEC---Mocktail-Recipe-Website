@@ -16,8 +16,10 @@
 }
 
 .alert {
-  background: #ffdb9b;
-  padding: 10 10 10 10;
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
 }
 body{
   background:
