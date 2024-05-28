@@ -1,6 +1,7 @@
 <?php
 session_start();
-include('includes/register_insert.php');
+require_once('includes/register_insert.php')
+//include('includes/register_insert.php');
 ?>
 <html lang="en">
 <head>
@@ -24,11 +25,11 @@ include('includes/register_insert.php');
     </div>
     <div class='alert'>
     <?php
-    if(isset($_SESSION['status']))
-    {
-        echo $_SESSION['status'];
+    if(isset($_SESSION['status'])) {
+        $message = $_SESSION['status'];
         unset($_SESSION['status']);
-    }?>
+        echo $message;
+     }?>
     </div>
     <div class='login'>
             <div class='form form-box'>
