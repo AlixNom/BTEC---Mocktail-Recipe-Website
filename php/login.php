@@ -34,6 +34,13 @@ session_start();
             <div class='form form-box'>
                 <h3>Login</h3>
                 <form action='' method='post'>
+                <?php
+                    if(isset($_SESSION['status']))
+                    {
+                    echo $_SESSION['status'];
+                    unset($_SESSION['status']);
+                    }
+                ?>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>Email</label>
