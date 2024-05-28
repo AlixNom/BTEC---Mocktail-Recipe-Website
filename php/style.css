@@ -16,11 +16,20 @@
 }
 
 .alert {
-  padding: 20px;
-  background-color: green; /* Red */
-  color: white;
-  margin-bottom: 15px;
+  padding: 20px 40px;
+  background-color: green;
+  /*Red*/color: white;
+  min-width: 420px;
   z-index: 3;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-left: 8px solid darkgreen;
 }
 body{
   /*background:
