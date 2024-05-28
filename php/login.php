@@ -24,6 +24,7 @@ session_start();
     
     </div>
     <div class='alert'>
+        Test
     <?php
     if(isset($_SESSION['status'])) {
         $message = $_SESSION['status'];
