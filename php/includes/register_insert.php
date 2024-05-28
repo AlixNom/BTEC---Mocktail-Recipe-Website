@@ -3,7 +3,7 @@ session_start();
 
 include 'ConnDB.php';
 
-$sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
+
 
 $stmt = $conn->prepare($sql);
 
@@ -18,12 +18,23 @@ $surname = mysqli_real_escape_string($conn, $surname);
 $email = stripslashes($_POST['email']);
 $email = mysqli_real_escape_string($conn, $email);
 $dob = date("Y-m-d H:i:s");
-if ($stmt->execute()) {
-    $_SESSION['status'] = "Sucessfully registered as a user!";
-    header("Location: ../login.php");
+
+$userVal = "SELECT * from mocktail_users where username = '$uname'";
+$result = mysqli_query($conn, $userVal);
+$count = mysqli_num_rows($result);
+
+If($count>0){
+    $_SESSION['status'] = "User already signed up!";
+    header("Location: ../register.php");
 } else {
-    $_SESSION['status'] = "Error with registering user!";
-    header("Location: register.php");
+    $sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
+    if ($stmt->execute()) {
+        $_SESSION['status'] = "Sucessfully registered as a user!";
+        header("Location: ../login.php");
+    } else {
+        $_SESSION['status'] = "Error with registering user!";
+        header("Location: ../register.php");
+    }
 }
 
 $stmt->close();
