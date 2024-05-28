@@ -22,12 +22,14 @@ session_start();
         </div>
     
     </div>
+    <div class='alert'>
     <?php
     if(isset($_SESSION['status']))
     {
         echo $_SESSION['status'];
         unset($_SESSION['status']);
     }?>
+    </div>
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
