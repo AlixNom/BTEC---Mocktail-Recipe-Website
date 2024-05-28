@@ -2,13 +2,13 @@
 include 'ConnDB.php';
 
 // Prepare the SQL statement with placeholders
-$sql = "INSERT INTO mocktail_users (uname, name , email, socials) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
 
 // Prepare the statement
 $stmt = $conn->prepare($sql);
 
 // Bind parameters
-$stmt->bind_param("sssss", $uname, $name, $surname,$email,$dob);
+$stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
 
 // Set parameters and execute the statement
 $uname = stripslashes($_POST['username']);
