@@ -31,13 +31,14 @@ session_start();
                     <div class='alert'>
                     <?php
                     if(isset($_SESSION['status'])) {
-                        $message = $_SESSION['status'];
-                        unset($_SESSION['status']);
                         ?>
-                        <div class="alert alert-success" role="alert">
-                        <?php echo $message;?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         </div>
-                        <?php } ?>
+                        <?php unset($_SESSION['status']); } ?>
                     </div>
                     <div class='image'></div>
                     <div class='field input'>
