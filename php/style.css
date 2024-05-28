@@ -21,7 +21,8 @@
   /*Red*/color: white;
   min-width: 420px;
   z-index: 3;
-  position: absolute;
+  position: flex;
+  justify-content:center;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
