@@ -28,7 +28,6 @@ session_start();
             <div class='form form-box'>
                 <h3>Login</h3>
                 <form action='' method='post'>
-                    <div class='alert'>
                     <?php
                     if(isset($_SESSION['status'])) {
                         ?>
@@ -39,7 +38,6 @@ session_start();
                         </button>
                         </div>
                         <?php unset($_SESSION['status']); } ?>
-                    </div>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>Email</label>
