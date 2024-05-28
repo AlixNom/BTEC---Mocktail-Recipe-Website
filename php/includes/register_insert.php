@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'ConnDB.php';
 
 $sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
