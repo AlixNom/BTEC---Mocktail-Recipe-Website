@@ -20,6 +20,7 @@
   background-color: #f44336; /* Red */
   color: black;
   margin-bottom: 15px;
+  z-index: 3;
 }
 body{
   /*background:
