@@ -23,19 +23,20 @@ session_start();
         </div>
     
     </div>
-    <div class='alert'>
-        Test
-    <?php
-    if(isset($_SESSION['status'])) {
-        $message = $_SESSION['status'];
-        unset($_SESSION['status']);
-        echo $message;
-     }?>
-    </div>
+    
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
                 <form action='' method='post'>
+                    <div class='alert'>
+                        Test
+                    <?php
+                    if(isset($_SESSION['status'])) {
+                        $message = $_SESSION['status'];
+                        unset($_SESSION['status']);
+                        echo $message;
+                    }?>
+                    </div>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>Email</label>
