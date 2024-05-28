@@ -19,11 +19,11 @@ $email = stripslashes($_POST['email']);
 $email = mysqli_real_escape_string($conn, $email);
 $dob = date("Y-m-d H:i:s");
 if ($stmt->execute()) {
-    $_SESSION['status'] = "Created a Registered User!";
+    $_SESSION['status'] = "Sucessfully registered as a user!";
     header("Location: ../login.php");
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-    header("Location: register.html");
+    $_SESSION['status'] = "Error with registering user!";
+    header("Location: register.php");
 }
 
 $stmt->close();

@@ -19,14 +19,14 @@ session_start();
         </div>
         <div class='nav-links'>
             <a href='Index.php'>Homepage</a>
-            <a href='register.html'>Register</a>
+            <a href='register.php'>Register</a>
         </div>
     
 </div>
 <?php
 if(isset($_SESSION['status'])) {
 ?>
-    <div class="alert">
+    <div class="alert-success">
         <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>

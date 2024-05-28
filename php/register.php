@@ -18,10 +18,15 @@
         
     </div>
     <?php
-    if(isset($_SESSION['status']))
-    {
-        echo $_SESSION['status'];
-    }?>
+    if(isset($_SESSION['status'])) {
+    ?>
+        <div class="alert-error">
+            <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php unset($_SESSION['status']); } ?>
     <div class="login">
         <div class="form form-box">
             <h3>Register</h3>
