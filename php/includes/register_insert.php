@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($result);
 
 If($count>0){
-    $_SESSION['status'] = "User already signed up!";
+    $_SESSION['status'] = "There is already a user with the same username!";
     header("Location: ../register.php");
 } else {
     $sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";

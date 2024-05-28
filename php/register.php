@@ -22,7 +22,7 @@
     if(isset($_SESSION['status'])) {
     ?>
         <div class="alert-error">
-            <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+            <strong>Error!</strong> <?php echo $_SESSION['status'];?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -55,6 +55,7 @@
                 <div class="field input">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
+                    <span id="show"><i class ="fa-regular fa-eye-slash"></i></span>
                 </div>
                 <div class="hint">
                    Must be at least 8 characters
