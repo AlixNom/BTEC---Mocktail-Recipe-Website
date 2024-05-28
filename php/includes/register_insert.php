@@ -22,12 +22,14 @@
             $query = ("INSERT INTO mocktail_users (uname, name, surname, email, dob) VALUES ('$uname',  '$name',  '$surname',  '$email', '$dob')");
             $result = mysqli_query($conn, $query);
             $result->bind_param("sssss", $uname, $name, $surname, $email, $dob);
-            if ($result) {
+            if ($result->execute()) {
                 header("Location: login.php");
             } else {
                 echo "ERROR: Missing Fields" . $query . "<br>" . $conn->error;
             }
+
             } else {
+
 
             header("Location: register.html");
         }
