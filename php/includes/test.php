@@ -8,19 +8,18 @@ $sql = "INSERT INTO mocktail_users (uname, name , email, socials) VALUES (?, ?, 
 $stmt = $conn->prepare($sql);
 
 // Bind parameters
-$stmt->bind_param("ssss", $uname, $name, $email, $socials);
+$stmt->bind_param("sssss", $uname, $name, $surname,$email,$dob);
 
 // Set parameters and execute the statement
-$uname = "BigBadBarry";
-$name = "Barry";
-$email = "BazzaTheBigFish@elfmail.com";
-$socials = '{
-            "socials":[
-                {"facebook":"big.barry01"},
-                {"twitter":"@bigBarry"},
-                {"instagram":"@big.barry01"}
-            ]
-            }';
+$uname = stripslashes($_POST['username']);
+$uname = mysqli_real_escape_string($conn, $uname);
+$name = stripslashes($_POST['firstName']);
+$name = mysqli_real_escape_string($conn, $name);
+$surname = stripslashes($_POST['surname']);
+$surname = mysqli_real_escape_string($conn, $surname);
+$email = stripslashes($_POST['email']);
+$email = mysqli_real_escape_string($conn, $email);
+$dob = date("Y-m-d H:i:s");
 
 if ($stmt->execute()) {
     echo "New record created successfully";
