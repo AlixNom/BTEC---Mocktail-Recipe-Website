@@ -17,10 +17,15 @@
         </div>
         
     </div>
+    <?php
+    if(isset($_SESSION['status']))
+    {
+        echo $_SESSION['status'];
+    }?>
     <div class="login">
         <div class="form form-box">
             <h3>Register</h3>
-            <form action="includes/test.php" method="post">
+            <form action="includes/register_insert.php" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="userName" required autocomplete="off">
@@ -48,6 +53,8 @@
                 <div class="hint">
                    Must be at least 8 characters
                 </div>
+                <div class="error">
+                 </div>
                 <div class="field">
                     <input type="submit" name="submit" class="button"value="Register" required>
                 </div>

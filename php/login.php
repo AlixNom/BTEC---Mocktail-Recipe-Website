@@ -11,9 +11,8 @@ session_start();
 </head>
 
 <body>
-    <?php
-    include 'includes/connDB.php';
-    echo"<div class='nav'>
+
+<div class='nav'>
         <div class='logo'>
             Logo
         </div>
@@ -23,6 +22,12 @@ session_start();
         </div>
     
     </div>
+    <?php
+    if(isset($_SESSION['status']))
+    {
+        echo $_SESSION['status'];
+        unset($_SESSION['status']);
+    }?>
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
@@ -46,7 +51,7 @@ session_start();
             </div>
         </div>
     <!--<a href='subscribe.php'>Subscribe</a>-->";
-    ?>
+
 </body>
 </html>
 <script type="text/javascript" src="onload.js"></script>
