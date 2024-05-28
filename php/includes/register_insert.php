@@ -5,10 +5,6 @@ include 'ConnDB.php';
 
 
 
-$stmt = $conn->prepare($sql);
-
-$stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
-
 $uname = stripslashes($_POST['username']);
 $uname = mysqli_real_escape_string($conn, $uname);
 $name = stripslashes($_POST['firstName']);
@@ -28,8 +24,11 @@ If($count>0){
     header("Location: ../register.php");
 } else {
     $sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
     if ($stmt->execute()) {
-        $_SESSION['status'] = "Sucessfully registered as a user!";
+        $_SESSION['status'] = "Successfully registered as a user!";
         header("Location: ../login.php");
     } else {
         $_SESSION['status'] = "Error with registering user!";
