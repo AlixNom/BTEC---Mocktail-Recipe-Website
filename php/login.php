@@ -29,11 +29,11 @@ session_start();
     <div class="alert">
         <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
     </div>
+    <?php unset($_SESSION['status']); } ?>
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
                 <form action='' method='post'>
-                        <?php unset($_SESSION['status']); } ?>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>Email</label>
