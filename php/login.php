@@ -29,13 +29,15 @@ session_start();
                 <h3>Login</h3>
                 <form action='' method='post'>
                     <div class='alert'>
-                        Test
                     <?php
                     if(isset($_SESSION['status'])) {
                         $message = $_SESSION['status'];
                         unset($_SESSION['status']);
-                        echo $message;
-                    }?>
+                        ?>
+                        <div class="alert alert-success" role="alert">
+                        <?php echo $message;?>
+                        </div>
+                        <?php } ?>
                     </div>
                     <div class='image'></div>
                     <div class='field input'>
