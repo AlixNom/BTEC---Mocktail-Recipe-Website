@@ -15,7 +15,7 @@ $email = stripslashes($_POST['email']);
 $email = mysqli_real_escape_string($conn, $email);
 $dob = date("Y-m-d H:i:s");
 
-$userVal = "SELECT * from mocktail_users where username = '$uname'";
+$userVal = "SELECT * from mocktail_users where uname = '$uname'";
 $result = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($result);
 
