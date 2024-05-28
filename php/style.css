@@ -17,8 +17,8 @@
 
 .alert {
   padding: 20px;
-  background-color: #f44336; /* Red */
-  color: black;
+  background-color: green; /* Red */
+  color: white;
   margin-bottom: 15px;
   z-index: 3;
 }

@@ -30,9 +30,7 @@ if(isset($_SESSION['status'])) {
         <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
     </div>
 <?php unset($_SESSION['status']); } ?>
-<div class="alert">
-        <strong>Test!</strong> 
-    </div>
+
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
