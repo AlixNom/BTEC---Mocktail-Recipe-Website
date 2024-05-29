@@ -28,7 +28,7 @@ If($count>0){
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
-    
+
     if ($stmt->execute()) {
         $pword_hash = stripslashes($_POST('password'));
         $pword_hash = mysqli_real_escape_string($conn, $pword_hash);
@@ -42,7 +42,7 @@ If($count>0){
         $stmtPass->bind_param("ss", $row["id"], $pword_hash);
         
         $_SESSION['status'] = "Successfully registered as a user!";
-        header("Location: ../login.php");
+        //header("Location: ../login.php");
     } else {
         $_SESSION['status'] = "Error with registering user!";
         header("Location: ../register.php");
