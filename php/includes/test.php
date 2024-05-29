@@ -2,24 +2,17 @@
 include 'ConnDB.php';
 
 // Prepare the SQL statement with placeholders
-$sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
+$pword_hash = stripslashes($_POST['password']);
+$pword_hash = mysqli_real_escape_string($conn, $pword_hash);
+$pword_hash = password_hash($pword_hash, PASSWORD_DEFAULT);
 
-// Prepare the statement
-$stmt = $conn->prepare($sql);
+$userPass = "SELECT id, uid from mocktail_users where uname = '$uname'";
+$result = $conn->prepare($userPass);
 
-// Bind parameters
-$stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
-
-// Set parameters and execute the statement
-$uname = stripslashes($_POST['username']);
-$uname = mysqli_real_escape_string($conn, $uname);
-$name = stripslashes($_POST['firstName']);
-$name = mysqli_real_escape_string($conn, $name);
-$surname = stripslashes($_POST['surname']);
-$surname = mysqli_real_escape_string($conn, $surname);
-$email = stripslashes($_POST['email']);
-$email = mysqli_real_escape_string($conn, $email);
-$dob = date("Y-m-d H:i:s");
+    $sql = "INSERT INTO mocktail_passwords (id, uid, pword_hash ) VALUES (?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $resultPass['id'], $resultPass['uid'], $pword_hash);
+    
 
 if ($stmt->execute()) {
     echo "New record created successfully";
