@@ -63,8 +63,8 @@
  color: green;
 }
 body{
-  background:
-  url(img/Mocktail.jpg) no-repeat;
+  background-image:
+  url('img/Mocktail.jpg') no-repeat;
   background-size: cover;
   background-position:center;
   z-index: -1;
