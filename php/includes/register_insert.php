@@ -35,12 +35,12 @@ If($count>0){
         $pword_hash = password_hash($pword_hash, PASSWORD_DEFAULT);
 
         $userPass = "SELECT id from mocktail_users where uname = '$uname'";
-        $result = $conn->prepare($userPass);
+        $resultPass = $conn->prepare($userPass);
 
-        while ( $resultPass = $result->fetch_assoc()) {
+        while ( $result = $resultPass->fetch_assoc()) {
             $sql = "INSERT INTO mocktail_passwords (id, pword_hash ) VALUES (?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sss", $resultPass['id'], $pword_hash);
+            $stmt->bind_param("ss", $result['id'], $pword_hash);
             
             $_SESSION['status'] = "Successfully registered as a user!";
             header("Location: ../login.php");}
