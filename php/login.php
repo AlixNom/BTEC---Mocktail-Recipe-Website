@@ -37,7 +37,7 @@ if(isset($_SESSION['status'])) {
     <div class='login'>
             <div class='form form-box'>
                 <h3>Login</h3>
-                <form action='' method='post'>
+                <form action='includes/login_validation.php' method='post'>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>User</label>
