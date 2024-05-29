@@ -32,7 +32,7 @@ $stmt= $conn->prepare($userVal);
 
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()) {
-                $valid = password_verify($hashed,$row['pword_hash']);
+                $valid = password_verify($password,$row['pword_hash']);
                 echo $valid;
                 if ($valid == true) {
                     $_SESSION['user'] = $row['uname'];
@@ -41,6 +41,6 @@ $stmt= $conn->prepare($userVal);
                     $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
-            $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-                header("Location: ../login.php");
+                //$_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
+                //header("Location: ../login.php");
 //header('Location:index.php');
