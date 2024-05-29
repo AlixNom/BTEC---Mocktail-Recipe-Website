@@ -15,7 +15,8 @@ $email = stripslashes($_POST['email']);
 $email = mysqli_real_escape_string($conn, $email);
 $dob = date("Y-m-d H:i:s");
 
-$password = $_POST('password');
+$password = stripslashes($_POST('password'));
+$password = mysqli_real_escape_string($conn, $password);
 $pword_hash = password_hash($password, PASSWORD_DEFAULT);
 
 $userVal = "SELECT * from mocktail_users where uname = '$uname'";
