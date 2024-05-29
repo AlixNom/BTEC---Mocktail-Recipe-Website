@@ -1,7 +1,7 @@
 <?php session_start();
 include 'ConnDB.php';
 
-$user = stripslashes($_POST['username']);
+$user = stripslashes($_POST['user']);
 $user = mysqli_real_escape_string($conn, $user);
 $password = $_POST['password'];
 $hashed = password_hash($password, PASSWORD_DEFAULT);
