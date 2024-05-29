@@ -34,7 +34,8 @@ If($count>0){
         $sql = "SELECT id from mocktail_users where uname = '$uname'";
         $stmt = $conn->prepare($sql);
 
- 
+        $result = $stmt->get_result();
+
         $_SESSION['status'] = "Successfully registered as a user!";
          header("Location: ../login.php");
     } else {
