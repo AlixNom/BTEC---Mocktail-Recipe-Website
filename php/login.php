@@ -40,8 +40,8 @@ if(isset($_SESSION['status'])) {
                 <form action='' method='post'>
                     <div class='image'></div>
                     <div class='field input'>
-                        <label for='email'>Email</label>
-                        <input type='text' name='email' id='email' required>
+                        <label for='email'>User</label>
+                        <input type='text' name='user' id='user' required>
                     </div>
                     <div class='field input'>
                         <label for='password'>Password</label>
