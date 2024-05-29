@@ -44,10 +44,10 @@ If($count>0){
         $result = $stmt->get_result();
 
         while ($row = $result->fetch_assoc()) {
-            $sql = "INSERT INTO mocktail_passwords (id) VALUES (?)";}
-
-        $_SESSION['status'] = "Successfully registered as a user!";
-         header("Location: ../login.php");
+            $sql = "INSERT INTO mocktail_passwords (id) VALUES (?)";};
+        if ($stmt->execute()) {
+            $_SESSION['status'] = "Successfully registered as a user!";
+            header("Location: ../login.php");}
     } else {
         $_SESSION['status'] = "Error with registering user!";
         header("Location: ../register.php");
