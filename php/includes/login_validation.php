@@ -40,10 +40,7 @@ $stmt= $conn->prepare($userVal);
                 }else{
                     $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
-                }
-                $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-                header("Location: ../login.php");}
-                $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
+                }}}
+            $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
                 header("Location: ../login.php");
-            }
 //header('Location:index.php');
