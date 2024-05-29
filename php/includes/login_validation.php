@@ -22,7 +22,7 @@ $stmt= $conn->prepare($userVal);
             $id = $rowUser['id'];
             $passVal = "SELECT pword_hash from mocktail_passwords where id = $id";
 
-            $stmt= $conn->prepare($pasVal);
+            $stmt = $conn->prepare($passVal);
             if ($stmt === false) {
                 die("Error preparing statement: " . $conn->error);
             }
