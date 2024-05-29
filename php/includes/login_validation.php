@@ -37,7 +37,8 @@ $stmt= $conn->prepare($userVal);
                 if ($valid == true) {
                     $_SESSION['user'] = $row['uname'];
                     header("Location: ../index.php");
-                }else{
+                }
+                if ($valid == false) {
                     $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
