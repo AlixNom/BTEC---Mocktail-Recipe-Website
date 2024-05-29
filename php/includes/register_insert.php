@@ -27,9 +27,9 @@ If($count>0){
     $_SESSION['status'] = "There is already a user with the same username!";
     header("Location: ../register.php");
 } else {
-    $pword_hash = stripslashes($_POST('password'));
-    $pword_hash = mysqli_real_escape_string($conn, $pword_hash);
-    $pword_hash = password_hash($_POST('password'), PASSWORD_DEFAULT);
+    //$pword_hash = stripslashes($_POST('password'));
+    //$pword_hash = mysqli_real_escape_string($conn, $pword_hash);
+    //$pword_hash = password_hash($_POST('password'), PASSWORD_DEFAULT);
 
     $userPass = "SELECT id from mocktail_users where uname = '$uname'";
     $result = $conn->prepare($userPass);
