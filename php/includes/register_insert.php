@@ -34,6 +34,13 @@ If($count>0){
         $sql = "SELECT id from mocktail_users where uname = '$uname'";
         $stmt = $conn->prepare($sql);
 
+        if ($stmt === false) {
+            die("Error preparing statement: " . $conn->error);
+        }
+        if ($stmt->execute() === false) {
+            die("Error executing statement: " . $stmt->error);
+        }
+        
         $result = $stmt->get_result();
 
         $_SESSION['status'] = "Successfully registered as a user!";
