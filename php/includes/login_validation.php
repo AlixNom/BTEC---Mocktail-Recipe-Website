@@ -10,13 +10,12 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 
 $stmt= $conn->prepare($userVal);
+if ($result->num_rows > 0) {
         if ($stmt === false) {
-            $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-            header("Location: ../login.php");
+            die("Error preparing statement: " . $conn->error);
         }
         if ($stmt->execute() === false) {
-            $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-            header("Location: ../login.php");
+            die("Error executing statement: " . $stmt->error);
         }
 
         $result = $stmt->get_result();
@@ -26,12 +25,10 @@ $stmt= $conn->prepare($userVal);
 
             $stmt = $conn->prepare($passVal);
             if ($stmt === false) {
-                $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-                header("Location: ../login.php");
+                die("Error preparing statement: " . $conn->error);
             }
             if ($stmt->execute() === false) {
-                $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-                header("Location: ../login.php");
+                die("Error executing statement: " . $stmt->error);
             }
 
             $result = $stmt->get_result();
@@ -43,9 +40,13 @@ $stmt= $conn->prepare($userVal);
                     header("Location: ../index.php");
                 }
                 if ($valid == false) {
-                    $_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
+                    $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
+            } else {
+                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+                header("Location: ../login.php");}
+$conn -> close();
                 //$_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
                 //header("Location: ../login.php");
 //header('Location:index.php');
