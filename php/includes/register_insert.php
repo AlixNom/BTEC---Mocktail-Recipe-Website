@@ -23,7 +23,6 @@ If($count>0){
     $_SESSION['status'] = "There is already a user with the same username!";
     header("Location: ../register.php");
 } else {
-    $password = stripslashes($_POST['password']);
 
     $sql = "INSERT INTO mocktail_users (uname, name , surname, email, dob) VALUES (?, ?, ?, ? ,?)";
     $stmt = $conn->prepare($sql);
@@ -31,6 +30,9 @@ If($count>0){
     $stmt->bind_param("sssss", $uname, $name, $surname, $email, $dob);
 
     if ($stmt->execute()) {
+        $password = stripslashes($_POST['password']);
+        $password = mysqli_real_escape_string($conn, $password);
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "SELECT id from mocktail_users where uname = '$uname'";
         $stmt = $conn->prepare($sql);
@@ -45,9 +47,9 @@ If($count>0){
         $result = $stmt->get_result();
 
         while ($row = $result->fetch_assoc()) {
-            $sql = "INSERT INTO mocktail_passwords (id, uid) VALUES (?, ?)";
+            $sql = "INSERT INTO mocktail_passwords (id, uid ,pword_hash) VALUES (?, ?, ?)";
             $stmtPass = $conn->prepare($sql);
-            $stmtPass->bind_param("ss", $row['id'], $row['id']);
+            $stmtPass->bind_param("sss", $row['id'], $row['id'], $password_hash);
         if ($stmtPass->execute()) {
             $_SESSION['status'] = "Successfully registered as a user!";
             header("Location: ../login.php");}}
