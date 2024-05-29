@@ -40,8 +40,11 @@ If($count>0){
         if ($stmt->execute() === false) {
             die("Error executing statement: " . $stmt->error);
         }
-        
+
         $result = $stmt->get_result();
+
+        while ($row = $result->fetch_assoc()) {
+            $sql = "INSERT INTO mocktail_passwords (id) VALUES (?)";}
 
         $_SESSION['status'] = "Successfully registered as a user!";
          header("Location: ../login.php");
