@@ -12,7 +12,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 $stmt = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($stmt);
 
-if( $count->num_rows > 0){
+if( $count > 0){
         $result = $stmt->get_result();
         while ($rowUser = $result->fetch_assoc()) {
             $id = $rowUser['id'];
