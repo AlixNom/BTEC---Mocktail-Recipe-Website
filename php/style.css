@@ -8,7 +8,9 @@
 
 }
 a{
-  text-decoration: none
+  text-decoration:solid;
+  padding-left: 10px;
+  color:whitesmoke;
 }
 .hint{
   
