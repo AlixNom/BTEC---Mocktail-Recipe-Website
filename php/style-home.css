@@ -235,4 +235,10 @@ body , html {
   .row{
     flex-direction: column;
   }
+  .row .col {
+    margin: 20px auto;
+  }
+  .col img{
+    max-width: 90%;
+  }
 }
