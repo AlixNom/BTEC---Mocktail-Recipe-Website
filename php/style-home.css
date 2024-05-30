@@ -103,7 +103,22 @@ p {
   background-image:url('img/bartender.jpg') ;
   background-position: center;
   background-size: cover;
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.tiptricks-content{
+  width: 50%;
+  padding:50px;
+  color:white;
+  align-items: center;
+}
+.tiptricks-content h1{
+  font-size: 7vmin;
+  margin: 50px;
+}
+.tiptricks-content p {
+  color:white;
 }
 .alert-error {
   padding: 20px 20px;
