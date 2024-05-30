@@ -24,10 +24,10 @@ session_start();
     if(isset($_SESSION['user'])) {
     ?>
         <div class="alert-success">
-            <strong>Hey!</strong> <?php echo $_SESSION['user'];?>
+            <strong>Logged in as:</strong> <?php echo $_SESSION['user'];?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-    </button>
+            </button>
         </div>
     <?php unset($_SESSION['user']); } ?>
     <header>    
