@@ -30,9 +30,13 @@ session_start();
     </button>
         </div>
     <?php unset($_SESSION['user']); } ?>
-    <div class="header">
-        <h1>Homepage</h1>
+    <header>    
+        <div class="header-content">
+            <h2>Enjoy a mocktail with love ones!</h2>
+            <div class="line"></div>
+            <h1>LIVE LAUGH LOVE!</h1>
         </div>
+    </header>
 
 </body>
 
