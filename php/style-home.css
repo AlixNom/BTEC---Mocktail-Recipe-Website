@@ -4,8 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Nunito',sans-serif;
-  color: white;
-
 }
 a{
   text-decoration: none;
@@ -27,10 +25,12 @@ header {
 .header-content {
   margin-bottom: 150px;
   text-align: center;
+  color: white;
 }
 
 .header-content h2 {
   font-size:  4vmin;
+  color: white;
 }
 .line{
   width: 150px;
