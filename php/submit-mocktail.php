@@ -23,7 +23,7 @@
                 <h3>Make a Cocktail</h3>
                 <form action='includes/login_validation.php' method='post'>
                     <div class="field input">
-                    <input type='combobox' name='combobox' id="combobox-container">
+                    <input type="combobox" name='combobox' id="combobox">
                         <select onchange="addComboBox(this)">
                             <option value="">Select an option</option>
                             <option value="option1">Option 1</option>
