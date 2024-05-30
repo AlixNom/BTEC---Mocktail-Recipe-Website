@@ -9,11 +9,6 @@
 }
 a{
   text-decoration: none;
-  color: purple;
-}
-.a .links{
-  text-decoration: none;
-  color: white;
 }
 header {
   background:
@@ -52,6 +47,16 @@ header {
   font-size:  7vmin;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+.ctn {
+  padding: 8px 15px;
+  background: hwb(129 39% 45%);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: white;
 }
 .hint{
   
