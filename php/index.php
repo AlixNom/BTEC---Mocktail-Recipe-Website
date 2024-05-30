@@ -60,16 +60,16 @@ session_start();
         </div>
         <div class ="row">
             <div class="col">
-                <img src="img/mocktail-explore2.jpg" alt="">
+                <img src="img/mocktail-explore.jpg" alt="">
                 <h4>Newsletter</h4>
                 <p>about the latest trends and updates in the cocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
                 <a href="#" class="ctn">View More</a>
             </div>
             <div class="col">
-                <img src="img/mocktail-submit.jpg" alt="">
+                <img src="img/mocktail-poll.jpg" alt="">
                 <h4>Polls/Quizzes</h4>
                 <p>Challenge yourself and see how much you really know about the art of mixology, or place your opinions out!</p>
-                <a href="#" class="ctn">Make Recipe</a>
+                <a href="#" class="ctn">View More</a>
             </div>
             
         </div>
