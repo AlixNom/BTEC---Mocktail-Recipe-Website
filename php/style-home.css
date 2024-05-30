@@ -160,3 +160,6 @@ header {
   display: flex;
   align-items: center;
 }
+.nav-links .li{
+  margin:0 30px;
+}
