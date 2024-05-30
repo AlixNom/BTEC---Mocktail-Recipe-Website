@@ -60,8 +60,6 @@
                 <div class="hint">
                    Must be at least 8 characters
                 </div>
-                <div class="error">
-                 </div>
                 <div class="field">
                     <input type="submit" name="submit" class="button"value="Register" required>
                 </div>
