@@ -48,13 +48,13 @@ session_start();
                 <img src="img/mocktail-explore.jpg" alt="">
                 <h4>Cocktails</h4>
                 <p>Explore the varieties of cocktail recipes made by multiple of users, You'll never get tired!</p>
-                <a href="#" class="ctn">View</a>
+                <a href="#" class="ctn">View More</a>
             </div>
             <div class="col">
                 <img src="img/mocktail-submit.jpg" alt="">
                 <h4>Submit Your Own</h4>
                 <p>Want to share your own homemade cocktail recipes for others to enjoy?</p>
-                <a href="#" class="ctn">Make</a>
+                <a href="#" class="ctn">Make Recipe</a>
             </div>
         </div>
     </section>

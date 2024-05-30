@@ -176,3 +176,6 @@ body{
   z-index: 100;
   z-index:1;
 }
+body , html {
+  overflow-x: hidden;
+}
