@@ -47,6 +47,8 @@ session_start();
             <div class="col">
                 <img src="img/mocktail-explore.jpg" alt="">
                 <h4>Mocktails</h4>
+                <p>Explore the varieties of mocktail recipes made by multiple of users, You'll never get tired!</p>
+                <a href="#" class="ctn">Learn More</a>
             </div>
         </div>
     </section>
