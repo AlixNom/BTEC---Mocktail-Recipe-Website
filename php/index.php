@@ -35,6 +35,7 @@ session_start();
             <h2>Enjoy a mocktail with love ones!</h2>
             <div class="line"></div>
             <h1>LIVE LAUGH LOVE!</h1>
+            <a href="#" class="ctn">Explore More</a>
         </div>
     </header>
 
