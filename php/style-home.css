@@ -152,8 +152,11 @@ header {
   display: flex;
   flex-direction: row;
   justify-content:space-around;
-  margin: 0 30px;
   line-height: 60px;
   z-index: 100;
   z-index:1;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
 }
