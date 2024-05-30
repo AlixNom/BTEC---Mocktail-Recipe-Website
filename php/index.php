@@ -17,7 +17,6 @@ session_start();
         </div>
         <div class="nav-links">
             <a class="links" href="login.php">Login</a>
-            <div class="seperator"></div>
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
