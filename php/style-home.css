@@ -80,7 +80,7 @@ section{
   align-items: center;
 }
 .row .col img{
-  width: 80%;
+  width: 70%;
   height: 275px;
   object-fit: cover;
 }
