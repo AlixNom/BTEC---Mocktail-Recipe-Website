@@ -22,7 +22,7 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='includes/login_validation.php' method='post'>
-                    <div class="field input" name ="combobox-sprite" id="combobox-container-sprite">
+                    <div class="field input" name ="combobox-sprite" id="combobox-container">
                         <label for="sprite">Base Sprite</label>
                         <select onchange="addComboBox(this)">
                             <option value="">Select an Base Sprite</option>
@@ -35,7 +35,7 @@
                             <option value="option3">Whiskey</option>
                         </select>
                     </div>
-                    <div class="field input" name ="combobox-wine" id="combobox-container-wine">
+                    <div class="field input" name ="combobox-wine" id="combobox-container">
                         <label for="sprite">Wine</label>
                         <select onchange="addComboBox(this)">
                             <option value="">Select an Wine</option>
