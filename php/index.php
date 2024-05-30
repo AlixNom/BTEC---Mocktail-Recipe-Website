@@ -35,7 +35,7 @@ session_start();
             <h2>Enjoy a cocktail with love ones!</h2>
             <div class="line"></div>
             <h1>LIVE LAUGH LOVE!</h1>
-            <a href="#" class="ctn">Newsletter</a>
+            <a href="#" class="ctn">Newsletter Sign Up</a>
         </div>
     </header>
     <section class="cocktail-section">
