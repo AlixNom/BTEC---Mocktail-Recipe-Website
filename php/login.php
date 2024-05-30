@@ -67,7 +67,11 @@ if(isset($_SESSION['status-warning'])) {
             </div>
         </div>
     <!--<a href='subscribe.php'>Subscribe</a>-->";
-
+    <section class = "footer">
+        <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
+        <p>Copyright © 2024 Alexis Zulueta</p>
+    </section>
+</body>
 </body>
 </html>
 <script type="text/javascript" src="onload.js"></script>

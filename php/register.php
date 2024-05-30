@@ -71,6 +71,10 @@
             </form>
         </div>
     </div>
-    
+    <section class = "footer">
+        <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
+        <p>Copyright © 2024 Alexis Zulueta</p>
+    </section>
+</body>
 </body>
 </html>
