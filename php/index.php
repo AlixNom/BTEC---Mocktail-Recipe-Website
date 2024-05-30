@@ -46,9 +46,15 @@ session_start();
         <div class ="row">
             <div class="col">
                 <img src="img/mocktail-explore.jpg" alt="">
-                <h4>Mocktails</h4>
-                <p>Explore the varieties of mocktail recipes made by multiple of users, You'll never get tired!</p>
-                <a href="#" class="ctn">Learn More</a>
+                <h4>Cocktails</h4>
+                <p>Explore the varieties of cocktail recipes made by multiple of users, You'll never get tired!</p>
+                <a href="#" class="ctn">View</a>
+            </div>
+            <div class="col">
+                <img src="img/mocktail-submit.jpg" alt="">
+                <h4>Submit Your Own</h4>
+                <p>Want to share your own homemade cocktail recipes for others to enjoy?</p>
+                <a href="#" class="ctn">Make</a>
             </div>
         </div>
     </section>
