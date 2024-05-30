@@ -156,10 +156,3 @@ header {
   z-index: 100;
   z-index:1;
 }
-.nav-links{
-  display: flex;
-  align-items: center;
-}
-.nav-links .li{
-  margin:0 30px;
-}
