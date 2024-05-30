@@ -80,9 +80,16 @@ section{
   align-items: center;
 }
 .row .col img{
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+}
+.cocktail-section .row{
+  margin-top: 50px;
+}
+h4 {
+  font-size: 2vmin;
+  margin: 20px auto;
 }
 .hint{
   
