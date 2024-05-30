@@ -11,6 +11,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 $stmt= $conn->prepare($userVal);
 $result = $stmt->get_result();
+if ($result->num_rows > 0) {
         if ($stmt === false) {
             die("Error preparing statement: " . $conn->error);
         }
@@ -43,6 +44,9 @@ $result = $stmt->get_result();
                     $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
+            } else {
+                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+                header("Location: ../login.php");}
 $conn -> close();
 $stmt->close();
                 //$_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
