@@ -80,7 +80,7 @@ section{
   align-items: center;
 }
 .row .col img{
-  width: 350px;
+  width: 375px;
   height: 250px;
   object-fit: cover;
 }
@@ -92,7 +92,7 @@ h4 {
   margin: 20px auto;
 }
 p {
-  padding: 0px 20px;
+  padding: 0px 40px;
 }
 .cocktail-section .ctn{
   margin-top:30px;
