@@ -14,6 +14,13 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 //if( $count > 0){
     $stmt = $conn->prepare($userVal);
+        if ($stmt === false) {
+            die("Error preparing statement: " . $conn->error);
+        }
+        if ($stmt->execute() === false) {
+            die("Error executing statement: " . $stmt->error);
+        }
+            $result = $stmt->get_result();    
         while ($rowUser = $result->fetch_assoc()) {
             $id = $rowUser['id'];
             $passVal = "SELECT pword_hash from mocktail_passwords where id = $id";
