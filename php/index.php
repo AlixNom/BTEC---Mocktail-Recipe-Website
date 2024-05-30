@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +10,7 @@
 </head>
 
 <body>
-    <?php
 
-    echo'
     <div class="nav">
         <div class="logo">
             Logo
@@ -20,11 +20,20 @@
             <a href="register.php">Not a Member?</a>
         </div>
     </div>
+    <?php
+    if(isset($_SESSION['user'])) {
+    ?>
+        <div class="alert-success">
+            <strong>Hey!</strong> <?php echo $_SESSION['user'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+    </button>
+        </div>
+    <?php unset($_SESSION['user']); } ?>
     <div class="header">
         <h1>Homepage</h1>
         </div>
-        ';
-        ?>
+
 </body>
 
 </html>
