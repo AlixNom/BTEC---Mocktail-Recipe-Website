@@ -43,6 +43,12 @@ session_start();
             <h1>Explore</h1>
             <div class="line"></div>
         </div>
+        <div class ="row">
+            <div class="col">
+                <img src="img/mocktail-explore.jpg" alt="">
+                <h4>Mocktails</h4>
+            </div>
+        </div>
     </section>
 
 </body>
