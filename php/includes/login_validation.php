@@ -12,7 +12,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
     $stmt = mysqli_query($conn, $userVal);
     $count = mysqli_num_rows($stmt);
 
-    if( $count = 0){$_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+    if( $count === 0){$_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
         header("Location: ../login.php");};
     $stmt = $conn->prepare($userVal);
         if ($stmt === false) {
