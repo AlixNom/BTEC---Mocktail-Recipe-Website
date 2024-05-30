@@ -11,6 +11,10 @@ a{
   text-decoration: none;
   color: purple;
 }
+.a .links{
+  text-decoration: none;
+  color: white;
+}
 header {
   background:
   url('img/mocktail-home.jpg') no-repeat;
