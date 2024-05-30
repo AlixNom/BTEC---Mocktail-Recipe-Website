@@ -10,7 +10,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 
 $stmt= $conn->prepare($userVal);
-if($result->num_rows > 0){
+if($stmt->num_rows > 0){
 
         if ($stmt === false) {
             $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
