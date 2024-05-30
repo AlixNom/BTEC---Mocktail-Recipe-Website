@@ -101,6 +101,7 @@ p {
   width: 100%;
   height:80vh;
   background-image:url('img/bartender.jpg') ;
+  background-position: center;
 }
 .alert-error {
   padding: 20px 20px;
