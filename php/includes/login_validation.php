@@ -6,14 +6,15 @@ $user = mysqli_real_escape_string($conn, $user);
 $password = $_POST['password'];
 $hashed = password_hash($password, PASSWORD_DEFAULT);
 //echo $hashed;//echo $user;
-$userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
+$userVal = "SELECT * from mocktail_users where uname = '$user'";
 
 
 $stmt = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($stmt);
 
 if( $count > 0){
-        $stmt = mysqli_query($conn, $userVal);
+        $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
+        $stmt = $conn->prepare($userVal);
         $result = $stmt->get_result();
         while ($rowUser = $result->fetch_assoc()) {
             $id = $rowUser['id'];
