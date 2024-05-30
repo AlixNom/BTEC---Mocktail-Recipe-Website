@@ -13,6 +13,7 @@ $stmt = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($stmt);
 
 if( $count > 0){
+        $stmt = $conn->prepare($userVal);
         $result = $stmt->get_result();
         while ($rowUser = $result->fetch_assoc()) {
             $id = $rowUser['id'];
