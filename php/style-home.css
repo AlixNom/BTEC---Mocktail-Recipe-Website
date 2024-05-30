@@ -241,4 +241,10 @@ body , html {
   .col img{
     max-width: 90%;
   }
+  .tiptricks-content{
+    width: 100%;
+  }
+  .footer{
+    padding: 10px;
+  }
 }
