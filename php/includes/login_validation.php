@@ -6,14 +6,13 @@ $user = mysqli_real_escape_string($conn, $user);
 $password = $_POST['password'];
 $hashed = password_hash($password, PASSWORD_DEFAULT);
 //echo $hashed;//echo $user;
-$userVal = "SELECT * from mocktail_users where uname = '$user'";
+$userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 
 $stmt = mysqli_query($conn, $userVal);
 $count = mysqli_num_rows($stmt);
 
-if( $count > 0){
-        $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
+//if( $count > 0){
         $stmt = $conn->prepare($userVal);
         $result = $stmt->get_result();
         while ($rowUser = $result->fetch_assoc()) {
@@ -40,12 +39,9 @@ if( $count > 0){
                     $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
-            } else {
-                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
-                header("Location: ../login.php");
-            }
+//            } else {
+//                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+//               header("Location: ../login.php");
+//            }
 $conn -> close();
 $stmt->close();
-                //$_SESSION['status'] = "Incorrect Password/Username. Please Try Again!";
-                //header("Location: ../login.php");
-//header('Location:index.php');
