@@ -9,8 +9,8 @@ $hashed = password_hash($password, PASSWORD_DEFAULT);
 $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 
 
-$stmt = mysqli_query($conn, $userVal);
-$count = mysqli_num_rows($stmt);
+//$stmt = mysqli_query($conn, $userVal);
+//$count = mysqli_num_rows($stmt);
 
 //if( $count > 0){
         $stmt = $conn->prepare($userVal);
