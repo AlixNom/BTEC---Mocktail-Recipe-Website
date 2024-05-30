@@ -73,8 +73,10 @@ section{
   display: flex;
   align-items: center;
 }
-.row .col {
-  width: 30%;
+.row .col img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 .hint{
   
