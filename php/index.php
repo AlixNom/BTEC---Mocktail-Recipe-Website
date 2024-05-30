@@ -60,7 +60,7 @@ session_start();
         </div>
         <div class ="row">
             <div class="col">
-                <img src="img/mocktail-explore.jpg" alt="">
+                <img src="img/mocktail-games.jpg" alt="">
                 <h4>Newsletter</h4>
                 <p>about the latest trends and updates in the cocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
                 <a href="#" class="ctn">View More</a>
