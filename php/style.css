@@ -9,6 +9,7 @@
 }
 a{
   text-decoration: none;
+  color: white;
 
 }
 .hint{
@@ -194,5 +195,4 @@ body , html {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  color:black;
 }
