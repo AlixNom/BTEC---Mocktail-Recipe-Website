@@ -108,9 +108,10 @@ p {
   align-items: center;
 }
 .tiptricks-content{
-  width: 50%;
+  width: 60%;
   padding:50px;
   color:white;
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
