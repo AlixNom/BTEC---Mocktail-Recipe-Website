@@ -9,7 +9,6 @@
 }
 a{
   text-decoration: none;
-  color: white;
 
 }
 .hint{
@@ -193,6 +192,7 @@ body , html {
 }
 .combo-multi{
   display: flex;
+  align-items:start;
   justify-content: space-between;
   flex-direction: column;
 }
