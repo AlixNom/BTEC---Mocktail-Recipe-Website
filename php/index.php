@@ -61,7 +61,7 @@ session_start();
     <section class="tiptricks">
         <div class="tiptricks-content">
         <h1>SECRETS TO MAKING THE BEST COCKTAIL!</h1>
-        <p>Crafting the perfect cocktail is an art form that blends creativity with precision. Whether you’re a novice mixologist or a seasoned bartender, there are numerous tips and tricks to enhance your cocktail-making skills. Here's a comprehensive guide to elevating your cocktail game:</p>
+        <p>Crafting the perfect cocktail is an art form that blends creativity with precision, there are numerous tips and tricks to enhance your cocktail-making skills. Here's a comprehensive guide to elevating your cocktail game:</p>
         <a href="#" class="ctn"> Learn More </a>
         </div>
     </section>
