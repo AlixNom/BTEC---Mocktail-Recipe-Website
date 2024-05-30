@@ -54,7 +54,7 @@ session_start();
                 <img src="img/mocktail-submit.jpg" alt="">
                 <h4>Submit Your Own</h4>
                 <p>Would you like to share your own homemade cocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow cocktail lovers and become the next big hit!</p>
-                <a href="#" class="ctn">Make Recipe</a>
+                <a href="submit-mocktail.php" class="ctn">Make Recipe</a>
             </div>
             
         </div>
