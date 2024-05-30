@@ -22,7 +22,8 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='includes/login_validation.php' method='post'>
-                    <div class="field input" id="combobox-container">
+                    <div class="field input">
+                    <input type='combobox' name='combobox' id="combobox-container">
                         <select onchange="addComboBox(this)">
                             <option value="">Select an option</option>
                             <option value="option1">Option 1</option>
@@ -31,7 +32,7 @@
                         </select>
                     </div>
                     <div class='field'>
-                        <input type='submit' name='submit' class='button'value='Login' required>
+                        <input type='submit' name='submit' class='button'value='Submit Recipe' required>
                     </div>
                 </form>
             </div>
