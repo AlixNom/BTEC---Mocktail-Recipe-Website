@@ -16,8 +16,8 @@ session_start();
             Logo
         </div>
         <div class="nav-links">
-            <li><a class="links" href="login.php">Login</a></li>
-            <li><a class="links" href="register.php">Not a Member?</a></li>
+            <a class="links" href="login.php">Login</a>
+            <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
     <?php
