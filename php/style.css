@@ -190,3 +190,6 @@ body , html {
 .footer .p{
   color:grey;
 }
+.combo-multi{
+  flex-direction: column;
+}
