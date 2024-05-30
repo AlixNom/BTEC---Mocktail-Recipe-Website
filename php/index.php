@@ -45,7 +45,7 @@ session_start();
         </div>
         <div class ="row">
             <div class="col">
-                <img src="img/mocktail-explore.jpg" alt="">
+                <img src="img/mocktail-explore2.jpg" alt="">
                 <h4>Cocktails</h4>
                 <p>Explore the varieties of cocktail recipes made by multiple of users, You'll never get tired!</p>
                 <a href="#" class="ctn">View More</a>
