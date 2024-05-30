@@ -8,11 +8,12 @@
 
 }
 a{
-  text-decoration: none
+  text-decoration: none;
+  color: purple;
 }
 header {
   background:
-  url('img/alcohol.jpg') no-repeat;
+  url('img/mocktail-home.jpg') no-repeat;
   width: 100vw;
   height: 100vh;
   background-size: cover;
