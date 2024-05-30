@@ -232,6 +232,11 @@ body , html {
   color:white;
 }
 @media only screen and (max-width:850px){
+  .title{
+    text-align: center;
+    font-size:5vmin;
+    color:#363636;
+  }
   .row{
     flex-direction: column;
   }
