@@ -14,6 +14,6 @@
         </select>
     </div>
 
-    <script src="script.js"></script>
+    <script src="addMocktailCombobox.js"></script>
 </body>
 </html>
