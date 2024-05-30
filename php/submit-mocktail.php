@@ -22,9 +22,9 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='includes/login_validation.php' method='post'>
-                    <div class="field input">
+                    <div class="field input" name ="combobox" id="combobox-container">
                         <label for="sprite">Sprite</label>
-                        <select name="sprite" id="combobox-container" onchange="addComboBox(this)">
+                        <select onchange="addComboBox(this)">
                             <option value="">Select an option</option>
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
