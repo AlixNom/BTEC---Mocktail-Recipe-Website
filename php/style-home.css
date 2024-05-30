@@ -79,11 +79,11 @@ section{
   flex-direction:column ;
   align-items: center;
 }
-/*.row .col img{
-  width: 375px;
+.row .col img{
+  width: 80%;
   height: 250px;
   object-fit: cover;
-}*/
+}
 .cocktail-section .row{
   margin-top: 50px;
 }
