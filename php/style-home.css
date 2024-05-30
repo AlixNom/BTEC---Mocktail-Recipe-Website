@@ -68,6 +68,14 @@ section{
   font-size:2vmin;
   color:#363636;
 }
+
+.row{
+  display: flex;
+  align-items: center;
+}
+.row .col {
+  width: 80%;
+}
 .hint{
   
   color: darkgray;
