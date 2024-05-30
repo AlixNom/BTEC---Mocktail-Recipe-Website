@@ -223,7 +223,7 @@ body , html {
 .footer{
   width:100%;
   height: 90px;
-  padding: 20px 80px;
+  padding: 0 80px;
   margin: 0;
   background:#363636;
   text-align: center;
