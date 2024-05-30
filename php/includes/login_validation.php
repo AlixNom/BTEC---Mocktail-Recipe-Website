@@ -12,10 +12,12 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 $stmt= $conn->prepare($userVal);
 
         if ($stmt === false) {
-            die("Error preparing statement: " . $conn->error);
+            $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+            header("Location: ../login.php");
         }
         if ($stmt->execute() === false) {
-            die("Error executing statement: " . $stmt->error);
+            $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+            header("Location: ../login.php");
         }
 
         $result = $stmt->get_result();
