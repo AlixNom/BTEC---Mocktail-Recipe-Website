@@ -112,13 +112,17 @@ p {
   padding:50px;
   color:white;
   align-items: center;
+  flex-direction: column;
 }
 .tiptricks-content h1{
-  font-size: 7vmin;
+  font-size: 5vmin;
   margin: 50px;
 }
 .tiptricks-content p {
   color:white;
+}
+.tiptricks-content .ctn{
+  margin-top: 40px;
 }
 .alert-error {
   padding: 20px 20px;
