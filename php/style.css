@@ -192,7 +192,6 @@ body , html {
 }
 .combo-multi{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   color:black;
