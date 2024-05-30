@@ -58,6 +58,14 @@ header {
   -o-border-radius: 30px;
   color: white;
 }
+section{
+  width: 80%;
+  margin: 80px auto;
+}
+.title{
+  text-align: center;
+  font-size:4vmin;
+}
 .hint{
   
   color: darkgray;

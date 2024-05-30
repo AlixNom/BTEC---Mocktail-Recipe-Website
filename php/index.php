@@ -38,6 +38,12 @@ session_start();
             <a href="#" class="ctn">Explore More</a>
         </div>
     </header>
+    <section>
+        <div class="title">
+            <h1>Explore</h1>
+            <div class="line"></div>
+        </div>
+    </section>
 
 </body>
 
