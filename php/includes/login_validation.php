@@ -13,8 +13,9 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
 //$count = mysqli_num_rows($stmt);
 
 //if( $count > 0){
-        $stmt = $conn->prepare($userVal);
-        $result = $stmt->get_result();
+    $stmt = $conn->prepare($userVal);
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
         while ($rowUser = $result->fetch_assoc()) {
             $id = $rowUser['id'];
             $passVal = "SELECT pword_hash from mocktail_passwords where id = $id";
@@ -39,9 +40,9 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
                     $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
                     header("Location: ../login.php");
                 }}}
-//            } else {
-//                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
-//               header("Location: ../login.php");
-//            }
+           } else {
+                $_SESSION['status-warning'] = "Incorrect Password/Username. Please Try Again!";
+               header("Location: ../login.php");
+            }
 $conn -> close();
 $stmt->close();
