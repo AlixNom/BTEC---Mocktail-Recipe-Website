@@ -23,8 +23,8 @@
                 <h3>Make a Cocktail</h3>
                 <form action='' method='post'>
                     <div class="field input" id="combobox-1">
+                        <label for="sprite">Base Sprite</label>
                         <div class ="combo-content">
-                            <label for="sprite">Base Sprite</label>
                             <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
