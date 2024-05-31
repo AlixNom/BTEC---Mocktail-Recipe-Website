@@ -1,25 +1,20 @@
-function addComboBox(selectElement) {
-    if (selectElement.value !== "") {
-        // Create a new combobox
-        const newSelect = document.createElement("select");
-        var list =""
-        var i;
-        for (i = 0; i < x.length; i++) {
-            newSelect.innerHTML = "<option>" + txt + x.options[i].text + "</option>";
-          } 
-        /*newSelect.innerHTML = `
-            <option value="">Select an option</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        `;*/
-        newSelect.onchange = function() { addComboBox(this); };
+function addCombobox(selectedValue) {
+    const container = document.getElementById('combobox-container');
+    
+    // Create new input element
+    const newInput = document.createElement('input');
+    newInput.setAttribute('type', 'text');
+    newInput.setAttribute('list', 'options');
+    newInput.classList.add('combobox');
 
-        // Append the new combobox to the container
-        const container = document.getElementById("combobox-container");
-        container.appendChild(newSelect);
-
-        // Remove the onchange event from the current select to avoid adding multiple new comboboxes
-        selectElement.onchange = null;
-    }
+    // Insert the new input element before the current input element
+    const firstCombobox = document.querySelector('.combobox');
+    container.insertBefore(newInput, firstCombobox);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const combobox = document.getElementById('combobox');
+    combobox.addEventListener('change', function() {
+        addCombobox(this.value);
+    });
+});
