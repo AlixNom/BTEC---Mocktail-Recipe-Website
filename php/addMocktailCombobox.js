@@ -24,7 +24,7 @@ function addComboBox(selectElement) {
 
         // Create a new combobox and populate it with the options
         const newSelect = document.createElement("select");
-        newSelect.name = "combobox";
+        newSelect.name = `${currentID}`;
         newSelect.innerHTML = optionsHTML;
         newSelect.onchange = function() { addComboBox(this); };
 
