@@ -35,6 +35,7 @@
                             <option value="option3">Whiskey</option>
                         </select>
                     </div>
+                    <div class="field input" id="combobox-1-additional"></div>
                     <div class="field input" id="combobox-2">
                         <label for="sprite">Wine</label>
                         <select name="combobox-2" onchange="addComboBox(this)">

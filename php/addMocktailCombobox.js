@@ -21,11 +21,13 @@ function addComboBox(selectElement) {
 
         const optionsHTML = selectElement.innerHTML;
         const currentID = selectElement.name;
+        const additionalFields = document.getElementById(`${currentID}-additional`);
+        additionalFields.innerHTML = '';
 
         const textInput = document.createElement("input");
         textInput.type = "text";
-        textInput.name = "additionalTextInput";
-        textInput.placeholder = "Enter additional information";
+        textInput.name = "amount";
+        textInput.placeholder = "e.g 0.5";
 
         const newSelect = document.createElement("select");
         newSelect.name = `${currentID}`;
