@@ -22,9 +22,9 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='' method='post'>
-                    <div class="field input" id="combobox-1">
+                    <div class="field input" id="combobox">
                             <label for="sprite">Base Sprite</label>
-                            <select name ="combobox-1">
+                            <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
                                 <option value="option2">Gin</option>
