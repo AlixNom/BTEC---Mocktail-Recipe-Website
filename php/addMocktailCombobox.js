@@ -20,9 +20,7 @@ function addComboBox(selectElement) {
     if (selectElement.value !== "") {
 
         const optionsHTML = selectElement.innerHTML;
-        const currentID = selectElement.name;
-        const additionalFields = document.getElementById(`${currentID}-additional`);
-        additionalFields.innerHTML = '';
+        const currentID = selectElement.name;;
 
         const textInput = document.createElement("input");
         textInput.type = "text";
