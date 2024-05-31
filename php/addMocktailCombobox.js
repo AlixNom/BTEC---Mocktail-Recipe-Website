@@ -1,20 +1,18 @@
-function addCombobox(selectedValue) {
-    const container = document.getElementById('combobox-container');
-    
-    // Create new input element
-    const newInput = document.createElement('input');
-    newInput.setAttribute('type', 'text');
-    newInput.setAttribute('list', 'options');
-    newInput.classList.add('combobox');
+function addComboBox(selectElement) {
+    if (selectElement.value !== "") {
+        const newSelect = document.createElement("select");
+        newSelect.name = "combobox[]";
+        newSelect.innerHTML = `
+            <option value="">Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        `;
+        newSelect.onchange = function() { addComboBox(this); };
 
-    // Insert the new input element before the current input element
-    const firstCombobox = document.querySelector('.combobox');
-    container.insertBefore(newInput, firstCombobox);
+        const container = document.getElementById("combobox-container");
+        container.appendChild(newSelect);
+
+        selectElement.onchange = null;
+    }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const combobox = document.getElementById('combobox');
-    combobox.addEventListener('change', function() {
-        addCombobox(this.value);
-    });
-});
