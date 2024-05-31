@@ -162,6 +162,9 @@ body{
   color:#363636;
   z-index:1;
 }
+.form-box form .recipe-input .recipe-input label{
+  font-size: 10px;
+}
 
 
 .button{
