@@ -36,8 +36,8 @@
                                 <option value="option7">Whiskey</option>
                             </select>
                             <div class='field input'>
-                            <label for='amount'>Amount</label>
-                            <input type='text' name='amount' id='amount' required>
+                                <label for='amount'>Amount</label>
+                                <input type='text' name='amount' id='amount' required>
                             </div>
                             <select id ="unit">
                                 <option value="">Select an Base Sprite</option>
