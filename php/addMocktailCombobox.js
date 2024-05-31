@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-function addComboBox(selectElement) {
+/*function addComboBox(selectElement) {
     if (selectElement.value !== "") {
 
         const optionsHTML = selectElement.innerHTML;
@@ -57,4 +57,4 @@ function addComboBox(selectElement) {
 
         selectElement.onchange = null;
     }
-}
+}*/
