@@ -24,7 +24,6 @@
                 <form action='includes/login_validation.php' method='post'>
                     <div class="field input" name ="combobox-sprite" id="combobox-container">
                         <input type="text" list="options" id="combobox" class="combobox" name="combobox">
-                    </div>
                         <label for="sprite">Base Sprite</label>
                         <select onchange="addComboBox(this)">
                             <option value="">Select an Base Sprite</option>
@@ -36,7 +35,7 @@
                             <option value="option3">Vodka</option>
                             <option value="option3">Whiskey</option>
                         </select>
-                    
+                    </div>
                     <div class="field input" name ="combobox-wine" id="combobox-container">
                         <label for="sprite">Wine</label>
                         <select onchange="addComboBox(this)">
