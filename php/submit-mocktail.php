@@ -35,7 +35,7 @@
                                 <option value="option6">Vodka</option>
                                 <option value="option7">Whiskey</option>
                             </select>
-                            <div class='field input'>
+                            <div class='field input2'>
                                 <label for='amount'>Amount</label>
                                 <input type='text' name='amount' id='amount' required>
                             </div>
