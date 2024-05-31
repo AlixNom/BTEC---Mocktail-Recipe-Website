@@ -24,7 +24,7 @@
                 <form action='includes/login_validation.php' method='post'>
                     <div class="field input" id="combobox-1">
                             <label for="sprite">Base Sprite</label>
-                            <select name ="combobox-1" onchange="addComboBox()">
+                            <select name ="combobox-1" onchange="addComboBox(this)">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
                                 <option value="option2">Gin</option>
