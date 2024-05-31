@@ -24,7 +24,7 @@
                 <form action='' method='post'>
                     <div class="field input" id="combobox-1">
                         <label for="sprite">Base Sprite</label>
-                        <div class = 'recipe-content input'>
+                        <div class = 'recipe-content'>
                             <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
@@ -35,7 +35,7 @@
                                 <option value="option6">Vodka</option>
                                 <option value="option7">Whiskey</option>
                             </select>
-                            <div class='recipe-input'>
+                            <div class='field input'>
                                 <label for='amount'>Amount</label>
                                 <input type='text' name='amount' id='amount' required>
                             </div>
