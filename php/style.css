@@ -141,6 +141,14 @@ body{
   z-index:1;
 }
 
+.form-box form .recipe-field{
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  width:60%;
+  z-index:1;
+}
+
 
 .button{
   background: hwb(129 39% 45%);
