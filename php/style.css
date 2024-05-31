@@ -128,7 +128,7 @@ body{
 }
 
 .form-box form .input input{
-  height: 40px;
+  height: 400px;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;
@@ -140,19 +140,7 @@ body{
   color:#363636;
   z-index:1;
 }
-.form-box form .input input .combo-content .input input{
-  width: 10px;
-  font-size: 16px;
-  padding:0 10px ;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  outline: none;
-  color:#363636;
-  z-index:1;
-}
+
 
 
 .button{
