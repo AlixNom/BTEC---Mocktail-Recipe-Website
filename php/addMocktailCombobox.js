@@ -22,11 +22,18 @@ function addComboBox(selectElement) {
 
         const optionsHTML = selectElement.innerHTML;
         const currentID = selectElement.name;
+        
 
         const newSelect = document.createElement("select");
         newSelect.name = `${currentID}`;
         newSelect.innerHTML = optionsHTML;
         newSelect.onchange = function() { addComboBox(this); };
+
+        const input = document.createElement("input")
+        input.type = "text";
+        input.name = "amount";
+
+        const inputContainer = document.getElementById("amount-form");
 
         const container = document.getElementById(`${currentID}`)
         container.appendChild(newSelect);
