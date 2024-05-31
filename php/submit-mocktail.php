@@ -22,9 +22,9 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='' method='post'>
-                    <div class="field recipe-input" id="combobox-1">
+                    <div class="recipe-field input" id="combobox-1">
                         <label for="sprite">Base Sprite</label>
-                        <div class ="combo-content">
+                        <div class ="recipe-content">
                             <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
@@ -35,7 +35,7 @@
                                 <option value="option6">Vodka</option>
                                 <option value="option7">Whiskey</option>
                             </select>
-                            <div class='field input'>
+                            <div class='recipe-input'>
                                 <label for='amount'>Amount</label>
                                 <input type='text' name='amount' id='amount' required>
                             </div>
