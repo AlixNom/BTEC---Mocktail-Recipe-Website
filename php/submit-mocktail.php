@@ -22,7 +22,7 @@
             <div class='form form-box'>
                 <h3>Make a Cocktail</h3>
                 <form action='' method='post'>
-                    <div class="field input" id="combobox">
+                    <div class="field input" id="combobox-1">
                             <label for="sprite">Base Sprite</label>
                             <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
@@ -34,8 +34,8 @@
                                 <option value="option3">Vodka</option>
                                 <option value="option3">Whiskey</option>
                             </select>
+                            <div class="field input" id="amount-form"></div>
                     </div>
-                    <div class="field input" id="amount-form"></div>
                     <div class="field input" id="combobox-2">
                         <label for="sprite">Wine</label>
                         <select name="combobox-2" onchange="addComboBox(this)">
