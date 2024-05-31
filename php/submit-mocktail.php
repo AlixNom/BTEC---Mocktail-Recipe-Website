@@ -44,6 +44,15 @@
                             <option value="option3">Sherry</option>
                         </select>
                     </div>
+                    <div class="field input" id="combobox-3">
+                        <label for="sprite">Wine</label>
+                        <select name="combobox-3" onchange="addComboBox(this)">
+                            <option value="">Select an Wine</option>
+                            <option value="option1">Dry White Wine</option>
+                            <option value="option2">Red Wine</option>
+                            <option value="option3">Sherry</option>
+                        </select>
+                    </div>
                     <div class='field'>
                         <input type='submit' name='submit' class='button'value='Submit Recipe' required>
                     </div>
