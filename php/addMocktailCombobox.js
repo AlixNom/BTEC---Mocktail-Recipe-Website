@@ -44,7 +44,7 @@ function addComboBox(selectElement) {
         // Append the wrapper to the container
 
         const container = document.getElementById(`${currentID}`)
-        container.appendChild(newComboForm);
+        container.appendChild(newSelect,newComboForm);
 
         selectElement.onchange = null;
     }
