@@ -20,6 +20,7 @@ function addComboBox(selectElement) {
     if (selectElement.value !== "") {
         // Get the HTML of the options from the initial combobox
         const optionsHTML = selectElement.innerHTML;
+        const currentID = selectElement.name;
 
         // Create a new combobox and populate it with the options
         const newSelect = document.createElement("select");
@@ -28,7 +29,7 @@ function addComboBox(selectElement) {
         newSelect.onchange = function() { addComboBox(this); };
 
         // Append the new combobox to the container
-        const container = document.getElementById(`combobox-1`)
+        const container = document.getElementById(`${currentID}`)
         container.appendChild(newSelect);
 
         // Remove the onchange event from the current select to avoid adding multiple new comboboxes
