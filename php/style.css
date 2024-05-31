@@ -145,11 +145,11 @@ body{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
-  width:50%;
+  width:200px;
   z-index:1;
 }
 .form-box form .recipe-input .recipe-input input{
-  height: 10px;
+  height: 30px;
   width: 100%;
   font-size: 16px;
   padding:0 10px ;
