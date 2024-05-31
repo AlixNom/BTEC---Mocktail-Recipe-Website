@@ -23,18 +23,29 @@
                 <h3>Make a Cocktail</h3>
                 <form action='' method='post'>
                     <div class="field input" id="combobox-1">
+                        <div class ="combo-content">
                             <label for="sprite">Base Sprite</label>
                             <select id ="combobox-1">
                                 <option value="">Select an Base Sprite</option>
                                 <option value="option1">Brandy</option>
                                 <option value="option2">Gin</option>
                                 <option value="option3">Rum</option>
-                                <option value="option3">Rhye Whiskey</option>
-                                <option value="option3">Tequila</option>
-                                <option value="option3">Vodka</option>
-                                <option value="option3">Whiskey</option>
+                                <option value="option4">Rhye Whiskey</option>
+                                <option value="option5">Tequila</option>
+                                <option value="option6">Vodka</option>
+                                <option value="option7">Whiskey</option>
                             </select>
-                            <div class="field input" id="amount-form"></div>
+                            <div class='field input'>
+                            <label for='amount'>Amount</label>
+                            <input type='text' name='amount' id='amount' required>
+                            </div>
+                            <select id ="unit">
+                                <option value="">Select an Base Sprite</option>
+                                <option value="option1">Ounce</option>
+                                <option value="option2">ml</option>
+
+                            </select>
+                        </div>
                     </div>
                     <div class="field input" id="combobox-2">
                         <label for="sprite">Wine</label>
