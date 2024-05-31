@@ -140,7 +140,7 @@ body{
   color:#363636;
   z-index:1;
 }
-.form-box form .input input .amount-form{
+.form-box form .input input .combo-content .input input{
   width: 10px;
   font-size: 16px;
   padding:0 10px ;
