@@ -112,7 +112,7 @@ body{
   z-index:1;
 }
 .form-box h3{
-  font-size: 25px;
+  font-size: 3vmin;
   font-weight: 700;
   padding-bottom: 10px;
   border-bottom: 1px solid #363636;
@@ -151,7 +151,7 @@ body{
 .form-box form .recipe-input .recipe-input input{
   height: 30px;
   width: 100%;
-  font-size: 16px;
+  font-size: 2vmin;
   padding:0 10px ;
   border-radius: 5px;
   -webkit-border-radius: 5px;
