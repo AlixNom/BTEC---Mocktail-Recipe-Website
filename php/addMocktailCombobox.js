@@ -20,7 +20,10 @@ function addComboBox(selectElement) {
     if (selectElement.value !== "") {
 
         const optionsHTML = selectElement.innerHTML;
-        const currentID = selectElement.name;;
+        const currentID = selectElement.name;
+
+        const newComboForm = document.createElement("div");
+        newComboForm.className = "combo-form";
 
         const textInput = document.createElement("input");
         textInput.type = "text";
@@ -32,8 +35,16 @@ function addComboBox(selectElement) {
         newSelect.innerHTML = optionsHTML;
         newSelect.onchange = function() { addComboBox(this); };
 
+        // Create a remove button
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.innerText = "Remove";
+        removeButton.onclick = function() { removeComboBox(newComboForm); };
+        
+        // Append the wrapper to the container
+
         const container = document.getElementById(`${currentID}`)
-        container.appendChild(newSelect);
+        container.appendChild(newComboForm);
 
         selectElement.onchange = null;
     }

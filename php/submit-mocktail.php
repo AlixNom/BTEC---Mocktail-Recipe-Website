@@ -23,31 +23,24 @@
                 <h3>Make a Cocktail</h3>
                 <form action='includes/login_validation.php' method='post'>
                     <div class="field input" id="combobox-1">
-                        <label for="sprite">Base Sprite</label>
-                        <select name ="combobox-1" onchange="addComboBox(this)">
-                            <option value="">Select an Base Sprite</option>
-                            <option value="option1">Brandy</option>
-                            <option value="option2">Gin</option>
-                            <option value="option3">Rum</option>
-                            <option value="option3">Rhye Whiskey</option>
-                            <option value="option3">Tequila</option>
-                            <option value="option3">Vodka</option>
-                            <option value="option3">Whiskey</option>
-                        </select>
+                        <div class="combo-form">
+                            <label for="sprite">Base Sprite</label>
+                            <select name ="combobox-1" onchange="addComboBox(this)">
+                                <option value="">Select an Base Sprite</option>
+                                <option value="option1">Brandy</option>
+                                <option value="option2">Gin</option>
+                                <option value="option3">Rum</option>
+                                <option value="option3">Rhye Whiskey</option>
+                                <option value="option3">Tequila</option>
+                                <option value="option3">Vodka</option>
+                                <option value="option3">Whiskey</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="field input" id="combobox-1-additional"></div>
                     <div class="field input" id="combobox-2">
                         <label for="sprite">Wine</label>
                         <select name="combobox-2" onchange="addComboBox(this)">
-                            <option value="">Select an Wine</option>
-                            <option value="option1">Dry White Wine</option>
-                            <option value="option2">Red Wine</option>
-                            <option value="option3">Sherry</option>
-                        </select>
-                    </div>
-                    <div class="field input" id="combobox-3">
-                        <label for="sprite">Wine</label>
-                        <select name="combobox-3" onchange="addComboBox(this)">
                             <option value="">Select an Wine</option>
                             <option value="option1">Dry White Wine</option>
                             <option value="option2">Red Wine</option>
