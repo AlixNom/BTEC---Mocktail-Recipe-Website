@@ -16,8 +16,11 @@
         selectElement.onchange = null;
     }
 }*/
+let comboBoxCount = 1;
 function addComboBox(selectElement) {
+    const selectElement = document.getElementById(selectElementId);
     if (selectElement.value !== "") {
+        comboBoxCount++;
         // Get the HTML of the options from the initial combobox
         const optionsHTML = selectElement.innerHTML;
 
@@ -28,7 +31,7 @@ function addComboBox(selectElement) {
         newSelect.onchange = function() { addComboBox(this); };
 
         // Append the new combobox to the container
-        const container = document.getElementById("combobox-container");
+        const container = document.getElementById(`combobox-${comboBoxCount}`)
         container.appendChild(newSelect);
 
         // Remove the onchange event from the current select to avoid adding multiple new comboboxes
