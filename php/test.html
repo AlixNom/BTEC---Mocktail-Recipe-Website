@@ -2,94 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic JSON Array Management</title>
+    <title>Dynamic JSON Management</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         .item { margin-bottom: 10px; }
-        .item input, .item select { margin-right: 5px; }
+        .item input { margin-right: 10px; }
     </style>
 </head>
 <body>
-    <h2>Manage JSON Data</h2>
+    <h2>Dynamic JSON Management</h2>
     
     <div id="data-container">
         <!-- Dynamic data will be appended here -->
     </div>
     
-    <form id="data-form">
-        <input type="text" id="data-input-1" placeholder="Enter text data">
-        <input type="number" id="data-input-2" placeholder="Enter number data">
-        <select id="data-input-3">
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-        </select>
-        <button type="button" id="add-btn">Add</button>
-        <button type="button" id="save-btn">Save</button>
-    </form>
+    <button id="add-btn">Add</button>
+    <button id="save-btn">Save</button>
 
     <script>
-        let dataArray = [];
-
         $(document).ready(function(){
+            let count = 0;
+            
+            // Add new input field
             $('#add-btn').on('click', function() {
-                let data1 = $('#data-input-1').val();
-                let data2 = $('#data-input-2').val();
-                let data3 = $('#data-input-3').val();
-                
-                if (data1 && data2 && data3) {
-                    dataArray.push({ data1: data1, data2: data2, data3: data3 });
-                    updateContainer();
-                    $('#data-input-1').val('');
-                    $('#data-input-2').val('');
-                    $('#data-input-3').val('Option 1');
-                }
+                count++;
+                $('#data-container').append(
+                    `<div class="item" id="item-${count}">
+                        <input type="text" id="input-${count}" placeholder="Enter data">
+                        <button type="button" onclick="editItem(${count})">Edit</button>
+                        <button type="button" onclick="removeItem(${count})">Remove</button>
+                    </div>`
+                );
             });
 
+            // Save all input data
             $('#save-btn').on('click', function() {
+                let data = [];
+                $('#data-container .item').each(function() {
+                    let id = $(this).attr('id').split('-')[1];
+                    let value = $(`#input-${id}`).val();
+                    if (value) {
+                        data.push(value);
+                    }
+                });
+
                 $.ajax({
                     url: 'process.php',
                     type: 'POST',
-                    data: { data: JSON.stringify(dataArray) },
+                    data: { action: 'save', data: JSON.stringify(data) },
                     success: function(response) {
-                        alert('Data saved successfully!');
+                        alert('Data saved successfully');
+                        console.log('Saved Data:', response);
                     }
                 });
             });
-
-            function updateContainer() {
-                $('#data-container').empty();
-                dataArray.forEach(function(item, index) {
-                    $('#data-container').append(
-                        `<div class="item" data-index="${index}">
-                            <input type="text" value="${item.data1}" class="item-input-1">
-                            <input type="number" value="${item.data2}" class="item-input-2">
-                            <select class="item-input-3">
-                                <option value="Option 1" ${item.data3 === 'Option 1' ? 'selected' : ''}>Option 1</option>
-                                <option value="Option 2" ${item.data3 === 'Option 2' ? 'selected' : ''}>Option 2</option>
-                                <option value="Option 3" ${item.data3 === 'Option 3' ? 'selected' : ''}>Option 3</option>
-                            </select>
-                            <button class="edit-btn">Edit</button>
-                            <button class="remove-btn">Remove</button>
-                        </div>`
-                    );
-                });
-
-                $('.edit-btn').on('click', function() {
-                    let index = $(this).parent().data('index');
-                    let newValue1 = $(this).siblings('.item-input-1').val();
-                    let newValue2 = $(this).siblings('.item-input-2').val();
-                    let newValue3 = $(this).siblings('.item-input-3').val();
-                    dataArray[index] = { data1: newValue1, data2: newValue2, data3: newValue3 };
-                });
-
-                $('.remove-btn').on('click', function() {
-                    let index = $(this).parent().data('index');
-                    dataArray.splice(index, 1);
-                    updateContainer();
-                });
-            }
         });
+
+        // Edit item
+        function editItem(id) {
+            let input = $(`#input-${id}`);
+            input.prop('disabled', false);
+            input.focus();
+        }
+
+        // Remove item
+        function removeItem(id) {
+            $(`#item-${id}`).remove();
+        }
     </script>
 </body>
 </html>
