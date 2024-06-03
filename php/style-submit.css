@@ -217,12 +217,13 @@ body , html {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  z-index: 5;
+  z-index: 2;
 }
 
 .flex{
   display: flex;
   gap:1.5em;
+  z-index:2
 }
 
 .delete{
@@ -233,4 +234,10 @@ body , html {
   font-size: 1.5em;
   width:30px;
   height:30px;
+  color:white;
+  margin-left:auto;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index:2;
 }
