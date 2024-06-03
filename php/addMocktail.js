@@ -21,7 +21,12 @@ function addIngredients(){
 
     const flex = document.createElement("div");
     flex.className="flex";
-
+    
+    ingredients.appendChild(flex);
+    flex.appendChild(addName);
+    flex.appendChild(addQuantity);
+    flex.appendChild(addSelect);
+    flex.appendChild(btn);
 }
 
 btnAdd.addEventListener("click", addIngredients)
