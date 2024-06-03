@@ -231,9 +231,9 @@ body , html {
   display: inline-block;
   background-color: red;
   color:white;
-  font-size: 1.5em;
-  width:300px;
-  height:10px;
+  font-size: 1em;
+  width:20px;
+  height:20px;
   color:white;
   margin-left:auto;
   display: flex;
