@@ -1,7 +1,7 @@
 const btnAdd = document.querySelector(".add");
 const ingredients = document.querySelector(".ingredients-list");
 
-$ingredients_array = array();
+//$ingredients_array = array();
 
 function removeIngredient(){
     this.parentElement.remove();
