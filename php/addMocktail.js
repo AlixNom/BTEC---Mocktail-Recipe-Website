@@ -67,3 +67,4 @@ function removeIngredients(this){
     this.closest('tr').remove();
 }
 btnAdd.addEventListener("click", addIngredients)
+btnDelete.addEventListener("click", removeIngredients);
