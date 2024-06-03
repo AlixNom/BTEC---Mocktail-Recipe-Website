@@ -24,7 +24,7 @@ function addIngredients(){
     <option value="ounces">Ounces</option>
     <option value="milliliters">Milliliters</option>`;
 
-    btnSave = document.createElement("a");
+    const btnSave = document.createElement("a");
     btnSave.className="save";
     btnSave.innerHTML="Save";
 
