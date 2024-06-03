@@ -194,7 +194,7 @@ body , html {
   justify-content: space-between;
   align-items: center;
   width:100%;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   padding-bottom: 7px;
   border-bottom: 2px solid #363636;
 
@@ -219,3 +219,4 @@ body , html {
   -o-border-radius: 5px;
   z-index: 5;
 }
+

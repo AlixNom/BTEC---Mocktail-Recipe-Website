@@ -31,8 +31,9 @@
                 </div>
                 </form>
             </div>
-        </div>
+    </div>
+    <div class="ingredients-list"></div>
 
-    <script src="addMocktailCombobox.js"></script>
+    <script src="addMocktail.js"></script>
 </body>
 </html>
