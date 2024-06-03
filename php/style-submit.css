@@ -238,6 +238,12 @@ body , html {
   margin-left:auto;
   display: flex;
   justify-content: center;
+  align-items:center;
   cursor: pointer;
+  border-radius: 5px;
   z-index:2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
