@@ -29,9 +29,9 @@ function addIngredients(){
     const addSelect = document.createElement("select")
     addSelect.name = "measurement";
     addSelect.value = intUnit.value;
-    //addSelect.innerHTML = `
-    //<option value="ounces">Ounces</option>
-    //<option value="milliliters">Milliliters</option>`;
+    addSelect.innerHTML = `
+    <option value="ounces">Ounces</option>
+    <option value="milliliters">Milliliters</option>`;
 
     const btnDelete = document.createElement("a");
     btnDelete.className="delete";
