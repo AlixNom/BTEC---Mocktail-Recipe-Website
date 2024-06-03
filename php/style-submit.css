@@ -110,7 +110,7 @@ body{
   margin-bottom: 10px;
   z-index:1;
 }
-.form-box form .field{
+.form-box form .ingredients-list{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
@@ -118,7 +118,7 @@ body{
   z-index:1;
 }
 
-.form-box form .input input{
+.form-box form .ingredients-list input{
   height: 40px;
   font-size: 16px;
   padding:0 10px ;
