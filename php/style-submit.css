@@ -143,6 +143,7 @@ body{
 
 .form-box form .input input{
   height: 300px;
+  align-items: flex-start;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;
