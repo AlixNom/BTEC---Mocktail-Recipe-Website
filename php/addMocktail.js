@@ -10,16 +10,16 @@ function removeIngredient(){
 function addIngredients(){
     const addName = document.createElement("input");
     addName.type = "text";
-    addName.name = "ingredient";
+    //addName.name = "ingredient";
     addName.placeholder = "Enter Ingredient";
 
     const addQuantity = document.createElement("input")
     addQuantity.type = "number";
-    addQuantity.name = "quantity";
+    //addQuantity.name = "quantity";
     addQuantity.placeholder = "Enter Quantity";
 
     const addSelect = document.createElement("select")
-    addSelect.name = "measurement";
+    //addSelect.name = "measurement";
     addSelect.innerHTML = `
     <option value="ounces">Ounces</option>
     <option value="milliliters">Milliliters</option>`;
