@@ -1,6 +1,10 @@
 const btnAdd = document.querySelector(".add");
 const ingredients = document.querySelector(".ingredients-list");
 
+function removeIngredient(){
+    this.parentElement.remove();
+}
+
 function addIngredients(){
     const addName = document.createElement("input");
     addName.type = "text";
@@ -18,6 +22,8 @@ function addIngredients(){
     const btn = document.createElement("a");
     btn.className="delete";
     btn.innerHTML="&times";
+
+    btn.addEventListener("click", removeIngredient)
 
     const flex = document.createElement("div");
     flex.className="flex";
