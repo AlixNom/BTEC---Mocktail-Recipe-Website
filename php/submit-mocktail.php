@@ -25,15 +25,13 @@
                 <a href="#" class="add">&plus;</a>
                 </div>
                 <form action='mocktail_insert.php' method='post'>
-                <div class="ingredients-list">
-                    <div class ="flex">			
-                        <table class="table table-bordered" id="dynamic_input">
+                <div class="ingredients-list">		
+                        <table class="flex" id="dynamic_input">
 				            <tr>
 					        <td><input type="text" class="form-control" name="name[]" placeholder="Enter here..."/></td>
 					        <td><a class="delete">&times;</a></td>
 				            </tr>
 			            </table>
-                    </div>
                 </div>
                 <div class='field input'>
                         <label for='method'>Method</label>
