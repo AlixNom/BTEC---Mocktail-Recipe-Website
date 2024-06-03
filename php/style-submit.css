@@ -114,7 +114,8 @@ body{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
-  width:80%;
+  justify-content: space-between;
+  width:100%;
   z-index:1;
 }
 
