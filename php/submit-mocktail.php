@@ -30,7 +30,7 @@
                     <div class="flex">
                     </div>
                 </div>
-                <div class="flex">
+                <div class="field input">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
                         <select class = "measurement" id="measurement">
