@@ -14,24 +14,24 @@ function removeIngredient(){
 
 function addIngredients(){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
-    const addName = document.createElement("text");
+    const addName = document.createElement("label");
     addName.type = "text";
     addName.value = intIngredient.value;
     addName.name = "ingredient";
     addName.placeholder = "Enter Ingredient";
 
-    const addQuantity = document.createElement("text")
+    const addQuantity = document.createElement("label")
     addQuantity.type = "number";
     addQuantity.value = intAmount.value;
     addQuantity.name = "quantity";
     addQuantity.placeholder = "Enter Quantity";
 
-    const addSelect = document.createElement("text")
+    const addSelect = document.createElement("label")
     addSelect.name = "measurement";
     addSelect.value = intUnit.value;
-    addSelect.innerHTML = `
-    <option value="ounces">Ounces</option>
-    <option value="milliliters">Milliliters</option>`;
+    //addSelect.innerHTML = `
+    //<option value="ounces">Ounces</option>
+    //<option value="milliliters">Milliliters</option>`;
 
     const btnDelete = document.createElement("a");
     btnDelete.className="delete";
