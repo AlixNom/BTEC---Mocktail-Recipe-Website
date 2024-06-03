@@ -1,5 +1,4 @@
 const btnAdd = document.querySelector(".add");
-const btnSubmit = document.querySelector(".submit");
 const ingredients = document.querySelector(".ingredients-list");
 
 $ingredients_array = array();
