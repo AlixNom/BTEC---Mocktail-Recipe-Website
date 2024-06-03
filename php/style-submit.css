@@ -157,7 +157,7 @@ body{
 }
 .form-box form .flex-add input{
   text-align: left;
-  height: 30px;
+  height: 0px;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;

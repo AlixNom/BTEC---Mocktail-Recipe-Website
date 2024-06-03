@@ -84,31 +84,31 @@ $(document).ready(function(){
     });
 
     function updateContainer() {
-        $('#data-container').empty();
+        $('#flex').empty();
         dataArray.forEach(function(item, index) {
-            $('#data-container').append(
+            $('#flex').append(
                 `<div class="flex" data-index="${index}">
                     <input type="text" value="${item.valIngredient}" class="item-input-1">
                     <input type="number" value="${item.valAmount}" class="item-input-2">
                     <select class="item-input-3">
-                        <option value="Option 1" ${item.data3 === 'Option 1' ? 'selected' : ''}>Option 1</option>
-                        <option value="Option 2" ${item.data3 === 'Option 2' ? 'selected' : ''}>Option 2</option>
-                        <option value="Option 3" ${item.data3 === 'Option 3' ? 'selected' : ''}>Option 3</option>
+                        <option value="option-1" ${item.valMeasurement === 'option-1' ? 'selected' : ''}>No Measurement</option>
+                        <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
+                        <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
                     </select>
-                    <button class="edit-btn">Edit</button>
-                    <button class="remove-btn">Remove</button>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Remove</button>
                 </div>`
             );
         });
-        $('.edit-btn').on('click', function() {
+        $('.edit').on('click', function() {
             let index = $(this).parent().data('index');
             let newValue1 = $(this).siblings('.item-input-1').val();
             let newValue2 = $(this).siblings('.item-input-2').val();
             let newValue3 = $(this).siblings('.item-input-3').val();
-            dataArray[index] = { data1: newValue1, data2: newValue2, data3: newValue3 };
+            dataArray[index] = { valIngredient: newValue1, valAmount: newValue2, valMeasurement: newValue3 };
         });
 
-        $('.remove-btn').on('click', function() {
+        $('.delete').on('click', function() {
             let index = $(this).parent().data('index');
             dataArray.splice(index, 1);
             updateContainer();
