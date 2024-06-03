@@ -34,11 +34,11 @@
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
                         <select class = "measurement" id="measurement">
-                            <options value="option-1">Select Measurement</options>
-                            <options value="option-2">Ounces</options>
-                            <options value="option-3">Milliliters</options>
+                            <option value="option-1">Select Measurement</option>
+                            <option value="option-2">Ounces</option>
+                            <option value="option-3">Milliliters</option>
                         </select>
-                        <button class ="add" type="button" id="add">Add</button>
+                        <button class ="add" type="button" id="add">&plus;</button>
                     </div>
                 <div class='field input'>
                         <label for='method'>Method</label>
