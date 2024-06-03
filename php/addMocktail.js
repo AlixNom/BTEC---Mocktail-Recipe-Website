@@ -39,15 +39,15 @@ function addIngredients(){
     btnDelete.addEventListener("click", removeIngredient);
     btnSave.addEventListener("click", saveIngredient)
 
-    //const flex = document.createElement("div");
-    //flex.className="flex";
+    const flex = document.createElement("div");
+    flex.className="flex";
     
-    //ingredients.appendChild(flex);
-    ingredients.appendChild(addName);
-    ingredients.appendChild(addQuantity);
-    ingredients.appendChild(addSelect);
-    ingredients.appendChild(btnSave);
-    ingredients.appendChild(btnDelete);
+    ingredients.appendChild(flex);
+    flex.appendChild(addName);
+    flex.appendChild(addQuantity);
+    flex.appendChild(addSelect);
+    flex.appendChild(btnSave);
+    flex.appendChild(btnDelete);
 }
 
 btnAdd.addEventListener("click", addIngredients)

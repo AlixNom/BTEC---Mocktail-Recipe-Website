@@ -25,7 +25,16 @@
                 <a href="#" class="add">&plus;</a>
                 </div>
                 <form action='mocktail_insert.php' method='post'>
-                <div class="ingredients-list"></div>
+                <div class="ingredients-list">
+                    <div class ="flex">			
+                        <table class="table table-bordered" id="dynamic_input">
+				            <tr>
+					        <td><input type="text" class="form-control" name="name[]" placeholder="Enter here..."/></td>
+					        <td><button type="button" id="add" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button></td>
+				            </tr>
+			            </table>
+                    </div>
+                </div>
                 <div class='field input'>
                         <label for='method'>Method</label>
                         <input type='text' name='method' id='method' required>
