@@ -25,14 +25,14 @@
                 <a href="#" class="add">&plus;</a>
                 </div>
                 <form action='' method='post'>
-
+                <div class="ingredients-list"></div>
                 <div class='field'>
                     <input type='submit' name='submit' class='button'value='Submit Recipe' required>
                 </div>
                 </form>
             </div>
     </div>
-    <div class="ingredients-list"></div>
+    
 
     <script src="addMocktail.js"></script>
 </body>
