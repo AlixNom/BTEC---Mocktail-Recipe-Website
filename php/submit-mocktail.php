@@ -45,7 +45,7 @@
                         <input type='text' name='method' id='method' required>
                 </div>
                 <div class='field'>
-                    <input type='button' name='save' class='save' value='Submit Recipe' required>
+                    <input type='submit' name='save' class='save' value='Submit Recipe' required>
                 </div>
                 </form>
             </div>
