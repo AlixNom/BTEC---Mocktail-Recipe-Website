@@ -1,6 +1,8 @@
 const btnAdd = document.querySelector(".add");
 const ingredients = document.querySelector(".ingredients-list");
-const tblIngredients = document.querySelector(".ingredients-table");
+const intIngredient = document.querySelector(".ingredient");
+const intAmount = document.querySelector(".amount");
+const intUnit = document.querySelector(".measurement");
 //const flex = document.querySelector(".flex");
 
 let JSONingredients = {};
@@ -13,32 +15,31 @@ function saveIngredient(){
 }
 
 function addIngredients(){
+    if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
     const addName = document.createElement("input");
     addName.type = "text";
+    addName.value = intIngredient.value;
     addName.name = "ingredient";
     addName.placeholder = "Enter Ingredient";
 
     const addQuantity = document.createElement("input")
     addQuantity.type = "number";
+    addQuantity.value = intAmount.value;
     addQuantity.name = "quantity";
     addQuantity.placeholder = "Enter Quantity";
 
     const addSelect = document.createElement("select")
     addSelect.name = "measurement";
+    addSelect.value = intUnit.value;
     addSelect.innerHTML = `
     <option value="ounces">Ounces</option>
     <option value="milliliters">Milliliters</option>`;
-
-    const btnEdit = document.createElement("a");
-    btnEdit.className="edit";
-    btnEdit.innerHTML="Edit";
 
     const btnDelete = document.createElement("a");
     btnDelete.className="delete";
     btnDelete.innerHTML="&times";
 
     btnDelete.addEventListener("click", removeIngredient);
-    btnEdit.addEventListener("click", saveIngredient)
 
     const flex = document.createElement("div");
     flex.className="flex";
@@ -47,8 +48,8 @@ function addIngredients(){
     flex.appendChild(addName);
     flex.appendChild(addQuantity);
     flex.appendChild(addSelect);
-    flex.appendChild(btnEdit);
     flex.appendChild(btnDelete);
+    }
 }
 
 btnAdd.addEventListener("click", addIngredients)

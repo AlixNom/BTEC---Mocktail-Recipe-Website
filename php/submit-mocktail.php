@@ -31,10 +31,10 @@
                 <div class="flex">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
-                        <select class = "measurement" id="measurement">
-                            <option value="option-1">Select Measurement</option>
-                            <option value="option-2">Ounces</option>
-                            <option value="option-3">Milliliters</option>
+                        <select class = "measurement" id="measurement" >
+                            <option value="">Select Measurement</option>
+                            <option value="ounces">Ounces</option>
+                            <option value="milliliters">Milliliters</option>
                         </select>
                         <a href="#" class="add">&plus;</a>
                 </div> 
