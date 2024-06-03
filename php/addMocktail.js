@@ -41,7 +41,6 @@ function addIngredients(){
     flex.appendChild(addName);
     flex.appendChild(addQuantity);
     //flex.appendChild(addSelect);
-    flex.appendChild(btnSave);
     flex.appendChild(btnDelete);
 }
 
