@@ -20,36 +20,15 @@
 
     <div class='login'>
             <div class='form form-box'>
+                <div class='wrap'>
                 <h3>Make a Cocktail</h3>
+                <a href="#" class="add">&plus;</a>
+                </div>
                 <form action='' method='post'>
-                    <div class="recipe-field recipe-input" id="combobox-1">
-                        <label for="sprite">Base Sprite</label>
-                            <div class='recipe-field recipe-input'>
-                                <label for='ingredients'>Ingredients</label>
-                                <input type='text' name='ingredients' id='ingredients' required>
-                            </div>
-                            <div class='recipe-field recipe-input'>
-                                <label for='amount'>Amount</label>
-                                <input type='text' name='amount' id='amount' required>
-                            </div>
-                            <select id ="unit" required>
-                                <option value="">Select an Measurement</option>
-                                <option value="option1">Ounce</option>
-                                <option value="option2">ml</option>
-                            </select>
-                    </div>
-                    <div class="field input" id="combobox-2">
-                        <label for="sprite">Wine</label>
-                        <select name="combobox-2" onchange="addComboBox(this)">
-                            <option value="">Select an Wine</option>
-                            <option value="option1">Dry White Wine</option>
-                            <option value="option2">Red Wine</option>
-                            <option value="option3">Sherry</option>
-                        </select>
-                    </div>
-                    <div class='field'>
-                        <input type='submit' name='submit' class='button'value='Submit Recipe' required>
-                    </div>
+
+                <div class='field'>
+                    <input type='submit' name='submit' class='button'value='Submit Recipe' required>
+                </div>
                 </form>
             </div>
         </div>

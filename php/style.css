@@ -224,3 +224,8 @@ body , html {
   justify-content: space-between;
   flex-direction: column;
 }
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
