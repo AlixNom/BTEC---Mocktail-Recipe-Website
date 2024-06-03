@@ -24,9 +24,9 @@ function addIngredients(){
     <option value="ounces">Ounces</option>
     <option value="milliliters">Milliliters</option>`;
 
-    const btnSave = document.createElement("a");
-    btnSave.className="save";
-    btnSave.innerHTML="Edit";
+    // btnSave = document.createElement("a");
+    //btnSave.className="save";
+    //btnSave.innerHTML="Edit";
 
     const btnDelete = document.createElement("a");
     btnDelete.className="delete";
@@ -40,7 +40,7 @@ function addIngredients(){
     ingredients.appendChild(flex);
     flex.appendChild(addName);
     flex.appendChild(addQuantity);
-    flex.appendChild(addSelect);
+    //flex.appendChild(addSelect);
     flex.appendChild(btnSave);
     flex.appendChild(btnDelete);
 }
