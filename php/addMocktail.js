@@ -14,19 +14,19 @@ function removeIngredient(){
 
 function addIngredients(){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
-    const addName = document.createElement("label");
+    const addName = document.createElement("input");
     addName.type = "text";
     addName.value = intIngredient.value;
     addName.name = "ingredient";
     addName.placeholder = "Enter Ingredient";
 
-    const addQuantity = document.createElement("label")
+    const addQuantity = document.createElement("input")
     addQuantity.type = "number";
     addQuantity.value = intAmount.value;
     addQuantity.name = "quantity";
     addQuantity.placeholder = "Enter Quantity";
 
-    const addSelect = document.createElement("label")
+    const addSelect = document.createElement("select")
     addSelect.name = "measurement";
     addSelect.value = intUnit.value;
     //addSelect.innerHTML = `
