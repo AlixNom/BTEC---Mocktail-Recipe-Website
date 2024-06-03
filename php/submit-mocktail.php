@@ -35,7 +35,6 @@
                                 <option value="ounces">Ounces</option>
                                 <option value="milliliters">Milliliters</option>
                             </select></td>
-                            <td><button class="save">&check;</button></td>
                             <td><button class="delete">&times;</button></td>
 				            </tr>
 			            </table>

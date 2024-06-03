@@ -54,17 +54,34 @@
 
 // btnAdd.addEventListener("click", addIngredients)
 
-function addIngredients(IngredientID){
-    let tblIngredient =  document.getElementById(IngredientID),
-        firstTr = tblIngredient.firstElementChild
-        trClone = firstTr.cloneNode(true);
+$(document).ready(function() {
+    $('#addItemButton').click(function() {
+        var itemText = $('#itemInput').val();
+        if (itemText !== '') {
+            $.ajax({
+                url: 'mocktail_insert.php',
+                type: 'POST',
+                data: { item: itemText },
+                success: function(response) {
+                    $('#itemList').append('<li>' + itemText + ' <button class="removeButton" data-id="' + response.id + '">Remove</button></li>');
+                    $('#itemInput').val(''); // Clear input field
+                }
+            });
+        }
+    });
 
-    tblIngredient.append(trClone);
-}
-
-function removeIngredients(this){
-    //this.closest
-    this.closest('tr').remove();
-}
-btnAdd.addEventListener("click", addIngredients)
-btnDelete.addEventListener("click", removeIngredients);
+    $(document).on('click', '.removeButton', function() {
+        var itemId = $(this).data('id');
+        var listItem = $(this).parent();
+        $.ajax({
+            url: 'remove_item.php',
+            type: 'POST',
+            data: { id: itemId },
+            success: function(response) {
+                if (response.success) {
+                    listItem.remove();
+                }
+            }
+        });
+    });
+});
