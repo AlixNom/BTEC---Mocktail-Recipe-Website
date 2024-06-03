@@ -72,7 +72,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#save').on('click', function() {
+    $('#submit').on('click', function() {
         $.ajax({
             url: 'process.php',
             type: 'POST',
