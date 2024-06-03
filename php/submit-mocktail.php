@@ -24,7 +24,7 @@
                 <h3>Make a Cocktail</h3>
                 <a href="#" class="add">&plus;</a>
                 </div>
-                <form action='' method='post'>
+                <form action='mocktail_insert.php' method='post'>
                 <div class="ingredients-list"></div>
                 <div class='field input'>
                         <label for='method'>Method</label>
