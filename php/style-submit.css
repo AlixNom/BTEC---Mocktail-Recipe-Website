@@ -156,7 +156,7 @@ body{
   z-index:1;
 }
 
-.button{
+.submit{
   background: hwb(129 39% 45%);
   height: 30px;
   color: white;
