@@ -29,12 +29,13 @@
                     <div class = "flex">	
                         <table class="ingredients-table" id="dynamic_input">
 				            <tr>
-					        <td><input type="text" class="ingredient" name="ingredient" placeholder="Enter Ingredient:"/></td>
-                            <td><input type="number" class="amount" name="ingredient" placeholder="e.g 1"/></td>
-					        <td><select>
+					        <td><input type="text" class="ingredient" name="ingredient" placeholder="Enter Ingredient"/></td>
+                            <td><input type="number" class="amount" name="ingredient" placeholder="Enter Amount"/></td>
+					        <td><select class="measurement" name="measurement">
                                 <option value="ounces">Ounces</option>
                                 <option value="milliliters">Milliliters</option>
                             </select></td>
+                            <td><a class="save">&check;</a></td>
                             <td><a class="delete">&times;</a></td>
 				            </tr>
 			            </table>
