@@ -224,6 +224,7 @@ body , html {
 .flex{
   display: flex;
   gap:1.5em;
+  margin-bottom: 15px;
   z-index:2
 }
 
