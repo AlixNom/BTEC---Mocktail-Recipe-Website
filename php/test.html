@@ -2,96 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic JSON with PHP, AJAX, and HTML</title>
+    <title>Dynamic JSON Array Management</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        .item {
-            margin: 5px 0;
-        }
-        .edit-btn, .delete-btn {
-            margin-left: 10px;
-        }
+        .item { margin-bottom: 10px; }
+        .item input, .item select { margin-right: 5px; }
     </style>
 </head>
 <body>
-    <h2>Dynamic JSON Management</h2>
+    <h2>Manage JSON Data</h2>
     
     <div id="data-container">
         <!-- Dynamic data will be appended here -->
     </div>
     
     <form id="data-form">
-        <input type="text" id="data-input" placeholder="Enter data">
+        <input type="text" id="data-input-1" placeholder="Enter text data">
+        <input type="number" id="data-input-2" placeholder="Enter number data">
+        <select id="data-input-3">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
         <button type="button" id="add-btn">Add</button>
+        <button type="button" id="save-btn">Save</button>
     </form>
 
     <script>
-        $(document).ready(function(){
-            loadData();
+        let dataArray = [];
 
+        $(document).ready(function(){
             $('#add-btn').on('click', function() {
-                let data = $('#data-input').val();
-                if (data) {
-                    $.ajax({
-                        url: 'process.php',
-                        type: 'POST',
-                        data: { action: 'add', data: data },
-                        success: function(response) {
-                            updateContainer(JSON.parse(response));
-                            $('#data-input').val('');
-                        }
-                    });
+                let data1 = $('#data-input-1').val();
+                let data2 = $('#data-input-2').val();
+                let data3 = $('#data-input-3').val();
+                
+                if (data1 && data2 && data3) {
+                    dataArray.push({ data1: data1, data2: data2, data3: data3 });
+                    updateContainer();
+                    $('#data-input-1').val('');
+                    $('#data-input-2').val('');
+                    $('#data-input-3').val('Option 1');
                 }
             });
 
-            function loadData() {
+            $('#save-btn').on('click', function() {
                 $.ajax({
                     url: 'process.php',
                     type: 'POST',
-                    data: { action: 'load' },
+                    data: { data: JSON.stringify(dataArray) },
                     success: function(response) {
-                        updateContainer(JSON.parse(response));
+                        alert('Data saved successfully!');
                     }
                 });
-            }
+            });
 
-            function updateContainer(data) {
+            function updateContainer() {
                 $('#data-container').empty();
-                data.forEach(function(item, index) {
-                    $('#data-container').append(`
-                        <div class="item" data-index="${index}">
-                            <span class="item-text">${item}</span>
+                dataArray.forEach(function(item, index) {
+                    $('#data-container').append(
+                        `<div class="item" data-index="${index}">
+                            <input type="text" value="${item.data1}" class="item-input-1">
+                            <input type="number" value="${item.data2}" class="item-input-2">
+                            <select class="item-input-3">
+                                <option value="Option 1" ${item.data3 === 'Option 1' ? 'selected' : ''}>Option 1</option>
+                                <option value="Option 2" ${item.data3 === 'Option 2' ? 'selected' : ''}>Option 2</option>
+                                <option value="Option 3" ${item.data3 === 'Option 3' ? 'selected' : ''}>Option 3</option>
+                            </select>
                             <button class="edit-btn">Edit</button>
-                            <button class="delete-btn">Delete</button>
-                        </div>
-                    `);
+                            <button class="remove-btn">Remove</button>
+                        </div>`
+                    );
                 });
 
                 $('.edit-btn').on('click', function() {
                     let index = $(this).parent().data('index');
-                    let newValue = prompt('Edit item:', $(this).siblings('.item-text').text());
-                    if (newValue) {
-                        $.ajax({
-                            url: 'process.php',
-                            type: 'POST',
-                            data: { action: 'edit', index: index, newValue: newValue },
-                            success: function(response) {
-                                updateContainer(JSON.parse(response));
-                            }
-                        });
-                    }
+                    let newValue1 = $(this).siblings('.item-input-1').val();
+                    let newValue2 = $(this).siblings('.item-input-2').val();
+                    let newValue3 = $(this).siblings('.item-input-3').val();
+                    dataArray[index] = { data1: newValue1, data2: newValue2, data3: newValue3 };
                 });
 
-                $('.delete-btn').on('click', function() {
+                $('.remove-btn').on('click', function() {
                     let index = $(this).parent().data('index');
-                    $.ajax({
-                        url: 'process.php',
-                        type: 'POST',
-                        data: { action: 'remove', index: index },
-                        success: function(response) {
-                            updateContainer(JSON.parse(response));
-                        }
-                    });
+                    dataArray.splice(index, 1);
+                    updateContainer();
                 });
             }
         });

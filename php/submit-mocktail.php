@@ -23,17 +23,29 @@
             <div class='form form-box'>
                 <div class='wrap'>
                 <h3>Make a Cocktail</h3>
-                <a href="#" class="add">&plus;</a>
+                <!--<a href="#" class="add">&plus;</a>-->
                 </div>
                 <form action='mocktail_insert.php' method='post'>
                 <div class="ingredients-list">	
+                    <div class="flex">
+                    </div>
                 </div>
+                <div class="flex">
+                        <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
+                        <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
+                        <select class = "measurement" id="measurement">
+                            <options value="option-1">Select Measurement</options>
+                            <options value="option-2">Ounces</options>
+                            <options value="option-3">Milliliters</options>
+                        </select>
+                        <button class ="add" type="button" id="add">Add</button>
+                    </div>
                 <div class='field input'>
                         <label for='method'>Method</label>
                         <input type='text' name='method' id='method' required>
                 </div>
                 <div class='field'>
-                    <input type='submit' name='submit' class='button'value='Submit Recipe' required>
+                    <input type='button' name='save' class='save' value='Submit Recipe' required>
                 </div>
                 </form>
             </div>
