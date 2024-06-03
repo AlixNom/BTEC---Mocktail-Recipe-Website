@@ -27,7 +27,7 @@
                 <form action='mocktail_insert.php' method='post'>
                 <div class="ingredients-list">	
                     <div class = "flex">	
-                        <table class="ingredients-table" id="dynamic_input">
+                        <table class="ingredients-table" id="IngredientID">
 				            <tr>
 					        <td><input type="text" class="ingredient" name="ingredient" placeholder="Enter Ingredient"/></td>
                             <td><input type="number" class="amount" name="ingredient" placeholder="Enter Amount"/></td>

@@ -1,55 +1,69 @@
-const btnAdd = document.querySelector(".add");
-const ingredients = document.querySelector(".ingredients-list");
-const tblIngredients = document.querySelector(".ingredients-table");
-//const flex = document.querySelector(".flex");
+ const btnAdd = document.querySelector(".add");
+// const ingredients = document.querySelector(".ingredients-list");
+// const tblIngredients = document.querySelector(".ingredients-table");
+// //const flex = document.querySelector(".flex");
 
-//$ingredients_array = array();
+// //$ingredients_array = array();
 
-function removeIngredient(){
-    this.parentElement.remove();
-}
-function saveIngredient(){
-    varSaved = true;
-}
+// function removeIngredient(){
+//     this.parentElement.remove();
+// }
+// function saveIngredient(){
+//     varSaved = true;
+// }
 
-function addIngredients(){
-    varSaved = false;
-    const addName = document.createElement("input");
-    addName.type = "text";
-    addName.name = "ingredient";
-    addName.placeholder = "Enter Ingredient";
+// function addIngredients(){
+//     varSaved = false;
+//     const addName = document.createElement("input");
+//     addName.type = "text";
+//     addName.name = "ingredient";
+//     addName.placeholder = "Enter Ingredient";
 
-    const addQuantity = document.createElement("input")
-    addQuantity.type = "number";
-    addQuantity.name = "quantity";
-    addQuantity.placeholder = "Enter Quantity";
+//     const addQuantity = document.createElement("input")
+//     addQuantity.type = "number";
+//     addQuantity.name = "quantity";
+//     addQuantity.placeholder = "Enter Quantity";
 
-    const addSelect = document.createElement("select")
-    addSelect.name = "measurement";
-    addSelect.innerHTML = `
-    <option value="ounces">Ounces</option>
-    <option value="milliliters">Milliliters</option>`;
+//     const addSelect = document.createElement("select")
+//     addSelect.name = "measurement";
+//     addSelect.innerHTML = `
+//     <option value="ounces">Ounces</option>
+//     <option value="milliliters">Milliliters</option>`;
 
-    const btnSave = document.createElement("a");
-    btnSave.className="save";
-    btnSave.innerHTML="Save";
+//     const btnSave = document.createElement("a");
+//     btnSave.className="save";
+//     btnSave.innerHTML="Save";
 
-    const btnDelete = document.createElement("a");
-    btnDelete.className="delete";
-    btnDelete.innerHTML="&times";
+//     const btnDelete = document.createElement("a");
+//     btnDelete.className="delete";
+//     btnDelete.innerHTML="&times";
 
-    btnDelete.addEventListener("click", removeIngredient);
-    btnSave.addEventListener("click", saveIngredient)
+//     btnDelete.addEventListener("click", removeIngredient);
+//     btnSave.addEventListener("click", saveIngredient)
 
-    const flex = document.createElement("div");
-    flex.className="flex";
+//     const flex = document.createElement("div");
+//     flex.className="flex";
     
-    ingredients.appendChild(flex);
-    flex.appendChild(addName);
-    flex.appendChild(addQuantity);
-    flex.appendChild(addSelect);
-    flex.appendChild(btnSave);
-    flex.appendChild(btnDelete);
+//     ingredients.appendChild(flex);
+//     flex.appendChild(addName);
+//     flex.appendChild(addQuantity);
+//     flex.appendChild(addSelect);
+//     flex.appendChild(btnSave);
+//     flex.appendChild(btnDelete);
+// }
+
+// btnAdd.addEventListener("click", addIngredients)
+
+function addIngredients(IngredientID){
+    let tblIngredient =  document.getElementById(IngredientID),
+        firstTr = tblIngredient.firstElementChild
+        trClone = firstTr.cloneNode(true);
+
+    tblIngredient.append(trClone);
 }
 
+function removeIngredients(this){
+    //this.closest
+    this.closest('tr').remove();
+}
 btnAdd.addEventListener("click", addIngredients)
