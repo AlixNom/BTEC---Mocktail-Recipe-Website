@@ -10,25 +10,23 @@ let JSONingredients = {};
 function removeIngredient(){
     this.parentElement.remove();
 }
-function saveIngredient(){
-    varSaved = true;
-}
+
 
 function addIngredients(){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
-    const addName = document.createElement("input");
+    const addName = document.createElement("text");
     addName.type = "text";
     addName.value = intIngredient.value;
     addName.name = "ingredient";
     addName.placeholder = "Enter Ingredient";
 
-    const addQuantity = document.createElement("input")
+    const addQuantity = document.createElement("text")
     addQuantity.type = "number";
     addQuantity.value = intAmount.value;
     addQuantity.name = "quantity";
     addQuantity.placeholder = "Enter Quantity";
 
-    const addSelect = document.createElement("select")
+    const addSelect = document.createElement("text")
     addSelect.name = "measurement";
     addSelect.value = intUnit.value;
     addSelect.innerHTML = `
