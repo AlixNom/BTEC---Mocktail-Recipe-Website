@@ -17,7 +17,7 @@ function addIngredients(){
 
     const btn = document.createElement("a");
     btn.className="delete";
-    btn.className="&times";
+    btn.innerHTML="&times";
 
     const flex = document.createElement("div");
     flex.className="flex";
