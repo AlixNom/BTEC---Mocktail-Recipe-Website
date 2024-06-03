@@ -28,7 +28,7 @@
                 <div class="ingredients-list"></div>
                 <div class='field input'>
                         <label for='method'>Method</label>
-                        <input type='text' name='method' id='method' required>
+                        <textarea name='method' id='method' required></textarea>
                 </div>
                 <div class='field'>
                     <input type='submit' name='submit' class='button'value='Submit Recipe' required>
