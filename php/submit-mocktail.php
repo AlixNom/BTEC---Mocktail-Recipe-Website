@@ -28,7 +28,7 @@
                 <form action='mocktail_insert.php' method='post'>
                 <div class="ingredients-list">	
                 </div>
-                <div class="field input">
+                <div class="flex">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
                         <select class = "measurement" id="measurement">
