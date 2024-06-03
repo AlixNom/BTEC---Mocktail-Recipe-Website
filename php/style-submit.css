@@ -232,9 +232,9 @@ body , html {
   display: inline-block;
   background-color: red;
   color:white;
-  font-size: 1em;
-  width:20px;
-  height:20px;
+  font-size: 1.2em;
+  width:30px;
+  height:30px;
   color:white;
   margin-left:auto;
   display: flex;
