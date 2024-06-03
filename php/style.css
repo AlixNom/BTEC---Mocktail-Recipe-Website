@@ -197,32 +197,3 @@ body , html {
   justify-content: space-between;
   flex-direction: column;
 }
-.wrap{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width:100%;
-  margin-bottom: 40px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid #363636;
-
-}
-
-.add{
-  text-decoration: none;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color:green;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  z-index: 5;
-}
