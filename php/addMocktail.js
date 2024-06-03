@@ -1,4 +1,4 @@
- const btnAdd = document.querySelector(".add");
+const btnAdd = document.querySelector(".add");
 const ingredients = document.querySelector(".ingredients-list");
 const tblIngredients = document.querySelector(".ingredients-table");
 //const flex = document.querySelector(".flex");
