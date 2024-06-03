@@ -5,7 +5,7 @@ const intAmount = document.querySelector(".amount");
 const intUnit = document.querySelector(".measurement");
 //const flex = document.querySelector(".flex");
 
-let JSONingredients = {};
+let JSONIngredientList = {};
 
 function removeIngredient(){
     this.parentElement.remove();
@@ -14,17 +14,18 @@ function removeIngredient(){
 
 function addIngredients(){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
-        JSONingredients = {ingredient:intIngredient.value,amount:intAmount.value,units:intUnit.value};
+        let JSONingredient = {name:intIngredient.value,amount:intAmount.value,unit:intUnit.value};
+        JSONIngredientList = {...JSONIngredientList,JSONingredient}
         const addName = document.createElement("input");
         addName.type = "text";
         addName.value = intIngredient.value;
         addName.name = "ingredient";
-        addName.placeholder = "Enter Ingredient";
+        addName.placeholder = "Ingredient";
 
         const addQuantity = document.createElement("input")
         addQuantity.type = "number";
         addQuantity.value = intAmount.value;
-        addQuantity.name = "quantity";
+        addQuantity.name = "Amount";
         addQuantity.placeholder = "Enter Quantity";
 
         const addSelect = document.createElement("select")
