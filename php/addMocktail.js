@@ -1,6 +1,7 @@
 const btnAdd = document.querySelector(".add");
 const ingredients = document.querySelector(".ingredients-list");
-const flex = document.querySelector(".flex");
+const tblIngredients = document.querySelector(".ingredients-table");
+//const flex = document.querySelector(".flex");
 
 //$ingredients_array = array();
 
@@ -40,8 +41,8 @@ function addIngredients(){
     btnDelete.addEventListener("click", removeIngredient);
     btnSave.addEventListener("click", saveIngredient)
 
-    //const flex = document.createElement("div");
-    //flex.className="flex";
+    const flex = document.createElement("div");
+    flex.className="flex";
     
     ingredients.appendChild(flex);
     flex.appendChild(addName);
