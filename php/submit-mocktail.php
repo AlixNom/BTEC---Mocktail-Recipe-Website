@@ -30,7 +30,7 @@
                         <table class="table table-bordered" id="dynamic_input">
 				            <tr>
 					        <td><input type="text" class="form-control" name="name[]" placeholder="Enter here..."/></td>
-					        <td><button type="button" id="add" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button></td>
+					        <td><a class="delete">&times;</a></td>
 				            </tr>
 			            </table>
                     </div>
