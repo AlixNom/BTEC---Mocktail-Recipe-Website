@@ -27,19 +27,6 @@
                 </div>
                 <form action='mocktail_insert.php' method='post'>
                 <div class="ingredients-list">	
-                    <div class = "flex">	
-                        <table class="ingredients-table" id="IngredientID">
-				            <tr>
-					        <td><input type="text" class="ingredient" name="ingredient" placeholder="Enter Ingredient"/></td>
-                            <td><input type="number" class="amount" name="ingredient" placeholder="Enter Amount"/></td>
-					        <td><select class="measurement" name="measurement">
-                                <option value="ounces">Ounces</option>
-                                <option value="milliliters">Milliliters</option>
-                            </select></td>
-                            <td><button class="delete">&times;</button></td>
-				            </tr>
-			            </table>
-                    </div>
                 </div>
                 <div class='field input'>
                         <label for='method'>Method</label>

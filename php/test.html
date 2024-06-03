@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic JSON with PHP, AJAX, and HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .item {
+            margin: 5px 0;
+        }
+        .edit-btn, .delete-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamic JSON Management</h2>
+    
+    <div id="data-container">
+        <!-- Dynamic data will be appended here -->
+    </div>
+    
+    <form id="data-form">
+        <input type="text" id="data-input" placeholder="Enter data">
+        <button type="button" id="add-btn">Add</button>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            loadData();
+
+            $('#add-btn').on('click', function() {
+                let data = $('#data-input').val();
+                if (data) {
+                    $.ajax({
+                        url: 'process.php',
+                        type: 'POST',
+                        data: { action: 'add', data: data },
+                        success: function(response) {
+                            updateContainer(JSON.parse(response));
+                            $('#data-input').val('');
+                        }
+                    });
+                }
+            });
+
+            function loadData() {
+                $.ajax({
+                    url: 'process.php',
+                    type: 'POST',
+                    data: { action: 'load' },
+                    success: function(response) {
+                        updateContainer(JSON.parse(response));
+                    }
+                });
+            }
+
+            function updateContainer(data) {
+                $('#data-container').empty();
+                data.forEach(function(item, index) {
+                    $('#data-container').append(`
+                        <div class="item" data-index="${index}">
+                            <span class="item-text">${item}</span>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    `);
+                });
+
+                $('.edit-btn').on('click', function() {
+                    let index = $(this).parent().data('index');
+                    let newValue = prompt('Edit item:', $(this).siblings('.item-text').text());
+                    if (newValue) {
+                        $.ajax({
+                            url: 'process.php',
+                            type: 'POST',
+                            data: { action: 'edit', index: index, newValue: newValue },
+                            success: function(response) {
+                                updateContainer(JSON.parse(response));
+                            }
+                        });
+                    }
+                });
+
+                $('.delete-btn').on('click', function() {
+                    let index = $(this).parent().data('index');
+                    $.ajax({
+                        url: 'process.php',
+                        type: 'POST',
+                        data: { action: 'remove', index: index },
+                        success: function(response) {
+                            updateContainer(JSON.parse(response));
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
