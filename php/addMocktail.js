@@ -13,7 +13,7 @@ function removeIngredient(){
 }
 
 
-function addIngredients(intIngredient,intAmount,intUnit){
+function addIngredients(){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
         let JSONingredient = {name:intIngredient.value,amount:intAmount.value,unit:intUnit.value};
         JSONIngredientList = {...JSONIngredientList,JSONingredient}
