@@ -25,13 +25,12 @@
                 <h3>Make a Cocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action='' method='post'>
+                <!-- <form action='' method='post'> -->
                 <div class="ingredients-list">	
                     <div class ="flex">
-                        
                     </div>
                 </div>
-                <div class="flex-add">
+                <div class="flex">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
                         <select class = "measurement" id="measurement" >
@@ -48,7 +47,7 @@
                 <div class='field'>
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
                 </div>
-                </form>
+                <!-- </form> -->
             </div>
     </div>
     
