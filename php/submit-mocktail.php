@@ -25,7 +25,7 @@
                 <h3>Make a Cocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action='' method='post'>
+                <!-- <form action='' method='post'> -->
                 <div class="ingredients-list">	
                 </div>
                 <div class="flex">
@@ -45,7 +45,7 @@
                 <div class='field'>
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
                 </div>
-                </form>
+                <!-- </form> -->
             </div>
     </div>
     
