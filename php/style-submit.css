@@ -252,9 +252,6 @@ body , html {
   -o-border-radius: 5px;
   z-index: 2;
 }
-.ingredients-table{
-  width:100%;
-}
 
 .flex{
   display: flex;
