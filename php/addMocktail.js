@@ -1,69 +1,69 @@
-const btnAdd = document.querySelector(".add");
-const ingredients = document.querySelector(".ingredients-list");
-const intIngredient = document.querySelector(".ingredient");
-const intAmount = document.querySelector(".amount");
-const intUnit = document.querySelector(".measurement");
-const btnSubmit = document.querySelector(".submit")
-//const flex = document.querySelector(".flex");
+// const btnAdd = document.querySelector(".add");
+// const ingredients = document.querySelector(".ingredients-list");
+// const intIngredient = document.querySelector(".ingredient");
+// const intAmount = document.querySelector(".amount");
+// const intUnit = document.querySelector(".measurement");
+// const btnSubmit = document.querySelector(".submit")
+// //const flex = document.querySelector(".flex");
 
-let JSONIngredientList = {};
+// let JSONIngredientList = {};
 
-function removeIngredient(){
-    this.parentElement.remove();
-}
+// function removeIngredient(){
+//     this.parentElement.remove();
+// }
 
 
-function addIngredients(){
-    if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
-        let JSONingredient = {name:intIngredient.value,amount:intAmount.value,unit:intUnit.value};
-        JSONIngredientList = {...JSONIngredientList,JSONingredient}
-        const addName = document.createElement("input");
-        addName.type = "text";
-        addName.value = intIngredient.value;
-        addName.name = "ingredient";
-        addName.placeholder = "Ingredient";
+// function addIngredients(){
+//     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
+//         let JSONingredient = {name:intIngredient.value,amount:intAmount.value,unit:intUnit.value};
+//         JSONIngredientList = {...JSONIngredientList,JSONingredient}
+//         const addName = document.createElement("input");
+//         addName.type = "text";
+//         addName.value = intIngredient.value;
+//         addName.name = "ingredient";
+//         addName.placeholder = "Ingredient";
 
-        const addQuantity = document.createElement("input")
-        addQuantity.type = "number";
-        addQuantity.value = intAmount.value;
-        addQuantity.name = "Amount";
-        addQuantity.placeholder = "Enter Quantity";
+//         const addQuantity = document.createElement("input")
+//         addQuantity.type = "number";
+//         addQuantity.value = intAmount.value;
+//         addQuantity.name = "Amount";
+//         addQuantity.placeholder = "Enter Quantity";
 
-        const addSelect = document.createElement("select")
-        addSelect.name = "measurement";
-        addSelect.value = intUnit.value;
-        addSelect.innerHTML = `
-        <option value="ounces">Ounces</option>
-        <option value="milliliters">Milliliters</option>`;
+//         const addSelect = document.createElement("select")
+//         addSelect.name = "measurement";
+//         addSelect.value = intUnit.value;
+//         addSelect.innerHTML = `
+//         <option value="ounces">Ounces</option>
+//         <option value="milliliters">Milliliters</option>`;
 
-        const btnDelete = document.createElement("a");
-        btnDelete.className="delete";
-        btnDelete.innerHTML="&times";
+//         const btnDelete = document.createElement("a");
+//         btnDelete.className="delete";
+//         btnDelete.innerHTML="&times";
 
-        btnDelete.addEventListener("click", removeIngredient);
+//         btnDelete.addEventListener("click", removeIngredient);
 
-        const flex = document.createElement("div");
-        flex.className="flex";
+//         const flex = document.createElement("div");
+//         flex.className="flex";
         
-        ingredients.appendChild(flex);
-        flex.appendChild(addName);
-        flex.appendChild(addQuantity);
-        flex.appendChild(addSelect);
-        flex.appendChild(btnDelete);
-    }
-};
+//         ingredients.appendChild(flex);
+//         flex.appendChild(addName);
+//         flex.appendChild(addQuantity);
+//         flex.appendChild(addSelect);
+//         flex.appendChild(btnDelete);
+//     }
+// };
 
-function submitIngredients(JSONingredientList) {
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {
-        JSONingredientList = this.responseText;
-    }
-    xmlhttp.open("POST", "mocktail_insert.php?q=" + str);
-    xmlhttp.send();
-}
+// function submitIngredients(JSONingredientList) {
+//     const xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onload = function() {
+//         JSONingredientList = this.responseText;
+//     }
+//     xmlhttp.open("POST", "mocktail_insert.php?q=" + str);
+//     xmlhttp.send();
+// }
 
-btnAdd.addEventListener("click", addIngredients);
-btnSubmit.addEventListener("click", submitIngredients);
+// btnAdd.addEventListener("click", addIngredients);
+// btnSubmit.addEventListener("click", submitIngredients);
 
 
 //--------------------------------------

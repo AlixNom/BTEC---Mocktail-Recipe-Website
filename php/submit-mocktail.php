@@ -50,6 +50,67 @@
     </div>
     
 
-    <script src="addMocktail.js"></script>
+    <script>
+    let dataArray = [];
+
+    $(document).ready(function(){
+        $('#add').on('click', function() {
+            let valIngredient = $('#ingredient').val();
+            let valAmount = $('#amount').val();
+            let valMeasurement = $('#measurement').val();
+            
+            if (valIngredient && valAmount && valMeasurement) {
+                dataArray.push({ valIngredient: valIngredient, valAmount: valAmount, valMeasurement: valMeasurement });
+                updateContainer();
+                $('#ingredient').val('');
+                $('#amount').val('');
+                $('#measurement').val('');
+            }
+        });
+
+        $('#submit').on('click', function() {
+            $.ajax({
+                url: 'process.php',
+                type: 'POST',
+                data: { data: JSON.stringify(dataArray) },
+                success: function(response) {
+                    alert('Data saved successfully!');
+                }
+            });
+        });
+
+        function updateContainer() {
+            $('#flex').empty();
+            dataArray.forEach(function(item, index) {
+                $('#flex').append(
+                    `<div class="flex" data-index="${index}">
+                        <input type="text" value="${item.valIngredient}" class="item-input-1">
+                        <input type="number" value="${item.valAmount}" class="item-input-2">
+                        <select class="item-input-3">
+                            <option value="option-1" ${item.valMeasurement === 'option-1' ? 'selected' : ''}>No Measurement</option>
+                            <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
+                            <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
+                        </select>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Remove</button>
+                    </div>`
+                );
+            });
+            $('.edit').on('click', function() {
+                let index = $(this).parent().data('index');
+                let newValue1 = $(this).siblings('.item-input-1').val();
+                let newValue2 = $(this).siblings('.item-input-2').val();
+                let newValue3 = $(this).siblings('.item-input-3').val();
+                dataArray[index] = { valIngredient: newValue1, valAmount: newValue2, valMeasurement: newValue3 };
+            });
+
+            $('.delete').on('click', function() {
+                let index = $(this).parent().data('index');
+                dataArray.splice(index, 1);
+                updateContainer();
+            });
+        }
+    });
+    </script>
 </body>
 </html>
