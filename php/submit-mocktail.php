@@ -72,7 +72,7 @@
 
         $('.submit').on('click', function() {
             $.ajax({
-                url: 'mocktail_insert.php',
+                url: 'includes/mocktail_insert.php',
                 type: 'POST',
                 data: { data: JSON.stringify(dataArray) },
                 success: function(response) {
