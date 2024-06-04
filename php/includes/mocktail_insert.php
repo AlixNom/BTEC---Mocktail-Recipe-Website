@@ -11,6 +11,7 @@ $stmt = $conn->prepare($sql);
 
 $stmt->bind_param("s", $json_data);
 
+    
 $stmt->close();
 $conn->close();
 

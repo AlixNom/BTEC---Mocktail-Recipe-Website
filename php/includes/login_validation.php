@@ -39,7 +39,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
                 $valid = password_verify($password,$row['pword_hash']);
                 echo $valid;
                 if ($valid == true) {
-                    $_SESSION['user'] = $row['uname'];
+                    $_SESSION['user'] = $row['id'];
                     header("Location: ../index.php");
                 }
                 if ($valid == false) {
