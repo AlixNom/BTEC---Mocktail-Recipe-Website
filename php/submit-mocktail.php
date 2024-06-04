@@ -72,7 +72,7 @@
 
         $('.submit').on('click', function() {
             $.ajax({
-                url: 'process.php',
+                url: 'mocktail_insert.php',
                 type: 'POST',
                 data: { data: JSON.stringify(dataArray) },
                 success: function(response) {
@@ -89,7 +89,6 @@
                         <input type="text" value="${item.valIngredient}" class="item-input-1">
                         <input type="number" value="${item.valAmount}" class="item-input-2">
                         <select class="item-input-3">
-                            <option value="option-1" ${item.valMeasurement === 'option-1' ? 'selected' : ''}>No Measurement</option>
                             <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
                             <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
                         </select>
