@@ -110,7 +110,7 @@ body{
   margin-bottom: 10px;
   z-index:1;
 }
-.form-box .ingredients-list{
+.ingredients-list{
   display: flex;
   margin-bottom: 10px;
   flex-direction: column;
