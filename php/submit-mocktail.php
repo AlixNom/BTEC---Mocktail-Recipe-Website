@@ -56,7 +56,7 @@
     let dataArray = [];
 
     $(document).ready(function(){
-        $('#add').on('click', function() {
+        $('.add').on('click', function() {
             let valIngredient = $('#ingredient').val();
             let valAmount = $('#amount').val();
             let valMeasurement = $('#measurement').val();
