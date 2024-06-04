@@ -21,6 +21,7 @@
 
     <div class='login'>
             <div class='form form-box'>
+                <form>
                 <div class='wrap'>
                 <h3>Make a Cocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
@@ -47,6 +48,7 @@
                 <div class='field'>
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
                 </div>
+                </form>
                 <!-- </form> -->
             </div>
     </div>
