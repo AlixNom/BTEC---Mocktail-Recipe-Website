@@ -4,7 +4,7 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $json_data = json_decode($_POST['data'], true);
-    $json_data = mysqli_real_escape_string($conn, $json_data);
+    //$json_data = mysqli_real_escape_string($conn, $json_data);
 
     $sql = "INSERT INTO test (ingredients) VALUES (?)";
     $stmt = $conn->prepare($sql);
