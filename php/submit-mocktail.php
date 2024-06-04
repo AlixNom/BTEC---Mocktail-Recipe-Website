@@ -70,7 +70,7 @@
             }
         });
 
-        $('#submit').on('click', function() {
+        $('.submit').on('click', function() {
             $.ajax({
                 url: 'process.php',
                 type: 'POST',
@@ -82,9 +82,9 @@
         });
 
         function updateContainer() {
-            $('#flex').empty();
+            $('.flex').empty();
             dataArray.forEach(function(item, index) {
-                $('#flex').append(
+                $('.flex').append(
                     `<div class="flex" data-index="${index}">
                         <input type="text" value="${item.valIngredient}" class="item-input-1">
                         <input type="number" value="${item.valAmount}" class="item-input-2">
