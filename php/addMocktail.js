@@ -58,7 +58,7 @@ function submitIngredients(JSONingredientList) {
     xmlhttp.onload = function() {
         JSONingredientList = this.responseText;
     }
-    xmlhttp.open("GET", "mocktail_insert.php?q=" + str);
+    xmlhttp.open("POST", "mocktail_insert.php?q=" + str);
     xmlhttp.send();
 }
 
