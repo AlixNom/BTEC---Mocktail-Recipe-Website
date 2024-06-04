@@ -3,6 +3,7 @@ const ingredients = document.querySelector(".ingredients-list");
 const intIngredient = document.querySelector(".ingredient");
 const intAmount = document.querySelector(".amount");
 const intUnit = document.querySelector(".measurement");
+const btnSubmit = document.querySelector(".submit")
 //const flex = document.querySelector(".flex");
 
 let JSONIngredientList = {};
@@ -12,7 +13,7 @@ function removeIngredient(){
 }
 
 
-function addIngredients(){
+function addIngredients(intIngredient,intAmount,intUnit){
     if(intIngredient.value !== "" || intAmount.value !== "" ||intUnit.value !== ""){
         let JSONingredient = {name:intIngredient.value,amount:intAmount.value,unit:intUnit.value};
         JSONIngredientList = {...JSONIngredientList,JSONingredient}
@@ -50,9 +51,19 @@ function addIngredients(){
         flex.appendChild(addSelect);
         flex.appendChild(btnDelete);
     }
+};
+
+function submitIngredients(JSONingredientList) {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+        JSONingredientList = this.responseText;
+    }
+    xmlhttp.open("GET", "mocktail_insert.php?q=" + str);
+    xmlhttp.send();
 }
 
-btnAdd.addEventListener("click", addIngredients)
+btnAdd.addEventListener("click", addIngredients);
+btnSubmit.addEventListener("click", submitIngredients);
 
 
 //--------------------------------------

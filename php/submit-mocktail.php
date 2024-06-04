@@ -25,7 +25,7 @@
                 <h3>Make a Cocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action='mocktail_insert.php' method='post'>
+                <form action='addMocktail.js' method='post'>
                 <div class="ingredients-list">	
                 </div>
                 <div class="flex">
