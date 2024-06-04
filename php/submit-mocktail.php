@@ -27,8 +27,11 @@
                 </div>
                 <form action='' method='post'>
                 <div class="ingredients-list">	
+                    <div class ="flex">
+                        
+                    </div>
                 </div>
-                <div class="flex">
+                <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
                         <select class = "measurement" id="measurement" >
@@ -91,7 +94,6 @@
                             <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
                             <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
                         </select>
-                        <button class="edit">Edit</button>
                         <button class="delete">Remove</button>
                     </div>`
                 );
