@@ -57,16 +57,16 @@
 
     $(document).ready(function(){
         $('.add').on('click', function() {
-            let valIngredient = $('#ingredient').val();
-            let valAmount = $('#amount').val();
-            let valMeasurement = $('#measurement').val();
+            let valIngredient = $('.ingredient').val();
+            let valAmount = $('.amount').val();
+            let valMeasurement = $('.measurement').val();
             
             if (valIngredient && valAmount && valMeasurement) {
                 dataArray.push({ valIngredient: valIngredient, valAmount: valAmount, valMeasurement: valMeasurement });
                 updateContainer();
-                $('#ingredient').val('');
-                $('#amount').val('');
-                $('#measurement').val('');
+                $('.ingredient').val('');
+                $('.amount').val('');
+                $('.measurement').val('');
             }
         });
 
