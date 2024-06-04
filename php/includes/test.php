@@ -6,7 +6,7 @@ $pword_hash = stripslashes($_POST['password']);
 $pword_hash = mysqli_real_escape_string($conn, $pword_hash);
 $pword_hash = password_hash($pword_hash, PASSWORD_DEFAULT);
 
-$userPass = "SELECT idfrom mocktail_users where uname = '$uname'";
+$userPass = "SELECT id from mocktail_users where uname = '$uname'";
 $result = $conn->prepare($userPass);
 
     $sql = "INSERT INTO mocktail_passwords (id, pword_hash ) VALUES (?, ?)";
