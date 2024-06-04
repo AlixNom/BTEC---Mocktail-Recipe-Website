@@ -38,7 +38,7 @@
                             <option value="ounces">Ounces</option>
                             <option value="milliliters">Milliliters</option>
                         </select>
-                        <button href="#" class="add">&plus;</button>
+                        <a href="#" class="add">&plus;</a>
                 </div> 
                 <div class='field input'>
                         <label for='method'>Method</label>
@@ -93,7 +93,7 @@
                             <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
                             <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
                         </select>
-                        <button class="delete">Remove</button>
+                        <a class="delete">&times;</a>
                     </div>`
                 );
             });
