@@ -38,7 +38,7 @@
                             <option value="ounces">Ounces</option>
                             <option value="milliliters">Milliliters</option>
                         </select>
-                        <a href="#" class="add">&plus;</a>
+                        <button href="#" class="add">&plus;</button>
                 </div> 
                 <div class='field input'>
                         <label for='method'>Method</label>
