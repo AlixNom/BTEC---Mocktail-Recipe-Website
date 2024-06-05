@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
-        $ingredientsArray = mysqli_real_escape_string($conn, json_encode($ingredients));
+        $ingredientsArray = mysqli_real_escape_string($conn, $ingredients);
         $methodArray = stripslashes($method);
         $methodArray = "Test";
 
