@@ -28,7 +28,7 @@
                 <form>
                 <!-- <form action='' method='post'> -->
                 <div class="ingredientsList">	
-
+                <div class="flex"></div>
                 </div>
                 <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
