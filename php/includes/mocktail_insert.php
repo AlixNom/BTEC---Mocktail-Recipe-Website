@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
 
-    $sql = "INSERT INTO test (ingredients) VALUES (?)";
+    $sql = "INSERT INTO mocktail_recipes (ingredients) VALUES (?)";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("s", $json_data);
