@@ -72,7 +72,7 @@
             let varMethod = document.querySelector('.method').value;
             let bodyContent = {
                     data: dataArray,
-                    method: method
+                    method: varMethod
                 };
             fetch('includes/mocktail_insert.php', {
                 method: 'POST',
