@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO mocktail_recipes (id, ingredients, method) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("sss", $userID, $ingredientsArray, "Test");
+        $stmt->bind_param("sss", $userID, $ingredientsArray, 'Test');
 
         if ($stmt->execute()) {
             echo "Data saved successfully!";
