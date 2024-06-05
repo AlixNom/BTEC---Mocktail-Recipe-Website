@@ -1,5 +1,5 @@
 const btnAdd = document.querySelector(".add");
-const ingredients = document.querySelector(".ingredients-list");
+const ingredients = document.querySelector(".ingredientsList");
 const intIngredient = document.querySelector(".ingredient");
 const intAmount = document.querySelector(".amount");
 const intUnit = document.querySelector(".measurement");
