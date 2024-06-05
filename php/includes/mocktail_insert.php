@@ -4,7 +4,7 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents("php://input");
-    $xml = simplexml_load_string($rawData);
+    $xml = simplexml_load_string($data);
     $json = json_encode($xml);
     $json_data = json_decode([$json],true);
 
