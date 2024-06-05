@@ -55,12 +55,12 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.add').addEventListener('click', function() {
-            let valIngredient = document.querySelector('.ingredient').value;
-            let valAmount = document.querySelector('.amount').value;
-            let valMeasurement = document.querySelector('.measurement').value;
+            let Ingredient = document.querySelector('.ingredient').value;
+            let Amount = document.querySelector('.amount').value;
+            let Unit = document.querySelector('.measurement').value;
 
-            if (valIngredient && valAmount && valMeasurement) {
-                dataArray.push({ valIngredient: valIngredient, valAmount: valAmount, valMeasurement: valMeasurement });
+            if (Ingredient && Amount && Unit) {
+                dataArray.push({ Ingredient: Ingredient, Amount: Amount, Unit: Unit });
                 updateContainer();
                 document.querySelector('.ingredient').value = '';
                 document.querySelector('.amount').value = '';
@@ -97,11 +97,12 @@
                 div.className = 'flex';
                 div.dataset.index = index;
                 div.innerHTML = `
-                    <input type="text" value="${item.valIngredient}" class="item-input-1">
-                    <input type="number" value="${item.valAmount}" class="item-input-2">
-                    <select class="item-input-3">
-                        <option value="Ounces" ${item.valMeasurement === 'Ounces' ? 'selected' : ''}>Ounces</option>
-                        <option value="Milliliters" ${item.valMeasurement === 'Milliliters' ? 'selected' : ''}>Milliliters</option>
+                    <input type="text" value="${item.Ingredient}" class="item-input-1">
+                    <input type="number" value="${item.Amount}" class="item-input-2">
+                    <label class = "item-input-3" >${item.Unit}</label>
+                    <select class="item-input-4">
+                        <option value="Ounces" ${item.Unit === 'Ounces' ? 'selected' : ''}>Ounces</option>
+                        <option value="Milliliters" ${item.Unit === 'Milliliters' ? 'selected' : ''}>Milliliters</option>
                     </select>
                     <span class="delete">&times;</span>
                 `;
@@ -119,10 +120,10 @@
             document.querySelectorAll('.item-input-1, .item-input-2, .item-input-3').forEach(function(element) {
                 element.addEventListener('change', function() {
                     let index = this.parentElement.dataset.index;
-                    let newValue1 = this.parentElement.querySelector('.item-input-1').value;
-                    let newValue2 = this.parentElement.querySelector('.item-input-2').value;
-                    let newValue3 = this.parentElement.querySelector('.item-input-3').value;
-                    dataArray[index] = { valIngredient: newValue1, valAmount: newValue2, valMeasurement: newValue3 };
+                    let newIngredient = this.parentElement.querySelector('.item-input-1').value;
+                    let newAmount = this.parentElement.querySelector('.item-input-2').value;
+                    let newUnit = this.parentElement.querySelector('.item-input-3').value;
+                    dataArray[index] = { Ingredient: newIngredient, Amount: newAmount, Unit: newUnit };
                 });
             });
         }
