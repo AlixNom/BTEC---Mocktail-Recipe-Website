@@ -50,9 +50,8 @@
     </div>
     
 
-    <script class="addMocktail.js">
-</script>
-    <!-- // let dataArray = [];
+    <script scr="addMocktail.js">
+    // let dataArray = [];
 
     // $(document).ready(function(){
     //     $('.add').on('click', function() {
@@ -110,6 +109,6 @@
     //             updateContainer();
     //         });
     //     }
-    // }); -->
+    // });</script>
 </body>
 </html>
