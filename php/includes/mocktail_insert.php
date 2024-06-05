@@ -4,8 +4,8 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents("php://input");
-    $data = explode(",", $data);
-    $json_data = json_decode([$data],true);
+    $json_data = json_encode([$data],true);
+    $json_data = json_decode([$json_data],true);
 
     $ingredients = isset($json_data['data']) ? $json_data['data'] : [];
     $method = isset($json_data['method']) ? $json_data['method'] : '';
