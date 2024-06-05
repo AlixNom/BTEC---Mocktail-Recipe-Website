@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
     // if (isset($dataArray['data'])&& is_array($dataArray['data'])) {
-        $sql = "INSERT INTO mocktail_recipes (id, ingredients, method) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO mocktail_recipes (uid, ingredients, method) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
         $stmt->bind_param("sss", $userID, $ingredientsArray, $methodArray);
