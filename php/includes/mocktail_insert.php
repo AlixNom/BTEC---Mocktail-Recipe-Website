@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
-        $ingredientsArray = mysqli_real_escape_string($conn, $ingredients);
+        $ingredientsArray = mysqli_real_escape_string($conn, json_encode($ingredients));
         $methodArray = stripslashes($method);
         $methodArray = mysqli_real_escape_string($conn,$method);
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO mocktail_recipes (uid, ingredients, method) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("sss", $userID, $ingredientsArray, $methodArray);
+        $stmt->bind_param("sss", $userID, stripslashes($ingredientsArray), $methodArray);
 
         if ($stmt->execute()) {
             echo "Data saved successfully!";
