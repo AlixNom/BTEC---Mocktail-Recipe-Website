@@ -3,11 +3,11 @@ session_start();
 
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = file_get_contents("php://input");
+    $data = json_decode(file_get_contents("php://input"),true);
     //$json_data = json_decode([$data],true);
 
-    $ingredients = isset($data['data']) ? $data['data'] : [];
-    $method = isset($data['method']) ? $data['method'] : '';
+    $ingredients = json_decode($data['data']) ? $json_decode['data'] : [];
+    $method = isset($json_decode['method']) ? $json_decode['method'] : '';
 
     if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
