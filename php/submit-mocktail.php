@@ -21,17 +21,15 @@
 
     <div class='login'>
             <div class='form form-box'>
-                <div class='wrap3'>
+                <div class='wrap'>
                 <h3>Make a Cocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form>
                 <!-- <form action='' method='post'> -->
-                <div class ="wrap">
                 <div class="ingredients-list">	
                     <div class ="flex">
                     </div>
-                </div>
                 </div>
                 <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
