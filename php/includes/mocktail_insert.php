@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (json_last_error() === JSON_ERROR_NONE) {
         // Output the error and raw data for debugging
         echo "Invalid JSON input: " . json_last_error_msg();
-        echo "\nRaw data: " . $data;
+        echo "\nRaw data: " . print_r($data, true);
         exit();
     }
     //$json_data = json_decode([$data],true);
