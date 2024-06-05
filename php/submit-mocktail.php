@@ -70,13 +70,16 @@
 
         document.querySelector('.submit').addEventListener('click', function() {
             let varMethod = document.querySelector('.method').value;
+            let bodyContent = {
+                    data: dataArray,
+                    method: method
+                };
             fetch('includes/mocktail_insert.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({data: dataArray,
-                    method: varMethod}
+                body: JSON.stringify(bodyContent
                 )
             })
             .then(response => response.text())
