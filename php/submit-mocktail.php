@@ -100,11 +100,7 @@
                     <input type="text" value="${item.Ingredient}" class="item-input-1">
                     <input type="number" value="${item.Amount}" class="item-input-2">
                     <label class = "item-input-3" >${item.Unit}</label>
-                    <select class="item-input-4">
-                        <option value="Ounces" ${item.Unit === 'Ounces' ? 'selected' : ''}>Ounces</option>
-                        <option value="Milliliters" ${item.Unit === 'Milliliters' ? 'selected' : ''}>Milliliters</option>
-                    </select>
-                    <span class="delete">&times;</span>
+
                 `;
                 container.appendChild(div);
             });
