@@ -28,6 +28,15 @@
                 <form>
                 <!-- <form action='' method='post'> -->
                 <div class="ingredients-list">	
+                <div class="flex" data-index="${index}">
+                        <input type="text" value="${item.valIngredient}" class="item-input-1">
+                        <input type="number" value="${item.valAmount}" class="item-input-2">
+                        <select class="item-input-3">
+                            <option value="option-2" ${item.valMeasurement === 'option-2' ? 'selected' : ''}>Ounces</option>
+                            <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
+                        </select>
+                        <a class="delete">&times;</a>
+                    </div>
                 </div>
                 <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
