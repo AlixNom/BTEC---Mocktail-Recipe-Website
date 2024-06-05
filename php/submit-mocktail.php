@@ -51,7 +51,7 @@
     
 
     <script>
-    // let dataArray = [];
+    let dataArray = [];
 
      $(document).ready(function(){
          $('.add').on('click', function() {
@@ -83,7 +83,7 @@
          function updateContainer() {
              $('.ingredientsList').empty();
              dataArray.forEach(function(item, index) {
-                 $('.ingredientsList').append( -->
+                 $('.ingredientsList').append(
                      `<div class="flex" data-index="${index}">
                          <input type="text" value="${item.valIngredient}" class="item-input-1">
                          <input type="number" value="${item.valAmount}" class="item-input-2">
