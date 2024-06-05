@@ -51,8 +51,8 @@
     </div>
     
 
-    <script scr="addMocktail.js">
-    // let dataArray = [];
+    <script scr="addMocktail.js"></script>
+    <!-- // let dataArray = [];
 
     // $(document).ready(function(){
     //     $('.add').on('click', function() {
@@ -84,8 +84,8 @@
     //     function updateContainer() {
     //         $('.ingredientsList').empty();
     //         dataArray.forEach(function(item, index) {
-    //             $('.ingredientsList').append(
-    //                 `<div class="flex" data-index="${index}">
+    //             $('.ingredientsList').append( -->
+    <!-- //                 `<div class="flex" data-index="${index}">
     //                     <input type="text" value="${item.valIngredient}" class="item-input-1">
     //                     <input type="number" value="${item.valAmount}" class="item-input-2">
     //                     <select class="item-input-3">
@@ -93,8 +93,8 @@
     //                         <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
     //                     </select>
     //                     <a class="delete">&times;</a>
-    //                 </div>`
-    //             );
+    //                 </div>` -->
+    <!-- //             );
     //         });
     //         $('.edit').on('click', function() {
     //             let index = $(this).parent().data('index');
@@ -110,7 +110,6 @@
     //             updateContainer();
     //         });
     //     }
-    // });
-    </script>
+    // }); -->
 </body>
 </html>
