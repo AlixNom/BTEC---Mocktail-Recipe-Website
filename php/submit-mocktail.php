@@ -40,7 +40,7 @@
                 </div> 
                 <div class='field input'>
                         <label for='method'>Method</label>
-                        <input type='text' name='method' id='method' required>
+                        <input type='text' class ='method' name='method' id='method' required>
                 </div>
                 <div class='field'>
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
@@ -69,12 +69,15 @@
         });
 
         document.querySelector('.submit').addEventListener('click', function() {
+            let varMethod = document.querySelector('.method').value;
             fetch('includes/mocktail_insert.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ data: dataArray })
+                body: JSON.stringify({ data: dataArray }
+                ),
+                methodTxt: (varMethod)
             })
             .then(response => response.text())
             .then(data => {

@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['user'])) {
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
+        $methods = stripslashes($_POST['method']);
+        $methods = mysqli_real_escape_string($conn, $methods);
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
     // if (isset($dataArray['data'])&& is_array($dataArray['data'])) {
