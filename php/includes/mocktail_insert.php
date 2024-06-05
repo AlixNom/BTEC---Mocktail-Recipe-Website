@@ -7,15 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $json_data = json_encode($_POST[$data],true);
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
-
+if (isset($dataArray['data'])) {
     $sql = "INSERT INTO mocktail_recipes (ingredients) VALUES (?)";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("s", $json_data);
 
     $stmt->close();
-}
-    
+    }
+} 
 
 
 $conn->close();
