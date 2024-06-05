@@ -4,19 +4,24 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents("php://input");
-    $json_data = json_encode([$data],true);
-    if (isset($_SESSION['user'])) {
+    $json_data = json_decode([$data],true);
+
+    $ingredients = isset($json_data['data']) ? $json_data['data'] : [];
+    $method = isset($json_data['method']) ? $json_data['method'] : '';
+
+    if (isset($_SESSION['user'])&& !empty($ingredients) && !empty($method)) {
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
-        $methods = stripslashes($_POST[$methodTxt]);
-        $methods = mysqli_real_escape_string($conn, $methods);
+        $ingredientsArray = mysqli_real_escape_string($conn, json_encode($ingredients));
+        $methodArray = stripslashes($method);
+        $methodArray = mysqli_real_escape_string($conn, $methodArray);
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
     // if (isset($dataArray['data'])&& is_array($dataArray['data'])) {
-        $sql = "INSERT INTO mocktail_recipes (id, ingredients, method) VALUES (?, ?)";
+        $sql = "INSERT INTO mocktail_recipes (id, ingredients, method) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("sss", $userID, $json_data, $methods);
+        $stmt->bind_param("sss", $userID, $ingredientsArray, $methodArray);
 
         if ($stmt->execute()) {
             echo "Data saved successfully!";
