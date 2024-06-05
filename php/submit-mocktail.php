@@ -28,8 +28,6 @@
                 <form>
                 <!-- <form action='' method='post'> -->
                 <div class="ingredients-list">	
-                    <div class ="flex">
-                    </div>
                 </div>
                 <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
@@ -84,9 +82,9 @@
         });
 
         function updateContainer() {
-            $('.flex').empty();
+            $('.ingredients_list').empty();
             dataArray.forEach(function(item, index) {
-                $('.flex').append(
+                $('.ingredients_list').append(
                     `<div class="flex" data-index="${index}">
                         <input type="text" value="${item.valIngredient}" class="item-input-1">
                         <input type="number" value="${item.valAmount}" class="item-input-2">
