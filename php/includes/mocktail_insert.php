@@ -4,7 +4,7 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents("php://input"),true);
-    if (json_last_error() === JSON_ERROR_NONE) {
+    if (json_last_error() !== JSON_ERROR_NONE) {
         // Output the error and raw data for debugging
         echo "Invalid JSON input: " . json_last_error_msg();
         echo "\nRaw data: " . print_r($data, true);
