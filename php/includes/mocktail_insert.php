@@ -4,7 +4,7 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents("php://input");
-    $json_data = json_encode($_POST['$data']);
+    $json_data = json_encode($_POST[$data],true);
 
     //$json_data = mysqli_real_escape_string($conn, $json_data);
 
