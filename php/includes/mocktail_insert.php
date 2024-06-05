@@ -11,9 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("s", $json_data);
+
+    $stmt->close();
 }
     
-$stmt->close();
+
+
 $conn->close();
 
 
