@@ -25,7 +25,7 @@
                 <h3>Make a Mocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action='addMocktail.js' method='post'> 
+                <form> 
                 <div class="ingredientsList">	
                 <div class="flex"></div>
                 </div>
