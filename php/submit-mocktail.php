@@ -75,8 +75,8 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify((data: dataArray,
-                    method: varMethod)
+                body: JSON.stringify({data: dataArray,
+                    method: varMethod}
                 )
             })
             .then(response => response.text())
