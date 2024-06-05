@@ -22,11 +22,10 @@
     <div class='login'>
             <div class='form form-box'>
                 <div class='wrap'>
-                <h3>Make a Cocktail</h3>
+                <h3>Make a Mocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form>
-                <!-- <form action='' method='post'> -->
+                <form action='addMocktail.js' method='post'> 
                 <div class="ingredientsList">	
                 <div class="flex"></div>
                 </div>
@@ -48,7 +47,6 @@
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
                 </div>
                 </form>
-                <!-- </form> -->
             </div>
     </div>
     
