@@ -78,7 +78,7 @@
                 data: { data: JSON.stringify(dataArray) },
                 success: function(response) {
                     alert('Data saved successfully!');
-                    echo (${data})
+                    echo (${data});
                 }
             });
         });
