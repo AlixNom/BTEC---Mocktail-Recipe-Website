@@ -92,7 +92,7 @@
                              <option value="option-3" ${item.valMeasurement === 'option-3' ? 'selected' : ''}>Milliliters</option>
                          </select>
                          <a class="delete">&times;</a>
-                     </div>` -->
+                     </div>`
                  );
              });
              $('.edit').on('click', function() {
