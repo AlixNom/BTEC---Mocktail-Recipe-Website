@@ -20,16 +20,6 @@ session_start();
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
-    <?php
-    if(isset($_SESSION['user'])) {
-    ?>
-        <div class="alert-success">
-            <strong>Logged in as:</strong> <?php echo $_SESSION['user'];?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    <?php unset($_SESSION['user']); } ?>
     <header>    
         <div class="header-content">
             <h2>Enjoy a cocktail with love ones!</h2>
