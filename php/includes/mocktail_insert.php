@@ -6,8 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents("php://input"),true);
     //$json_data = json_decode([$data],true);
 
-    $ingredients = json_decode($data['data']) ? $json_decode['data'] : [];
-    $method = isset($json_decode['method']) ? $json_decode['method'] : '';
+    $ingredients = isset($data['data']) ? $data['data'] : [];
+    $method = isset($data['method']) ? $data['method'] : '';
 
     if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
