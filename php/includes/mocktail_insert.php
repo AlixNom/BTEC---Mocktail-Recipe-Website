@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ingredients = isset($data['data']) ? $data['data'] : [];
     $method = isset($data['method']) ? $data['method'] : '';
 
-    if (isset($_SESSION['user'])&& !empty($ingredients) && !empty($method)) {
+    if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
         $ingredientsArray = mysqli_real_escape_string($conn, json_encode($ingredients));
