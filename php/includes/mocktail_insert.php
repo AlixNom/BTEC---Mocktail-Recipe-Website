@@ -4,12 +4,10 @@ session_start();
 include 'ConnDB.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = file_get_contents("php://input");
-    $xml = simplexml_load_string($data);
-    $json = json_encode($xml);
-    $json_data = json_decode([$json],true);
+    //$json_data = json_decode([$data],true);
 
-    $ingredients = isset($json_data['data']) ? $json_data['data'] : [];
-    $method = isset($json_data['method']) ? $json_data['method'] : '';
+    $ingredients = isset($data['data']) ? $data['data'] : [];
+    $method = isset($data['method']) ? $data['method'] : '';
 
     if (isset($_SESSION['user'])&& !empty($ingredients) && !empty($method)) {
         $userID = stripslashes($_SESSION['user']);
