@@ -206,11 +206,12 @@ main button:hover{
   flex-direction: row;
   justify-content:space-around;
   line-height: 60px;
-  z-index: 100;
+  z-index: 101;
   color: white;
 }
 .nav-links{
   width: 300px;
+  justify-content:space-between;
 }
 body , html {
   overflow-x: hidden;
