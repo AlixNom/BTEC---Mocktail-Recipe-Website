@@ -13,9 +13,9 @@ header {
   background:
   url('img/mocktail-home.jpg') no-repeat;
   width: 100vw;
-  height: 50vh;
+  height: 25vh;
   background-size: cover;
-  background-position:bottom;
+  background-position:center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
