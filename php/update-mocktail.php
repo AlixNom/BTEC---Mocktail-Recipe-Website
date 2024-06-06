@@ -67,7 +67,7 @@
                     </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
-                            <textarea class ='method' name='method' id='method' minlength ="10" value="<?php echo $row['method'];?>" required></textarea><br>
+                            <textarea class ='method' name='method' id='method' minlength ="10" required><?php echo $row['method'];?></textarea><br>
                     </div>
                     <div class='field input'>
                             <label>Description</label>
