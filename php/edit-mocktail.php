@@ -34,6 +34,16 @@
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
+    <?php
+    if(isset($_SESSION['status-success'])) {
+    ?>
+        <div class="alert-success">
+            <strong>Hey!</strong> <?php echo $_SESSION['username'];?>
+            <span aria-hidden="true">&times;</span>
+        </div>
+    <?php unset($_SESSION['status-success']); } ?>
+
+
     <header>    
         <div class="header-content">
             <h2>Browse endless amount of mocktails!</h2>
