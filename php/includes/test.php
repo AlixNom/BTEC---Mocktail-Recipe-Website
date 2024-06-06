@@ -18,7 +18,7 @@ include 'ConnDB.php';
     if (isset($_SESSION['user'])){
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
-        $ingredients = $ingredients['data']
+        $ingredients = $ingredients['data'];
         $method = stripslashes($_POST['method']);
         $method = mysqli_real_escape_string($conn, $method);
         
