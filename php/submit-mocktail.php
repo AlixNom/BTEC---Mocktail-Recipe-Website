@@ -46,10 +46,6 @@
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form action="includes/test.php" method="post"> 
-                <div class='field input'>
-                        <label>Method</label>
-                        <input type='textbox' class ='title' name='title' id='title' maxlength="15" required>
-                </div>
                 <div class="ingredientsList">	
                 </div>
                 <input type="hidden" name="ingredientArray" id="ingredientArray">
@@ -63,6 +59,10 @@
                         </select>
                         <a href="#" class="add">&plus;</a>
                 </div> 
+                <div class='field input'>
+                        <label>Title</label>
+                        <input type='text' class ='title' name='title' id='title' maxlength="15" required>
+                </div>
                 <div class='field input'>
                         <label>Method</label>
                         <textarea class ='method' name='method' id='method' minlength ="10" required></textarea>
