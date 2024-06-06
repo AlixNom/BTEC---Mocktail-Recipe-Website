@@ -68,6 +68,10 @@
                             <textarea class ='method' name='method' id='method' minlength ="10" required></textarea><br>
                     </div>
                     <div class='field input'>
+                            <label>Description</label>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="10" required></textarea><br>
+                    </div>
+                    <div class='field input'>
                             <label>Image</label>
                             <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"value="" required></input>
                     </div>
