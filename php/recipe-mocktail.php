@@ -12,7 +12,7 @@ $json = $row['ingredients'];
 $ingredientArray = json_decode($json, true);
 $ingredients = ""
 foreach ($ingredientArray as $key => $value) {
-    $ingredients = $ingredients + " '$value'" 
+    $ingredients = " '$value'"
 }
 ?>
 <html lang="en">
