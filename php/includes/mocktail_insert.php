@@ -47,8 +47,8 @@ include 'ConnDB.php';
     } else {
         $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
         header("Location: ../submit_mocktail.php");
-            
-    }
+    }    
+}
 }
 
 
