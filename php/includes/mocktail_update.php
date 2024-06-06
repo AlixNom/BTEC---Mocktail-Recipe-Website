@@ -2,7 +2,7 @@
 session_start();
 
 include 'ConnDB.php';
-    $id =$_GET['edit'];    
+    $id = $_GET['edit'];    
 
     
         $data = json_decode($_POST['ingredientArray'],true);
