@@ -22,14 +22,17 @@ include 'ConnDB.php';
         $stmt->bind_param("sss", $userID, $ingredientsArray, $method);
 
         if ($stmt->execute()) {
-            echo "Data saved successfully!";
+            $_SESSION['status-warning'] = "Error with registering user!";
+            header("Location: ../register.php");
         } else {
-            echo "Error executing query: " . $stmt->error;
+            $_SESSION['status-warning'] = "Was not able to submit recipe!";
+            header("Location: ../submit_mocktail.php");
         }
 
         $stmt->close();
 } else {
-echo "User session not set!";
+    $_SESSION['status-warning'] = "Error with registering user!";
+    header("Location: ../register.php");
         
 }
 
