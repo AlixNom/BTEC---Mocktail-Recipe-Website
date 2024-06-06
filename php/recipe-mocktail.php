@@ -20,7 +20,7 @@ foreach ($ingredientArray as $ingredient) {
     $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
 }
 $method = $row['method']
-$method = str_replace("\r\n","<br>",$method)
+$method = str_replace("\r\n","<br>")
 ?>
 <html lang="en">
 <head>
