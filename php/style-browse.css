@@ -209,7 +209,7 @@ main button:hover{
   z-index: 101;
   color: white;
 }
-.nav-links{
+.nav .nav-links{
   display: flex;
   width: 250px;
   justify-content:space-between;
