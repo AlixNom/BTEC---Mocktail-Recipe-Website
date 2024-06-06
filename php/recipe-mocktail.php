@@ -1,7 +1,12 @@
 <?php
-session_start();
-//require_once('includes/register_insert.php')
-//include('includes/register_insert.php');
+    session_start();
+
+    include('includes/ConnDB.php');
+    $sql = "SELECT * from mocktail_recipes where id = $_SESSION['recipe_uid']"
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
 ?>
 <html lang="en">
 <head>
@@ -30,15 +35,17 @@ session_start();
                 <div class='field'>
                         <a href ="browse-mocktail.php" class= "back">&times;</a>
                 </div>
-                <h3>Title</h3>
+                <h3><?php $row['title']?></h3>
                 <form>
                     <div class='image'>Image</div>
                     <div class='field input'>
-                        <label class="creator">Made By Creator</label>
-                        <label class="desc">Description</label>
-                        <label class="servings">Servings</label>
-                        <label class="ingredients">Ingredients</label>
-                        <label class="method">Methods</label>
+                        <label class="creator">Made By ...</label>
+                        <label class="desc"><?php $row['description']?></label>
+                        <label class="servings">Serves <?php $row['servings']?> people</label>
+                        <label>Ingredients</label>
+                        <label class="ingredients"><?php $row['ingredients']?></label>
+                        <label >Methods</label>
+                        <label class="method"><?php $row['method']?></label>
                     </div>
                     <div class='links'>
                         Not a member yet? <a href='register.php'>Join our community</a>
@@ -51,7 +58,7 @@ session_start();
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
-</body>
+<?php}?>
 </body>
 </html>
 <script type="text/javascript" src="onload.js"></script>
