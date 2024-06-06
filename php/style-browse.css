@@ -67,7 +67,7 @@ section{
 }
 
 main{
-    margin-top: 1500px;
+    margin-top: 150px;
     max-width: 90%;
     width: 50%;
     margin: 30px auto;
@@ -81,7 +81,7 @@ main .card{
     max-width: 100%;
     flex:1 1 210px;
     text-align: center;
-    height: 700px;
+    height: 400px;
     border-radius: 5px;
     border: 1px solid lightgrey;
     margin: 20px;
