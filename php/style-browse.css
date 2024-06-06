@@ -24,7 +24,8 @@ header {
 }
 
 .header-content {
-  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
   color: white;
 }
@@ -43,11 +44,6 @@ header {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-}
-.header-content h1 {
-  font-size:  7vmin;
-  margin-top: 100px;
-  margin-bottom: 30px;
 }
 .ctn {
   padding: 8px 15px;
