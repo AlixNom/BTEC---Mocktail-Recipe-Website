@@ -25,7 +25,7 @@
                 <h3>Make a Mocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action="includes/mocktail_insert.php" method="post"> 
+                <form action="includes/test.php" method="post"> 
                 <div class="ingredientsList">	
                 </div>
                 <input type="hidden" name="ingredientArray" id="ingredientArray">
