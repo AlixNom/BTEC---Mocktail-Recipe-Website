@@ -48,6 +48,9 @@
                 <button class="owned" onclick="location.href='edit-mocktail.php'">Go Back</button>    
                 <h3>Update Mocktail</h3>
                 </div>
+                <?php
+                $sql = msqli_query($)
+                ?>
                 <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
                     <label>Ingredients</label>
                     <div class="ingredientsList">	
@@ -87,6 +90,7 @@
                         <input type='submit' name='submit' class='submit' value='Update Recipe' required>
                     </div>
                 </form>
+                <?php }; ?>
             </div>
     </div>
     
