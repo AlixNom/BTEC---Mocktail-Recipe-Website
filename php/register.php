@@ -34,7 +34,7 @@
             <form action="includes/register_insert.php" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="userName" required autocomplete="off">
+                    <input type="text" name="username" id="userName" minlength = "5" required autocomplete="off">
                 </div>
                 <div class="field input">
                     <label for="firstName">First Name</label>

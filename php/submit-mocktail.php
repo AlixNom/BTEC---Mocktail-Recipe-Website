@@ -25,9 +25,10 @@
                 <h3>Make a Mocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form> 
+                <form action="includes/mocktail_insert.php" method="post"> 
                 <div class="ingredientsList">	
                 </div>
+                <input type="hidden" name="ingredientArray" id="ingredientArray">
                 <div class="flex-add">
                         <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                         <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
@@ -39,7 +40,7 @@
                         <a href="#" class="add">&plus;</a>
                 </div> 
                 <div class='field input'>
-                        <label for='method'>Method</label>
+                        <label>Method</label>
                         <input type='textbox' class ='method' name='method' id='method' required>
                 </div>
                 <div class='field'>
@@ -70,24 +71,22 @@
 
         document.querySelector('.submit').addEventListener('click', function() {
             let varMethod = document.querySelector('.method').value;
-            let bodyContent = {
-                    data: dataArray,
-                    method: varMethod
-                };
-            fetch('includes/mocktail_insert.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(bodyContent
-                )
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert('Data saved successfully!');
-            })
-            .catch(error => console.error('Error:', error));
-        });
+            let body = JSON.stringify({data: dataArray});
+            document.getElementById('ingredientArray').value = body;
+        //     fetch('includes/mocktail_insert.php', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(bodyContent
+        //         )
+        //     })
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         alert('Data saved successfully!');
+        //     })
+        //     .catch(error => console.error('Error:', error));
+         });
 
         function updateContainer() {
             let container = document.querySelector('.ingredientsList');
