@@ -71,11 +71,11 @@
                     </div>
                     <div class='field input'>
                             <label>Description</label>
-                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142" value="<?php echo $row['description'];?>" required></textarea><br>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142"  required><?php echo $row['description'];?></textarea><br>
                     </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
-                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png" value="<?php echo $row['image'];?>" required></input>
+                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png" required><?php echo $row['image'];?></input>
                     </div>
                     <div class='field'>
                         <input type='submit' name='submit' class='submit' value='Update Recipe' required>
