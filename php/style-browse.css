@@ -89,6 +89,7 @@ main .card{
 main .card .image{
   height: 50%;
   margin-bottom: 20px;
+  z-index:10;
 }
 h4 {
   font-size: 2vmin;
