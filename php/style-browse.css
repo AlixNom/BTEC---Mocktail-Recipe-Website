@@ -258,6 +258,19 @@ body , html {
 .footer .p{
   color:white;
 }
+
+.recipe-display{
+  margin:2rem 0;
+}
+
+.recipe-display table{
+  width: 100%;
+}
+.recipe-display table thead{
+  padding:1rem;
+  font-size: 2rem;
+  background:#363636;
+}
 @media only screen and (max-width:850px){
   .title{
     text-align: center;
@@ -281,3 +294,4 @@ body , html {
     padding: 10px;
   }
 }
+
