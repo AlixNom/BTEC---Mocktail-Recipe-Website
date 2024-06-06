@@ -19,6 +19,11 @@ foreach ($ingredientArray as $ingredient) {
 
     $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
 }
+$creatorID = $row['uid']
+$sqlUser = "SELECT uname FROM mocktail_users WHERE id = $creatorID";
+$stmtUser = $conn->prepare($sqlUser);
+$stmtUser->execute();
+$resultUser = $stmtUser->get_result();
 $method = $row['method'];
 $method = str_replace("\r\n", "<br>", $method);
 ?>
@@ -50,7 +55,7 @@ $method = str_replace("\r\n", "<br>", $method);
         <form>
             <div class='image'><img src="<?php echo $row['image']; ?>" alt="Recipe Image"></div>
             <div class='field input'>
-                <label class="creator">Made By ...</label><br></br><br></br>
+                <label class="creator">Made By <?php$resultUser?></label><br></br><br></br>
                 <h2>Description</h2>
                 <label class="label"><?php echo $row['description']; ?></label><br></br><br></br>
                 <label class="label">-   Serving for <?php echo $row['servings']; ?></label><br></br><br></br>
