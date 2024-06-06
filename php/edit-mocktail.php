@@ -10,6 +10,7 @@
     if(isset($_GET['delete'])){
         $id = $_GET['delete'];
         mysqli_query($conn,"DELETE FROM mocktail_recipes where id = $id" );
+        $_SESSION['status-success'] = "Sucessfully deleted a recipe!";
         header('location:edit-mocktail.php');
     }
 ?>
