@@ -38,18 +38,18 @@ include 'ConnDB.php';
                         header("Location: ../edit-mocktail.php");
                     } else {
                         $_SESSION['status-warning'] = "Was not able to update recipe!";
-                        header("Location: ../edit-mocktail.php");
+                        header("Location: ../update-mocktail.php");
                     }
         
                     $stmt->close();
                 } else {
                     $_SESSION['status-warning'] = "File not uploaded!";
-                    header("Location: ../edit-mocktail.php");
+                    header("Location: ../update-mocktail.php");
             }
         
     } else {
         $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
-        header("Location: ../edit-mocktail.php");
+        header("Location: ../update-mocktail.php");
     }    
 }
 }
