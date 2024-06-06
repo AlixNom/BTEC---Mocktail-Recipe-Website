@@ -56,7 +56,7 @@
                 </thead>
                 <?php
 
-                    while($row = $result->fetch_assoc();){
+                    while($row = $result->fetch_assoc()){
                 ?>
                     <tr>
                         <td><img scr="uploads/<?php $row['image'];?>" alt ="" height = "100"></td>
