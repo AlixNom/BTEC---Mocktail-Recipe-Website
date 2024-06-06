@@ -92,7 +92,7 @@ main .card{
 }
 
 main .card .image{
-  height: 50%;
+  height: 30%;
   margin-bottom: 20px;
   z-index:10;
 }
