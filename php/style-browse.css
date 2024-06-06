@@ -130,7 +130,7 @@ p {
   margin-top:30px;
 }
 
-.cocktail-section button{
+.cocktail-section .owned{
   background: #363636;
   height: 30px;
   color: white;
