@@ -267,10 +267,14 @@ body , html {
   width: 100%;
 }
 .recipe-display table thead{
+  background:lightgrey;
+}
+.recipe-display table td{
   padding:1rem;
   font-size: 1rem;
   color:gray;
   background:lightgrey;
+  border-bottom: 1px gray;
 }
 @media only screen and (max-width:850px){
   .title{
