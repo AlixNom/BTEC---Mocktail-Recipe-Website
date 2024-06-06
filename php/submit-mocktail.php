@@ -43,7 +43,6 @@
             <div class='form form-box'>
                 <div class='wrap'>
                 <h3>Make a Mocktail</h3>
-                <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form action="includes/mocktail_insert.php" method="post" enctype="multipart/form-data"> 
                     <label>Ingredients</label>

@@ -20,29 +20,9 @@ session_start();
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
-    <?php
-    if(isset($_SESSION['status'])) {
-    ?>
-        <div class="alert-success">
-            <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    <?php unset($_SESSION['status']); } ?>
-    <?php
-    if(isset($_SESSION['status-warning'])) {
-    ?>
-    <div class="alert-error">
-        <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <?php unset($_SESSION['status-warning']); } ?>
     <header>    
         <div class="header-content">
-            <h2>Enjoy a cocktail with love ones!</h2>
+            <h2>Browse endless amount of mocktails!</h2>
             <div class="line"></div>
             <h1>LIVE LAUGH LOVE!</h1>
             <a href="#" class="ctn">Newsletter</a>
@@ -58,7 +38,7 @@ session_start();
                 <img src="img/mocktail-explore2.jpg" alt="">
                 <h4>Cocktails</h4>
                 <p>Dive into the diverse world of cocktail recipes crafted by countless enthusiasts. With such a wide array of options, you’ll always find something new and exciting to try, ensuring you'll never get tired of experimenting and discovering new flavors!</p>
-                <a href="browse-mocktail.php" class="ctn">Browse</a>
+                <a href="#" class="ctn">Browse</a>
             </div>
             <div class="col">
                 <img src="img/mocktail-submit.jpg" alt="">
