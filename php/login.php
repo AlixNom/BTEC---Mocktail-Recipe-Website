@@ -18,8 +18,9 @@ session_start();
             Logo
         </div>
         <div class='nav-links'>
-            <a href='Index.php'>Homepage</a>
-            <a href='register.php'>Register</a>
+            <a class="links" href="homepage.php">Home</a>
+            <a class="links" href="login.php">Login</a>
+            <a class="links" href="register.php">Not a Member?</a>
         </div>
     
 </div>

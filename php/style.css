@@ -178,6 +178,12 @@ body{
   z-index: 100;
   z-index:1;
 }
+.nav-links{
+  display: flex;
+  width: 250px;
+  justify-content:space-between;
+}
+
 body , html {
   overflow-x: hidden;
 }
