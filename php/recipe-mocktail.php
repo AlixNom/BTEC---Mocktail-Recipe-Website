@@ -28,10 +28,10 @@
         </div>
     </div>
     <header>    
-        <div class="header-content">
+        <!-- <div class="header-content">
             <h2>Browse endless amount of mocktails!</h2>
             <div class="line"></div>
-        </div>
+        </div> -->
     </header>
     <section class="cocktail-section">
         <div class="title">
@@ -51,7 +51,7 @@
                     <p class = "serving">Serving: <?php echo $row['servings'];?></p>
                     <p class = "description"><?php echo $row['description'];?></p>
                 </div>
-                <button class = "view" onclick="location.href = 'recipe-mocktail.php';" > View Recipe</button>
+                <button class = "view"> View Recipe</button>
             </div>
             <?php
             }?>
