@@ -79,6 +79,7 @@
                         <td><?php echo $row['method'];?></td>
                         <td>
                             <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a>
+                            <a href="delete-mocktail.php?delete=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-trash"></i>Edit</a>
                         </td>
                     </tr>
 
