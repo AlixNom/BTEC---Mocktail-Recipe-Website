@@ -50,8 +50,12 @@
                     <p class = "name"><?php echo $row['title'];?></p>
                     <p class = "serving">Serving: <?php echo $row['servings'];?></p>
                     <p class = "description"><?php echo $row['description'];?></p>
+                    
                 </div>
-                <button class = "view" onclick="location.href = 'recipe-mocktail.php';" > View Recipe</button>
+                <form method="POST" action="includes/browse-navigation.php">
+                    <input type="hidden" name="recipe_id" value="<?php echo $row['id']; ?>">
+                    <button class="view" type="submit"> View Recipe</button>
+                </form>
             </div>
             <?php
             }?>
