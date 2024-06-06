@@ -22,8 +22,8 @@ include 'ConnDB.php';
         $stmt->bind_param("sss", $userID, $ingredientsArray, $method);
 
         if ($stmt->execute()) {
-            $_SESSION['status-warning'] = "Error with registering user!";
-            header("Location: ../register.php");
+            $_SESSION['status'] = "You have submitted a recipe!";
+            header("Location: ../index.php");
         } else {
             $_SESSION['status-warning'] = "Was not able to submit recipe!";
             header("Location: ../submit_mocktail.php");
@@ -31,8 +31,8 @@ include 'ConnDB.php';
 
         $stmt->close();
 } else {
-    $_SESSION['status-warning'] = "Error with registering user!";
-    header("Location: ../register.php");
+    $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
+    header("Location: ../submit_mocktail.php");
         
 }
 
