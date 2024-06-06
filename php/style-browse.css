@@ -103,6 +103,15 @@ main .card .image img{
   object-fit: cover;
 }
 
+main .card .caption{
+  padding-left: 1em;
+  text-align: left;
+  line-height: 3em;
+  height: 25%;
+}
+
+
+
 h4 {
   font-size: 2vmin;
   margin: 20px auto;
@@ -198,8 +207,11 @@ main button:hover{
   justify-content:space-around;
   line-height: 60px;
   z-index: 100;
-  z-index:1;
   color: white;
+}
+.nav-links{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 body , html {
   overflow-x: hidden;
