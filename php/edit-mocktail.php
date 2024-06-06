@@ -44,14 +44,14 @@
             <table class = "recipe-table">
                 <thead>
                     <tr>
-                        <td>Image</td>
-                        <td>Title</td>
-                        <td>ID</td>
-                        <td>Description</td>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>ID</th>
+                        <th>Description</th>
                         <td>Servings</td>
-                        <td>Ingredients</td>
-                        <td>Method</td>
-                        <td colspan ="2">action</td>
+                        <th>Ingredients</th>
+                        <th>Method</th>
+                        <th colspan ="2">action</th>
                     </tr>
                 </thead>
                 <?php

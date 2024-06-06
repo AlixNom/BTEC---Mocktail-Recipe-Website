@@ -272,6 +272,12 @@ body , html {
   background:lightgrey;
   padding:1rem;
 }
+.recipe-display table th{
+  padding:1rem;
+  font-size: 1rem;
+  color:#424242;
+  background:lightgrey
+}
 .recipe-display table td{
   padding:1rem;
   font-size: 1rem;
