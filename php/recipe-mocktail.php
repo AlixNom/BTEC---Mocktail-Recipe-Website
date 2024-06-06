@@ -39,12 +39,13 @@ $row = $result->fetch_assoc();
             <div class='image'><img src="<?php echo $row['image']; ?>" alt="Recipe Image"></div>
             <div class='field input'>
                 <label class="creator">Made By ...</label>
-                <label class="desc"><?php echo $row['description']; ?></label>
-                <label class="servings">Serves <?php echo $row['servings']; ?> people</label>
-                <label>Ingredients</label>
-                <label class="ingredients"><?php echo $row['ingredients']; ?></label>
-                <label>Methods</label>
-                <label class="method"><?php echo $row['method']; ?></label>
+                <h2>Description</h2>
+                <label class="desc"><?php echo $row['description']; ?></label><br></br>
+                <label class="servings">Serves <?php echo $row['servings']; ?> people</label><br>
+                <h2>Ingredients</h2>
+                <label class="ingredients"><?php echo $row['ingredients']; ?></label><br>
+                <h2>Methods</h2>
+                <label class="method"><?php echo $row['method']; ?></label><br>
             </div>
             <div class='links'>
                 Not a member yet? <a href='register.php'>Join our community</a>
