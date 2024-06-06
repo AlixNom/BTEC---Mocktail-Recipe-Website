@@ -22,9 +22,9 @@
     session_start();
     if(isset($_SESSION['status'])) {
     ?>
-        <div class="alert-error">
-            <strong>Error!</strong> <?php echo $_SESSION['status'];?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <div class="alert-success">
+            <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -34,7 +34,7 @@
     ?>
     <div class="alert-error">
         <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <button type="button" class="close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
         </button>
     </div>
@@ -46,6 +46,10 @@
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form action="includes/test.php" method="post"> 
+                <div class='field input'>
+                        <label>Method</label>
+                        <input type='textbox' class ='title' name='title' id='title' maxlength="15" required>
+                </div>
                 <div class="ingredientsList">	
                 </div>
                 <input type="hidden" name="ingredientArray" id="ingredientArray">

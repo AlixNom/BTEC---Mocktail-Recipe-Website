@@ -21,9 +21,9 @@
     session_start();
     if(isset($_SESSION['status'])) {
     ?>
-        <div class="alert-error">
-            <strong>Error!</strong> <?php echo $_SESSION['status'];?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <div class="alert-success">
+            <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert" >
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -44,7 +44,7 @@
             <form action="includes/register_insert.php" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="userName" minlength = "5" required autocomplete="off">
+                    <input type="text" name="username" id="userName" minlength = "2" maxlength="40" required autocomplete="off">
                 </div>
                 <div class="field input">
                     <label for="firstName">First Name</label>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="field input">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" minlength= "10" required>
                 </div>
                 <div class="field input">
                     <label for="dob">Date of Birth</label>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="field input">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" minlength="8" required>
                     <span id="show"><i class ="fa-regular fa-eye-slash"></i></span>
                 </div>
                 <div class="hint">
