@@ -31,35 +31,16 @@ session_start();
             <h1>Recipes</h1>
             <div class="line"></div>
         </div>
-        <div class ="row">
-            <div class="col">
-                <img src="img/mocktail-explore2.jpg" alt="">
-                <h4>Cocktails</h4>
-                <p>Dive into the diverse world of cocktail recipes crafted by countless enthusiasts. With such a wide array of options, you’ll always find something new and exciting to try, ensuring you'll never get tired of experimenting and discovering new flavors!</p>
-                <a href="#" class="ctn">Browse</a>
+        <div class = "card">
+            <div class = "image">
+                <img scr="img/mocktail-games_cropped.png">
             </div>
-            <div class="col">
-                <img src="img/mocktail-submit.jpg" alt="">
-                <h4>Submit Your Own</h4>
-                <p>Would you like to share your own homemade cocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow cocktail lovers and become the next big hit!</p>
-                <a href="submit-mocktail.php" class="ctn">Make Recipe</a>
+            <div class="caption">
+                <p class = "name">Recipe</p>
+                <p class = "serving">Serving</p>
+                <p class = "description">Description</p>
             </div>
-            
-        </div>
-        <div class ="row">
-            <div class="col">
-                <img src="img/mocktail-newspaper.jpg" alt="">
-                <h4>Newsletter</h4>
-                <p>about the latest trends and updates in the cocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
-                <a href="#" class="ctn">View More</a>
-            </div>
-            <div class="col">
-                <img src="img/mocktail-poll.jpg" alt="">
-                <h4>Polls/Quizzes</h4>
-                <p>Challenge yourself and see how much you really know about the art of mixology, or place your opinions out!</p>
-                <a href="#" class="ctn">View More</a>
-            </div>
-            
+            <button class = "view"> View Recipe</button>
         </div>
     </section>
     <section class = "footer">
