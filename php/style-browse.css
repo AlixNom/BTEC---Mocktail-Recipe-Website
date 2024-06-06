@@ -107,10 +107,12 @@ main .card .caption{
   padding-left: 1em;
   text-align: left;
   line-height: 3em;
-  height: 25%;
+  height: 10%;
 }
 
-
+main .card .caption p{
+  font-size:1.5rem;
+}
 
 h4 {
   font-size: 2vmin;
