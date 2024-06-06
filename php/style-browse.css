@@ -210,6 +210,7 @@ main button:hover{
   color: white;
 }
 .nav-links{
+  display: flex;
   width: 300px;
   justify-content:space-between;
 }
