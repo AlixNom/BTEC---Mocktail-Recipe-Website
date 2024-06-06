@@ -156,6 +156,7 @@ body{
 }
 .form-box form .input textarea{
   resize: none;
+  height: 350px;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;
