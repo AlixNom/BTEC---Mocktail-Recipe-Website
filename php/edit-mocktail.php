@@ -78,7 +78,7 @@
                         <td><?php echo $ingredients;?></td>
                         <td><?php echo $row['method'];?></td>
                         <td>
-                            <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="button"> <i class="fas fa-edit"></i>Edit</a>
+                            <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a>
                         </td>
                     </tr>
 
