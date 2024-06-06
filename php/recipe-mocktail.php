@@ -10,6 +10,9 @@ $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $json = $row['ingredients'];
 $ingredientArray = json_decode($json, true);
+if (json_last_error() !== JSON_ERROR_NONE) {
+    die('Error decoding JSON: ' . json_last_error_msg());
+}
 $ingredients = ""
 foreach ($ingredientArray as $key => $value) {
     $ingredients = " '$value'"
