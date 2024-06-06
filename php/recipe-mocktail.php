@@ -5,7 +5,7 @@ include('includes/ConnDB.php');
 $recipe_id = stripslashes($_SESSION['recipe_uid']);
 $sql = "SELECT * FROM mocktail_recipes WHERE id = $recipe_id";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $recipe_id);
+//$stmt->bind_param("s", $recipe_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
