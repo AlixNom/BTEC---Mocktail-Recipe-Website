@@ -2,8 +2,8 @@
     session_start();
     include 'includes/ConnDB.php'
 
-    $sql = "SELECT * FROM mocktail_recipes";
-    $stmt = $conn->prepare($sql);
+    // $sql = "SELECT * from mocktail_recipes";
+    // $stmt = $conn->prepare($sql);
 ?>
 <html lang="en">
 <head>
@@ -41,7 +41,7 @@
                 while($row = mysqli_fetch_assoc($stmt)){
             ?>
             <div class = "card">
-                <div class = "image">
+                <!-- <div class = "image">
                     <img scr="<?php echo $row['image'];?>" alt="">
                 </div>
                 <div class="caption">
@@ -49,7 +49,7 @@
                     <p class = "serving">Serving: <?php echo $row['serving'];?></p>
                     <p class = "description"><?php echo $row['description'];?></p>
                 </div>
-                <button class = "view"> View Recipe</button>
+                <button class = "view"> View Recipe</button> -->
             </div>
             <?php
             }?>
