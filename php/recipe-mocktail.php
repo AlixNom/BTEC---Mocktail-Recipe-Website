@@ -13,7 +13,7 @@ $ingredientArray = json_decode($json, true);
 $ingredients = "";
 foreach ($ingredientArray as $key => $value) {
     $ingredients = " '$value'"
-}
+};
 ?>
 <html lang="en">
 <head>
