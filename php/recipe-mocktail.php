@@ -39,12 +39,12 @@ $row = $result->fetch_assoc();
             <div class='field input'>
                 <label class="creator">Made By ...</label>
                 <h2>Description</h2>
-                <label class="desc"><?php echo $row['description']; ?></label><br></br>
-                <label class="servings">Serves <?php echo $row['servings']; ?> people</label><br></br>
+                <label class="label"><?php echo $row['description']; ?></label><br></br>
+                <label class="label">Serves <?php echo $row['servings']; ?> people</label><br></br>
                 <h2>Ingredients</h2>
-                <label class="ingredients"><?php echo $row['ingredients']; ?></label><br><br>
+                <label class="label"><?php echo $row['ingredients']; ?></label><br><br>
                 <h2>Methods</h2>
-                <label class="method"><?php echo $row['method']; ?></label><br></br>
+                <label class="label"><?php echo $row['method']; ?></label><br></br>
             </div>
             <div class='links'>
                 Not a member yet? <a href='register.php'>Join our community</a>

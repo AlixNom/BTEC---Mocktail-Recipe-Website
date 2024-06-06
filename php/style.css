@@ -120,7 +120,7 @@ body{
   z-index:1;
 }
 
-.form-box h2{
+.form-box form h2{
   font-size: 2vmin;
   font-weight: 700;
   padding-bottom: 10px;
