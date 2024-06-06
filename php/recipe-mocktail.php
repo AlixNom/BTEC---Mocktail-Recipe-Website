@@ -24,7 +24,6 @@ $sqlUser = "SELECT * FROM mocktail_users WHERE id = $creatorID";
 $stmtUser = $conn->prepare($sqlUser);
 $stmtUser->execute();
 $resultUser = $stmtUser->get_result();
-$rowUser = $resultUser->fetch_assoc();
 $method = $row['method'];
 $method = str_replace("\r\n", "<br>", $method);
 ?>
