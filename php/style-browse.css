@@ -114,6 +114,10 @@ main .card .name{
   font-size:1.5rem;
 }
 
+main .card .view{
+  margin-top: 30px;
+}
+
 h4 {
   font-size: 2vmin;
   margin: 20px auto;
