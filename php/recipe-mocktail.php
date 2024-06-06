@@ -5,7 +5,6 @@ include('includes/ConnDB.php');
 $recipe_id = stripslashes($_SESSION['recipe_uid']);
 $sql = "SELECT * FROM mocktail_recipes WHERE id = $recipe_id";
 $stmt = $conn->prepare($sql);
-//$stmt->bind_param("s", $recipe_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
@@ -41,11 +40,11 @@ $row = $result->fetch_assoc();
                 <label class="creator">Made By ...</label>
                 <h2>Description</h2>
                 <label class="desc"><?php echo $row['description']; ?></label><br></br>
-                <label class="servings">Serves <?php echo $row['servings']; ?> people</label><br>
+                <label class="servings">Serves <?php echo $row['servings']; ?> people</label><br></br>
                 <h2>Ingredients</h2>
-                <label class="ingredients"><?php echo $row['ingredients']; ?></label><br>
+                <label class="ingredients"><?php echo $row['ingredients']; ?></label><br><br>
                 <h2>Methods</h2>
-                <label class="method"><?php echo $row['method']; ?></label><br>
+                <label class="method"><?php echo $row['method']; ?></label><br></br>
             </div>
             <div class='links'>
                 Not a member yet? <a href='register.php'>Join our community</a>
