@@ -65,7 +65,7 @@
                 </div> 
                 <div class='field input'>
                         <label>Method</label>
-                        <input type='textbox' class ='method' name='method' id='method' required>
+                        <textarea class ='method' name='method' id='method' minlength ="10" required></textarea>
                 </div>
                 <div class='field'>
                     <input type='submit' name='submit' class='submit' value='Submit Recipe' required>

@@ -142,8 +142,7 @@ body{
 }
 
 .form-box form .input input{
-  text-align: left;
-  height: 300px;
+  height: 40px;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;
