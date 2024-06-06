@@ -25,8 +25,6 @@ include 'ConnDB.php';
             $allowedTypes = array('jpg','jpeg','png');
             $tempName = $_FILES['image']['tmp_name'];
             $targetPath = "../uploads/".$fileName;
-            if(in_array($ext, $allowedTypes)){
-                if(move_uploaded_file($tempName, $targetPath)){
                     $ingredientsArray = stripslashes($ingredients);
                     $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $id";
                     $stmt = $conn->prepare($sql);
@@ -44,15 +42,7 @@ include 'ConnDB.php';
                     }
         
                     $stmt->close();
-                } else {
-                    $_SESSION['status-warning'] = "File not uploaded!";
-                    header("Location: ../edit-mocktail.php");
-            }
-        
-    } else {
-        $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
-        header("Location: ../edit-mocktail.php");
-    }    
+ 
 }
 
 
