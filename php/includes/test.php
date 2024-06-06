@@ -27,7 +27,7 @@ include 'ConnDB.php';
     // if (isset($dataArray['data'])&& is_array($dataArray['data'])) {
         $sql = "INSERT INTO mocktail_recipes (uid, ingredients, method) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $ingredientsArray = stripslashes($ingredients);
+        //$ingredientsArray = stripslashes($ingredients);
 
         $stmt->bind_param("sss", $userID, $ingredients, $method);
 
