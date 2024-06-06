@@ -21,7 +21,7 @@ include 'ConnDB.php';
         $stmt = $conn->prepare($sql);
         $ingredientsArray = stripslashes($ingredients);
 
-        $stmt->bind_param("sss", $userID, $title, $ingredientsArray, $method);
+        $stmt->bind_param("ssss", $userID, $title, $ingredientsArray, $method);
 
         if ($stmt->execute()) {
             $_SESSION['status'] = "You have submitted a recipe!";
