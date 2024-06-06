@@ -51,12 +51,25 @@
                         <td>Servings</td>
                         <td>Ingredients</td>
                         <td>Method</td>
+                        <td colspan ="2">action</td>
                     </tr>
                 </thead>
                 <?php
 
-                    while($row = mysqli_fetch_assoc($result))
+                    while($row = $result->fetch_assoc();){
                 ?>
+                    <tr>
+                        <td><img scr="uploads/<?php $row['image'];?>" alt ="" height = "100"></td>
+                        <td>Title</td>
+                        <td>ID</td>
+                        <td>Description</td>
+                        <td>Servings</td>
+                        <td>Ingredients</td>
+                        <td>Method</td>
+                        <td colspan ="2">action</td>
+                    </tr>
+
+                <?php };?>
             </table>
         </div>
     </section>
