@@ -30,11 +30,15 @@ session_start();
                 <div class='field'>
                         <a href ="browse-mocktail.php" class= "back">&times;</a>
                 </div>
-                <h3>Login</h3>
+                <h3>Title</h3>
                 <form>
-                    <div class='image'></div>
+                    <div class='image'>Image</div>
                     <div class='field input'>
-                        <label for='email'>User</label>
+                        <label class="creator">Made By Creator</label>
+                        <label class="desc">Description</label>
+                        <label class="servings">Servings</label>
+                        <label class="ingredients">Ingredients</label>
+                        <label class="method">Methods</label>
                     </div>
                     <div class='links'>
                         Not a member yet? <a href='register.php'>Join our community</a>
