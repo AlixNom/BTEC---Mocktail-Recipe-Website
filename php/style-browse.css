@@ -211,7 +211,7 @@ main button:hover{
 }
 .nav-links{
   display: flex;
-  width: 300px;
+  width: 200px;
   justify-content:space-between;
 }
 body , html {
