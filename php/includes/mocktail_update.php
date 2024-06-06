@@ -52,7 +52,7 @@ include 'ConnDB.php';
         header("Location: ../update-mocktail.php");
     }    
 }
-}
+
 
 
 $conn->close();
