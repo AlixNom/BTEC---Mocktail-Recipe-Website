@@ -62,7 +62,7 @@
                     </div> 
                     <div class='field input'>
                             <label>Title</label>
-                            <input type='text' class ='title' name='title' id='title' maxlength="15" required>
+                            <input type='text' class ='titleMocktail' name='titleMocktail' id='titleMocktail' maxlength="15" required>
                     </div>
                     <div class='field input'>
                             <label>Method</label>

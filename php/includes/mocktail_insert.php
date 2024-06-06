@@ -10,7 +10,7 @@ include 'ConnDB.php';
         $userID = stripslashes($_SESSION['user']);
         $userID = mysqli_real_escape_string($conn, $userID);
         $ingredients = json_encode($data['data']);
-        $title = stripslashes($_POST['title']);
+        $title = stripslashes($_POST['titleMocktail']);
         $title = mysqli_real_escape_string($conn, $title);
         $method = stripslashes($_POST['method']);
         $method = mysqli_real_escape_string($conn, $method);
