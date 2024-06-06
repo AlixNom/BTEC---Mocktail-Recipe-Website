@@ -210,8 +210,7 @@ main button:hover{
   color: white;
 }
 .nav-links{
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 300px;
 }
 body , html {
   overflow-x: hidden;
