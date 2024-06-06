@@ -33,7 +33,7 @@ session_start();
         </div>
         <div class = "card">
             <div class = "image">
-                <img scr="img/mocktail-games_cropped.png">
+                <img scr="uploads/mocktail-games_cropped.png">
             </div>
             <div class="caption">
                 <p class = "name">Recipe</p>
