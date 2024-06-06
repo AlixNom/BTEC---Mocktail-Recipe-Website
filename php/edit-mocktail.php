@@ -40,6 +40,21 @@
         </div>
         <button class="owned" onclick="location.href='browse-mocktail.php'">Back</button>
 
+        <div class ="recipe-display">
+            <table class = "recipe-table">
+                <thead>
+                    <tr>
+                        <td>Image</td>
+                        <td>Title</td>
+                        <td>ID</td>
+                        <td>Description</td>
+                        <td>Servings</td>
+                        <td>Ingredients</td>
+                        <td>Method</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </section>
     <section class = "footer">
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
