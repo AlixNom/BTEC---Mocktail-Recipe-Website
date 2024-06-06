@@ -41,9 +41,9 @@
     </div>
     <?php unset($_SESSION['status-warning']); } ?>
     <div class='login'>
-    <button class="owned" onclick="location.href='edit-mocktail.php'">Go Back</button>    
             <div class='form form-box'>
                 <div class='wrap'>
+                <button class="owned" onclick="location.href='edit-mocktail.php'">Go Back</button>    
                 <h3>Update Mocktail</h3>
                 </div>
                 <form action="includes/mocktail_insert.php" method="post" enctype="multipart/form-data"> 

@@ -65,7 +65,7 @@
                         <th>Title</th>
                         <th>ID</th>
                         <th>Description</th>
-                        <td>Servings</td>
+                        <th>Servings</th>
                         <th>Ingredients</th>
                         <th>Method</th>
                         <th colspan ="2">action</th>
