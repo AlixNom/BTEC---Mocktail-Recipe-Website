@@ -57,7 +57,7 @@ $method = str_replace("\r\n","<br>", $method)
                 <h2>Ingredients</h2>
                 <label class="label"><?php echo $ingredients; ?></label><br><br>
                 <h2>Methods</h2>
-                <label class="label"><?php echo $row['method']; ?></label><br></br><br></br>
+                <label class="label"><?php echo $method; ?></label><br></br><br></br>
             </div>
             <div class='links'>
                 Not a member yet? <a href='register.php'>Join our community</a>
