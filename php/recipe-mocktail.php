@@ -12,8 +12,12 @@ $json = $row['ingredients'];
 $ingredientArray = json_decode($json, true);
 $ingredients = "";
 foreach ($ingredientArray as $ingredient) {
+    $valIngredient = isset($ingredient['ingredients']) ? $ingredient['ingredients'] : 'N/A';
+    $valAmount = isset($ingredient['amount']) ? $ingredient['amount'] : 'N/A';
+    $valUnit = isset($ingredient['unit']) ? $ingredient['unit'] : 'N/A';
+        
 
-    $ingredients .= "- $ingredient\n";
+    $ingredients .= "- $valIngredient   $valAmount$valUnit/n";
 }
 ?>
 <html lang="en">
