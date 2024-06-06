@@ -94,7 +94,6 @@
         });
 
         document.querySelector('.submit').addEventListener('click', function() {
-            let varMethod = document.querySelector('.method').value;
             let body = JSON.stringify({data: dataArray});
             document.getElementById('ingredientArray').value = body;
          });
