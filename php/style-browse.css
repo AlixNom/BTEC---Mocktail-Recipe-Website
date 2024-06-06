@@ -161,7 +161,6 @@ p {
 main .button{
   background: hwb(129 39% 45%);
   height: 30px;
-  width: 20px;
   color: white;
   border: 0;
   border-radius: 5px;
