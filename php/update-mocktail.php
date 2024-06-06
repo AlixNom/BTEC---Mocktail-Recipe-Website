@@ -50,7 +50,8 @@
                 </div>
                 <?php
                 include 'includes/ConnDB.php';
-                $sql = mysqli_query($conn, "SELECT * from mocktail_recipes");
+                $id = $_GET['edit'];
+                $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
                 <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
