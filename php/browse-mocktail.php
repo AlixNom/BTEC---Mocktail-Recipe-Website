@@ -37,18 +37,22 @@
             <div class="line"></div>
         </div>
         <main>
-            <?php?>
+            <?php
+                while($row = mysqli_fetch_assoc($stmt)){
+            ?>
             <div class = "card">
                 <div class = "image">
-                    <img scr="uploads/mocktail-games_cropped.png" alt="">
+                    <img scr="<?php echo $row['image'];?>" alt="">
                 </div>
                 <div class="caption">
-                    <p class = "name">Recipe</p>
-                    <p class = "serving">Serving</p>
-                    <p class = "description">Description</p>
+                    <p class = "name"><?php echo $row['title'];?></p>
+                    <p class = "serving">Serving: <?php echo $row['serving'];?></p>
+                    <p class = "description"><?php echo $row['description'];?></p>
                 </div>
                 <button class = "view"> View Recipe</button>
             </div>
+            <?php
+            }?>
         </main>
     </section>
     <section class = "footer">
