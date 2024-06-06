@@ -24,8 +24,6 @@ session_start();
         <div class="header-content">
             <h2>Browse endless amount of mocktails!</h2>
             <div class="line"></div>
-            <h1>LIVE LAUGH LOVE!</h1>
-            <a href="#" class="ctn">Newsletter</a>
         </div>
     </header>
     <section class="cocktail-section">
