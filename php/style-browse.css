@@ -269,7 +269,8 @@ body , html {
 .recipe-display table thead{
   padding:1rem;
   font-size: 2rem;
-  background:#363636;
+  color:white;
+  background:lightgrey;
 }
 @media only screen and (max-width:850px){
   .title{
