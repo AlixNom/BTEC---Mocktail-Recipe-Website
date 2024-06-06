@@ -28,7 +28,7 @@ session_start();
     </header>
     <section class="cocktail-section">
         <div class="title">
-            <h1>Browse Recipes</h1>
+            <h1>Recipes</h1>
             <div class="line"></div>
         </div>
         <div class ="row">
