@@ -74,7 +74,7 @@
                     </div>
                     <div class='field input'>
                             <label>Description</label>
-                            <textarea class ='desc' name='desc' id='desc' minlength ="10" placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="10" maxlength="142"placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
                     </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
