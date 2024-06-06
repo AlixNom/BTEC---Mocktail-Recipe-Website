@@ -6,6 +6,12 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
+
+    if(isset($_GET['delete'])){
+        $id = $_GET['delete'];
+        mysqli_query($conn,"DELETE FROM mocktail_recipes where id = $id" );
+        header('location:edit-mocktail.php');
+    }
 ?>
 <html lang="en">
 <head>
@@ -79,7 +85,7 @@
                         <td><?php echo $row['method'];?></td>
                         <td>
                             <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a>
-                            <a href="delete-mocktail.php?delete=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-trash"></i>Edit</a>
+                            <a href="edit-mocktail.php?delete=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-trash"></i>Delete</a>
                         </td>
                     </tr>
 
