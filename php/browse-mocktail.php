@@ -48,7 +48,7 @@
                 </div>
                 <div class="caption">
                     <p class = "name"><?php echo $row['title'];?></p>
-                    <p class = "serving">Serving: <?php echo $row['serving'];?></p>
+                    <p class = "serving">Serving: <?php echo $row['servings'];?></p>
                     <p class = "description"><?php echo $row['description'];?></p>
                 </div>
                 <button class = "view"> View Recipe</button>
