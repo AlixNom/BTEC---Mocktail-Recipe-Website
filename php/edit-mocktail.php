@@ -57,6 +57,17 @@
                 <?php
 
                     while($row = $result->fetch_assoc()){
+                        $json = $row['ingredients'];
+                        $ingredientArray = json_decode($json, true);
+                        $ingredients = "";
+                        foreach ($ingredientArray as $ingredient) {
+                            $valIngredient = isset($ingredient['Ingredient']) ? $ingredient['Ingredient'] : 'N/A';
+                            $valAmount = isset($ingredient['Amount']) ? $ingredient['Amount'] : 'N/A';
+                            $valUnit = isset($ingredient['Unit']) ? $ingredient['Unit'] : 'N/A';
+                                
+
+                            $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
+                        }
                 ?>
                     <tr>
                         <td><img scr="uploads/<?php $row['image'];?>" alt ="" height = "100"></td>
@@ -64,7 +75,7 @@
                         <td><?php echo $row['id'];?></td>
                         <td><?php echo $row['description'];?></td>
                         <td><?php echo $row['servings'];?></td>
-                        <td>Ingredients</td>
+                        <td><?php echo $row['ingredients'];?></td>
                         <td>Method</td>
                         <td colspan ="2">action</td>
                     </tr>
