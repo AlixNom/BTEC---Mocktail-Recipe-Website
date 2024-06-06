@@ -4,10 +4,7 @@ session_start();
 include 'ConnDB.php';
     $id =$_GET['edit'];    
 
-    if($_FILES['image']['error'] === 4){
-        $_SESSION['status-warning'] = "This image doesn't exist!";
-        header("Location: ../edit-mocktail.php");
-    } else {
+    
         $data = json_decode($_POST['ingredientArray'],true);
 
 
