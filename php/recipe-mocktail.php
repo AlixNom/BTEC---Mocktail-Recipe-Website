@@ -19,7 +19,7 @@ foreach ($ingredientArray as $ingredient) {
 
     $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
 }
-$creatorID = $row['uid']
+$creatorID = $row['uid'];
 $sqlUser = "SELECT uname FROM mocktail_users WHERE id = $creatorID";
 $stmtUser = $conn->prepare($sqlUser);
 $stmtUser->execute();
