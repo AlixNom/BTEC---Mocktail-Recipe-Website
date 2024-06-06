@@ -27,11 +27,11 @@ session_start();
 
     <div class='login'>
             <div class='form form-box'>
+                <div class='field'>
+                        <a href ="browse-mocktail.php" class= "back">&times;</a>
+                </div>
                 <h3>Login</h3>
                 <form>
-                    <div class='field'>
-                        <a href ="browse-mocktail.php" class= "back">&times;</a>
-                    </div>
                     <div class='image'></div>
                     <div class='field input'>
                         <label for='email'>User</label>
