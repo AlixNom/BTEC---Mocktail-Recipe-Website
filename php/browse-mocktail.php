@@ -31,6 +31,7 @@ session_start();
             <h1>Recipes</h1>
             <div class="line"></div>
         </div>
+        <main>
         <div class = "card">
             <div class = "image">
                 <img scr="uploads/mocktail-games_cropped.png">
@@ -42,6 +43,7 @@ session_start();
             </div>
             <button class = "view"> View Recipe</button>
         </div>
+        </main>
     </section>
     <section class = "footer">
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
