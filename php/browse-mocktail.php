@@ -62,14 +62,6 @@ session_start();
             
         </div>
     </section>
-    <section class="tiptricks">
-        <div class="tiptricks-content">
-        <h1>SECRETS TO MAKING THE BEST COCKTAIL!</h1>
-        <div class="line"></div>
-        <p>Crafting the perfect cocktail is an art form that blends creativity with precision, there are numerous tips and tricks to enhance your cocktail-making skills. Here's a comprehensive guide to elevating your cocktail game:</p>
-        <a href="#" class="ctn"> Learn More </a>
-        </div>
-    </section>
     <section class = "footer">
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
