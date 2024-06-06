@@ -121,7 +121,7 @@
                     <input type="text" value="${item.Ingredient}" class="item-input-1">
                     <input type="number" value="${item.Amount}" class="item-input-2 min="1">
                     <label class = "item-input-3" >${item.Unit}</label>
-
+                    <a class = "delete">&times;</a>
                 `;
                 container.appendChild(div);
             });
