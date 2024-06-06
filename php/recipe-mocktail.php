@@ -17,7 +17,7 @@ foreach ($ingredientArray as $ingredient) {
     $valUnit = isset($ingredient['Unit']) ? $ingredient['Unit'] : 'N/A';
         
 
-    $ingredients .= "- $valIngredient       $valAmount$valUnit <br>";
+    $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
 }
 ?>
 <html lang="en">
@@ -50,12 +50,12 @@ foreach ($ingredientArray as $ingredient) {
             <div class='field input'>
                 <label class="creator">Made By ...</label>
                 <h2>Description</h2>
-                <label class="label"><?php echo $row['description']; ?></label><br></br>
-                <label class="label">Serves <?php echo $row['servings']; ?> people</label><br></br>
+                <label class="label"><?php echo $row['description']; ?></label><br></br><br></br>
+                <label class="label">-   Serving for <?php echo $row['servings']; ?></label><br></br><br></br>
                 <h2>Ingredients</h2>
                 <label class="label"><?php echo $ingredients; ?></label><br><br>
                 <h2>Methods</h2>
-                <label class="label"><?php echo $row['method']; ?></label><br></br>
+                <label class="label"><?php echo $row['method']; ?></label><br></br><br></br>
             </div>
             <div class='links'>
                 Not a member yet? <a href='register.php'>Join our community</a>
