@@ -8,6 +8,12 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
+$json = $row['ingredients'];
+$ingredientArray = json_decode($json, true);
+$ingredients = ""
+foreach ($ingredientArray as $key => $value) {
+    $ingredients = $ingredients + " '$value'" 
+}
 ?>
 <html lang="en">
 <head>
@@ -42,7 +48,7 @@ $row = $result->fetch_assoc();
                 <label class="label"><?php echo $row['description']; ?></label><br></br>
                 <label class="label">Serves <?php echo $row['servings']; ?> people</label><br></br>
                 <h2>Ingredients</h2>
-                <label class="label"><?php echo $row['ingredients']; ?></label><br><br>
+                <label class="label"><?php echo $ingredients; ?></label><br><br>
                 <h2>Methods</h2>
                 <label class="label"><?php echo $row['method']; ?></label><br></br>
             </div>
