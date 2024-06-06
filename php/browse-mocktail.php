@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'includes/ConnDB.php'
+    include 'includes/ConnDB.php';
 
     $sql = "SELECT * from mocktail_recipes";
     $stmt = $conn->prepare($sql);
