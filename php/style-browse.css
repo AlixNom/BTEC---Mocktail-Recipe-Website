@@ -261,16 +261,19 @@ body , html {
 
 .recipe-display{
   margin:2rem 0;
+  overflow-y: scroll;
 }
 
 .recipe-display table{
   width: 100%;
+  text-align:center;
 }
 .recipe-display table thead{
   background:lightgrey;
   padding:1rem;
 }
 .recipe-display table td{
+  padding:1rem;
   font-size: 1rem;
   color:gray;
   background:lightgrey;
