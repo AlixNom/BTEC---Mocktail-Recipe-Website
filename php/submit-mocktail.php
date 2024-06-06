@@ -61,7 +61,7 @@
                     </div> 
                     <div class='field input'>
                             <label>Title</label>
-                            <input type='text' class ='titleMocktail' name='titleMocktail' id='titleMocktail' maxlength="15" required>
+                            <input type='text' class ='titleMocktail' name='titleMocktail' id='titleMocktail' maxlength="15" placeholder="Title" required>
                     </div>
                     <div class='field input'>
                             <label>Method</label>
