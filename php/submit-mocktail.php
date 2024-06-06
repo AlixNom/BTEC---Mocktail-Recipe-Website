@@ -65,7 +65,7 @@
                     </div>
                     <div class='field input'>
                             <label>Serving Amount</label>
-                            <input type='text' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Title" required>
+                            <input type='text' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" required>
                     </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
