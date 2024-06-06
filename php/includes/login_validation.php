@@ -40,6 +40,7 @@ $userVal = "SELECT id, uname from mocktail_users where uname = '$user'";
                 echo $valid;
                 if ($valid == true) {
                     $_SESSION['user'] = $id;
+                    $_SESSION['username'] = $user;
                     header("Location: ../index.php");
                 }
                 if ($valid == false) {

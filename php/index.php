@@ -20,6 +20,27 @@ session_start();
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
+    <?php
+    session_start();
+    if(isset($_SESSION['status'])) {
+    ?>
+        <div class="alert-error">
+            <strong>Error!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php unset($_SESSION['status']); } ?>
+    <?php
+    if(isset($_SESSION['status-warning'])) {
+    ?>
+    <div class="alert-error">
+        <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <?php unset($_SESSION['status-warning']); } ?>
     <header>    
         <div class="header-content">
             <h2>Enjoy a cocktail with love ones!</h2>

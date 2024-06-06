@@ -54,7 +54,7 @@ If($count>0){
             $_SESSION['status'] = "Successfully registered as a user!";
             header("Location: ../login.php");}}
     } else {
-        $_SESSION['status'] = "Error with registering user!";
+        $_SESSION['status-warning'] = "Error with registering user!";
         header("Location: ../register.php");
     }
 }

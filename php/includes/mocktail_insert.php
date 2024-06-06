@@ -31,9 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sss", $userID, $ingredientsArray, $methodArray);
 
         if ($stmt->execute()) {
-            echo "Data saved successfully!";
+            $_SESSION['status'] = "You have submitted a recipe!";
+            header("Location: ../index.php");
         } else {
-            echo "Error executing query: " . $stmt->error;
+            $_SESSION['status-warning'] = "Was not able to submit recipe!";
+            header("Location: ../submit_mocktail.php");
         }
 
         $stmt->close();
@@ -44,7 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //     echo "Invalid data!";
 // }
 } else {
-echo "User session not set!";
+    $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
+    header("Location: ../submit_mocktail.php");
         
 }}
 

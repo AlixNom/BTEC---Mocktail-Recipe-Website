@@ -18,7 +18,27 @@
         
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <?php
+    session_start();
+    if(isset($_SESSION['status'])) {
+    ?>
+        <div class="alert-error">
+            <strong>Error!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php unset($_SESSION['status']); } ?>
+    <?php
+    if(isset($_SESSION['status-warning'])) {
+    ?>
+    <div class="alert-error">
+        <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <?php unset($_SESSION['status-warning']); } ?>
     <div class='login'>
             <div class='form form-box'>
                 <div class='wrap'>
@@ -73,19 +93,6 @@
             let varMethod = document.querySelector('.method').value;
             let body = JSON.stringify({data: dataArray});
             document.getElementById('ingredientArray').value = body;
-        //     fetch('includes/mocktail_insert.php', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(bodyContent
-        //         )
-        //     })
-        //     .then(response => response.text())
-        //     .then(data => {
-        //         alert('Data saved successfully!');
-        //     })
-        //     .catch(error => console.error('Error:', error));
          });
 
         function updateContainer() {
