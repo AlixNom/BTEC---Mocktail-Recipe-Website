@@ -58,11 +58,15 @@
                                 <option value="milliliters">Milliliters</option>
                             </select>
                             <a href="#" class="add">&plus;</a>
-                    </div> 
+                    </div><br></br>
                     <div class='field input'>
                             <label>Title</label>
                             <input type='text' class ='titleMocktail' name='titleMocktail' id='titleMocktail' maxlength="15" placeholder="Title" required>
                     </div>
+                    <div class='field input'>
+                            <label>Serving Amount</label>
+                            <input type='text' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Title" required>
+                    </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
                             <textarea class ='method' name='method' id='method' minlength ="10" placeholder="Step 1: 100ml of Wine..., Step 2:, Step 3:"required></textarea><br>
@@ -70,7 +74,7 @@
                     <div class='field input'>
                             <label>Description</label>
                             <textarea class ='desc' name='desc' id='desc' minlength ="10" placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
-                    </div>
+                    </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
                             <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"value="" required></input>
