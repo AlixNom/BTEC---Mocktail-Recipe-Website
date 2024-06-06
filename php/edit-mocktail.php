@@ -60,10 +60,10 @@
                 ?>
                     <tr>
                         <td><img scr="uploads/<?php $row['image'];?>" alt ="" height = "100"></td>
-                        <td><?php $row['title'];?></td>
-                        <td><?php $row['id'];?></td>
-                        <td><?php $row['description'];?></td>
-                        <td><?php $row['servings'];?></td>
+                        <td><?php echo $row['title'];?></td>
+                        <td><?php echo $row['id'];?></td>
+                        <td><?php echo $row['description'];?></td>
+                        <td><?php echo $row['servings'];?></td>
                         <td>Ingredients</td>
                         <td>Method</td>
                         <td colspan ="2">action</td>
