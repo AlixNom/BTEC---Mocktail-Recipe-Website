@@ -6,7 +6,7 @@ include 'ConnDB.php';
 
     if($_FILES['image']['error'] === 4){
         $_SESSION['status-warning'] = "This image doesn't exist!";
-        header("Location: ../submit_mocktail.php");
+        header("Location: ../edit-mocktail.php");
     } else {
         $data = json_decode($_POST['ingredientArray'],true);
 
@@ -47,12 +47,12 @@ include 'ConnDB.php';
                     $stmt->close();
                 } else {
                     $_SESSION['status-warning'] = "File not uploaded!";
-                    header("Location: ../submit-mocktail.php");
+                    header("Location: ../edit-mocktail.php");
             }
         
     } else {
         $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
-        header("Location: ../submit-mocktail.php");
+        header("Location: ../edit-mocktail.php");
     }    
 }
 }
