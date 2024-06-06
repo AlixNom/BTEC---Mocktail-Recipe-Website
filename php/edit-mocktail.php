@@ -35,7 +35,7 @@
     </header>
     <section class="cocktail-section">
         <div class="title">
-            <h1>Recipes</h1>
+            <h1>Your Recipes</h1>
             <div class="line"></div>
         </div>
         <button class="owned">Back</button>
