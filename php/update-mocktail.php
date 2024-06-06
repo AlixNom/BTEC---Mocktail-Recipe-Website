@@ -49,7 +49,7 @@
                 <h3>Update Mocktail</h3>
                 </div>
                 <?php
-                include 'includes/ConnDB.php'
+                include 'includes/ConnDB.php';
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes");
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
