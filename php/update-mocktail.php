@@ -1,5 +1,55 @@
 
+<?php
+session_start();
 
+include 'includes/ConnDB.php';
+    $id = $_GET['edit'];    
+
+    
+        $data = json_decode($_POST['ingredientArray'],true);
+
+
+        if (isset($_SESSION['user'])){
+            $userID = stripslashes($_SESSION['user']);
+            $userID = mysqli_real_escape_string($conn, $userID);
+            $ingredients = json_encode($data['data']);
+            $title = stripslashes($_POST['titleMocktail']);
+            $title = mysqli_real_escape_string($conn, $title);
+            $method = stripslashes($_POST['method']);
+            $method = mysqli_real_escape_string($conn, $method);
+            $desc = stripslashes($_POST['desc']);
+            $desc = mysqli_real_escape_string($conn, $desc);
+            $servings = stripslashes($_POST['serving']);
+            $servings = mysqli_real_escape_string($conn, $servings);
+            $fileName = $_FILES['image']['name'];
+            $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+            $allowedTypes = array('jpg','jpeg','png');
+            $tempName = $_FILES['image']['tmp_name'];
+            $targetPath = "../uploads/".$fileName;
+                    $ingredientsArray = stripslashes($ingredients);
+                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $id";
+                    $stmt = $conn->prepare($sql);
+        
+                    $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
+        
+                    if ($stmt->execute()) {
+                        $_SESSION['status'] = "You have updated a recipe!";
+                        $_SESSION['id'] = $row['id'];
+                        header("Location: ../edit-mocktail.php");
+                        
+                    } else {
+                        $_SESSION['status-warning'] = "Was not able to update recipe!";
+                        header("Location: ../edit-mocktail.php");
+                    }
+        
+                    $stmt->close();
+ 
+}
+
+
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +104,7 @@
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
-                <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
+                <form action="" method="post" enctype="multipart/form-data"> 
                     <label><strong>Important!</strong> Ingredients cannot be updated!</label><br></br>
                     <input type="hidden" name="ingredientArray" value="<?php $row['ingredients']?>" id="ingredientArray">
                     <div class='field input'>
