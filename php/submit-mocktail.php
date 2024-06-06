@@ -46,10 +46,10 @@
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form action="includes/mocktail_insert.php" method="post" enctype="multipart/form-data"> 
+                    <label>Ingredients</label>
                     <div class="ingredientsList">	
                     </div>
                     <input type="hidden" name="ingredientArray" id="ingredientArray">
-                    <label>Ingredients</label>
                     <div class="flex-add">
                             <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                             <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
