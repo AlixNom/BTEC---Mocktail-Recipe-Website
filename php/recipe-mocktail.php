@@ -48,7 +48,7 @@ foreach ($ingredientArray as $ingredient) {
         <form>
             <div class='image'><img src="<?php echo $row['image']; ?>" alt="Recipe Image"></div>
             <div class='field input'>
-                <label class="creator">Made By ...</label>
+                <label class="creator">Made By ...</label><br></br><br></br>
                 <h2>Description</h2>
                 <label class="label"><?php echo $row['description']; ?></label><br></br><br></br>
                 <label class="label">-   Serving for <?php echo $row['servings']; ?></label><br></br><br></br>
