@@ -34,14 +34,7 @@ a{
   border-left: 8px solid #800000;
   transition: opacity 0.6s;
 }
-.alert-error .close{
-  position: absolute;
-  background: #800000;
-  padding: 20px 15px;
-  right:0px;
-  top: 60px;
-  color: #A45A52;
- }
+
 .alert-success {
   padding: 20px 20px;
   background-color: green;
@@ -58,14 +51,7 @@ a{
   border-left: 8px solid darkgreen;
   transition: opacity 0.6s;
 }
-.alert-success .close{
- position: absolute;
- background: darkgreen;
- padding: 20px 15px;
- right:0px;
- top: 60px;
- color: green;
-}
+
 body{
   background:
   url('img/Mocktail.jpg') no-repeat;
