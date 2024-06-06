@@ -66,7 +66,7 @@
                             $valUnit = isset($ingredient['Unit']) ? $ingredient['Unit'] : 'N/A';
                                 
 
-                            $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
+                            $ingredients .= "($valIngredient       $valAmount$valUnit) <br>";
                         }
                 ?>
                     <tr>
