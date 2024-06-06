@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +48,7 @@
                 <button class="owned" onclick="location.href='edit-mocktail.php'">Go Back</button>    
                 <h3>Update Mocktail</h3>
                 </div>
-                <form action="includes/mocktail_insert.php" method="post" enctype="multipart/form-data"> 
+                <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
                     <label>Ingredients</label>
                     <div class="ingredientsList">	
                     </div>
