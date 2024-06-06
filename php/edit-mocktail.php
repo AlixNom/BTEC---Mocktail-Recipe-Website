@@ -77,7 +77,9 @@
                         <td><?php echo $row['servings'];?></td>
                         <td><?php echo $ingredients;?></td>
                         <td><?php echo $row['method'];?></td>
-                        <td colspan ="2">action</td>
+                        <td>
+                            <a href="update-mocktail.php?edit=<?php echo $row['id'];?>"> <i class="fas fa-edit"></i>Edit</a>
+                        </td>
                     </tr>
 
                 <?php };?>
