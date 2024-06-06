@@ -17,7 +17,7 @@ foreach ($ingredientArray as $ingredient) {
     $valUnit = isset($ingredient['Unit']) ? $ingredient['Unit'] : 'N/A';
         
 
-    $ingredients .= "- $valIngredient       $valAmount$valUnit/n";
+    $ingredients .= "- $valIngredient       $valAmount$valUnit";
 }
 ?>
 <html lang="en">
