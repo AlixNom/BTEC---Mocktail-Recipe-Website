@@ -20,7 +20,7 @@ foreach ($ingredientArray as $ingredient) {
     $ingredients .= "-  $valIngredient       $valAmount$valUnit <br>";
 }
 $method = $row['method'];
-$method = nl2br($method)
+$method = nl2br($method);
 ?>
 <html lang="en">
 <head>
