@@ -1,5 +1,9 @@
 <?php
-session_start();
+    session_start();
+    include 'includes/ConnDB.php'
+
+    $sql = "SELECT * FROM mocktail_recipes";
+    $stmt = $conn->prepare($sql);
 ?>
 <html lang="en">
 <head>
@@ -33,17 +37,18 @@ session_start();
             <div class="line"></div>
         </div>
         <main>
-        <div class = "card">
-            <div class = "image">
-                <img scr="uploads/mocktail-games_cropped.png" alt="">
+            <?php?>
+            <div class = "card">
+                <div class = "image">
+                    <img scr="uploads/mocktail-games_cropped.png" alt="">
+                </div>
+                <div class="caption">
+                    <p class = "name">Recipe</p>
+                    <p class = "serving">Serving</p>
+                    <p class = "description">Description</p>
+                </div>
+                <button class = "view"> View Recipe</button>
             </div>
-            <div class="caption">
-                <p class = "name">Recipe</p>
-                <p class = "serving">Serving</p>
-                <p class = "description">Description</p>
-            </div>
-            <button class = "view"> View Recipe</button>
-        </div>
         </main>
     </section>
     <section class = "footer">
