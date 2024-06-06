@@ -76,7 +76,7 @@
                         <td><?php echo $row['description'];?></td>
                         <td><?php echo $row['servings'];?></td>
                         <td><?php echo $ingredients;?></td>
-                        <td>Method</td>
+                        <td><?php echo $row['method'];?></td>
                         <td colspan ="2">action</td>
                     </tr>
 
