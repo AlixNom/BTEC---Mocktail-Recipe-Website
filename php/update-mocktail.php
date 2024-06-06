@@ -49,7 +49,6 @@
                 <h3>Update Mocktail</h3>
                 </div>
                 <?php
-                session_start();
                 include 'includes/ConnDB.php';
                 $id = $_GET['edit'];
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
