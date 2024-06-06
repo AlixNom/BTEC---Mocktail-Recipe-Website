@@ -203,10 +203,10 @@ body , html {
     font-size:5vmin;
     color:#363636;
   }
-  .row{
+  .card{
     flex-direction: column;
   }
-  .row .col {
+  .card .col {
     margin: 20px auto;
   }
   h4 {
