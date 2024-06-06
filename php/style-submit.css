@@ -120,6 +120,7 @@ body{
 }
 
 .form-box form .ingredients-list input{
+  display: flex;
   height: 40px;
   font-size: 16px;
   padding:0 10px ;
@@ -142,6 +143,7 @@ body{
 }
 
 .form-box form .input input{
+  display: flex;
   height: 40px;
   font-size: 16px;
   padding:0 10px ;
@@ -170,7 +172,7 @@ body{
 }
 .form-box form .input .desc{
   resize: none;
-  height: 100px;
+  height: 80px;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;

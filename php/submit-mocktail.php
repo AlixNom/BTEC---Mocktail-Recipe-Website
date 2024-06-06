@@ -65,11 +65,11 @@
                     </div>
                     <div class='field input'>
                             <label>Method</label>
-                            <textarea class ='method' name='method' id='method' minlength ="10" required></textarea><br>
+                            <textarea class ='method' name='method' id='method' minlength ="10" placeholder="Step 1: 100ml of Wine..., Step 2:, Step 3:"required></textarea><br>
                     </div>
                     <div class='field input'>
                             <label>Description</label>
-                            <textarea class ='desc' name='desc' id='desc' minlength ="10" required></textarea><br>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="10" placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
                     </div>
                     <div class='field input'>
                             <label>Image</label>
