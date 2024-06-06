@@ -4,6 +4,8 @@
 
     $sql = "SELECT * from mocktail_recipes";
     $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
 ?>
 <html lang="en">
 <head>
@@ -38,7 +40,7 @@
         </div>
         <main>
             <?php
-                while($row = mysqli_fetch_assoc($stmt)){
+                while($row = $result->fetch_assoc){
             ?>
             <div class = "card">
                 <div class = "image">
