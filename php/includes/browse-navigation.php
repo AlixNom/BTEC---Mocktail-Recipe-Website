@@ -11,4 +11,4 @@ $sql = "SELECT * from mocktail_recipes where id = '$recipeID'";
 
 $_SESSION['recipe_uid'] = $recipeID;
 
-header("Location: ../recipe-mocktail.php");}?>
+header("Location: ../recipe-mocktail.php");?>
