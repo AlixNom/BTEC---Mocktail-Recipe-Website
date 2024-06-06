@@ -38,7 +38,7 @@
             <h1>Recipes</h1>
             <div class="line"></div>
         </div>
-        <button class="owned" type="submit">Your Recipes</button>
+        <button class="owned">Your Recipes</button>
         <main>
             <?php
                 while($row = $result->fetch_assoc()){
