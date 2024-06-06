@@ -49,7 +49,7 @@
                 <h3>Update Mocktail</h3>
                 </div>
                 <?php
-                $sql = msqli_query($conn, "SELECT * from mocktail_recipes");
+                $sql = mysqli_query($conn, "SELECT * from mocktail_recipes");
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
                 <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
