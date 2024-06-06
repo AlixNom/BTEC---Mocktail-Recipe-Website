@@ -214,7 +214,6 @@ p {
   justify-content:space-around;
   line-height: 60px;
   z-index: 100;
-  z-index:1;
   color: white;
 }
 .nav .nav-links{
