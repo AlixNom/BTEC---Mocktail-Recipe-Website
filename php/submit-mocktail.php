@@ -45,10 +45,11 @@
                 <h3>Make a Mocktail</h3>
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
-                <form action="includes/test.php" method="post"> 
+                <form action="includes/test.php" method="post" enctype="multipart/form-data"> 
                     <div class="ingredientsList">	
                     </div>
                     <input type="hidden" name="ingredientArray" id="ingredientArray">
+                    <label>Ingredients</label>
                     <div class="flex-add">
                             <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
                             <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
@@ -65,7 +66,11 @@
                     </div>
                     <div class='field input'>
                             <label>Method</label>
-                            <textarea class ='method' name='method' id='method' minlength ="10" required></textarea>
+                            <textarea class ='method' name='method' id='method' minlength ="10" required></textarea><br>
+                    </div>
+                    <div class='field input'>
+                            <label>Image</label>
+                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"value="" required></input>
                     </div>
                     <div class='field'>
                         <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
