@@ -116,6 +116,7 @@ main .card .name{
 
 main .card .view{
   margin-top: 100px;
+  align-self: left;
 }
 
 h4 {
