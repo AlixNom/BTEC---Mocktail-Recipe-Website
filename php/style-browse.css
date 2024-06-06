@@ -211,9 +211,10 @@ main button:hover{
 }
 .nav-links{
   display: flex;
-  width: 200px;
+  width: 250px;
   justify-content:space-between;
 }
+
 body , html {
   overflow-x: hidden;
 }
