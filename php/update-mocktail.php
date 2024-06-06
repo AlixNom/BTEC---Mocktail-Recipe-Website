@@ -54,7 +54,7 @@
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
                 <form action="includes/mocktail_update.php" method="post" enctype="multipart/form-data"> 
-                    <label><strong>Important!</strong>Ingredients cannot be updated!</label>
+                    <label><strong>Important!</strong> Ingredients cannot be updated!</label><br></br>
                     <input type="hidden" name="ingredientArray" value="<?php $row['ingredients']?>" id="ingredientArray">
                     <div class='field input'>
                             <label>Title</label>
@@ -62,19 +62,19 @@
                     </div>
                     <div class='field input'>
                             <label>Serving Amount</label>
-                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" min="1" required>
+                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" min="1" value="<?php echo $row['servings']?>" required>
                     </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
-                            <textarea class ='method' name='method' id='method' minlength ="10" placeholder="Step 1: 100ml of Wine..., Step 2:, Step 3:"required></textarea><br>
+                            <textarea class ='method' name='method' id='method' minlength ="10" placeholder="Step 1: 100ml of Wine..., Step 2:, Step 3:" value="<?php echo $row['method']?>" required></textarea><br>
                     </div>
                     <div class='field input'>
                             <label>Description</label>
-                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142"placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142"placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" value="<?php echo $row['description']?>" required></textarea><br>
                     </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
-                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"value="" required></input>
+                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png" value="<?php echo $row['image']?>" required></input>
                     </div>
                     <div class='field'>
                         <input type='submit' name='submit' class='submit' value='Update Recipe' required>
