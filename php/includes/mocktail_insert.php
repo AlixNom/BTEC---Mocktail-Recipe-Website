@@ -21,7 +21,7 @@ include 'ConnDB.php';
             $ext = pathinfo($fileName, PATHINFO_EXTENSION);
             $allowedTypes = array('jpg','jpeg','png');
             $tempName = $_FILES['image']['tmp_name'];
-            $targetPath = "uploads/".$fileName;
+            $targetPath = "../uploads/".$fileName;
             if(in_array($ext, $allowedTypes)){
                 if(move_uploaded_file($tempName, $targetPath)){
                     $sql = "INSERT INTO mocktail_recipes (uid, title, ingredients, method, image) VALUES (?, ?, ?, ?, ?)";
