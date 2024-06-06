@@ -17,6 +17,10 @@ include 'ConnDB.php';
             $title = mysqli_real_escape_string($conn, $title);
             $method = stripslashes($_POST['method']);
             $method = mysqli_real_escape_string($conn, $method);
+            $desc = stripslashes($_POST['desc']);
+            $desc = mysqli_real_escape_string($conn, $desc);
+            $servings = stripslashes($_POST['serving']);
+            $servings = mysqli_real_escape_string($conn, $servings);
             $fileName = $_FILES['image']['name'];
             $ext = pathinfo($fileName, PATHINFO_EXTENSION);
             $allowedTypes = array('jpg','jpeg','png');
@@ -24,11 +28,11 @@ include 'ConnDB.php';
             $targetPath = "../uploads/".$fileName;
             if(in_array($ext, $allowedTypes)){
                 if(move_uploaded_file($tempName, $targetPath)){
-                    $sql = "INSERT INTO mocktail_recipes (uid, title, ingredients, method, image) VALUES (?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO mocktail_recipes (uid, title, ingredients, method, image, description, servings) VALUES (?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($sql);
                     $ingredientsArray = stripslashes($ingredients);
         
-                    $stmt->bind_param("sssss", $userID, $title, $ingredientsArray, $method, $fileName);
+                    $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have submitted a recipe!";
