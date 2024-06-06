@@ -155,7 +155,7 @@ body{
   z-index:1;
 }
 .form-box form .input textarea{
-  resize: vertical;
+  resize: none;
   font-size: 16px;
   padding:0 10px ;
   border-radius: 5px;

@@ -46,30 +46,30 @@
                 <!-- <a href="#" class="add">&plus;</a> -->
                 </div>
                 <form action="includes/test.php" method="post"> 
-                <div class="ingredientsList">	
-                </div>
-                <input type="hidden" name="ingredientArray" id="ingredientArray">
-                <div class="flex-add">
-                        <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
-                        <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
-                        <select class = "measurement" id="measurement" >
-                            <option value="">Select Measurement</option>
-                            <option value="ounces">Ounces</option>
-                            <option value="milliliters">Milliliters</option>
-                        </select>
-                        <a href="#" class="add">&plus;</a>
-                </div> 
-                <div class='field input'>
-                        <label>Title</label>
-                        <input type='text' class ='title' name='title' id='title' maxlength="15" required>
-                </div>
-                <div class='field input'>
-                        <label>Method</label>
-                        <textarea class ='method' name='method' id='method' minlength ="10" required></textarea>
-                </div>
-                <div class='field'>
-                    <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
-                </div>
+                    <div class="ingredientsList">	
+                    </div>
+                    <input type="hidden" name="ingredientArray" id="ingredientArray">
+                    <div class="flex-add">
+                            <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
+                            <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
+                            <select class = "measurement" id="measurement" >
+                                <option value="">Select Measurement</option>
+                                <option value="ounces">Ounces</option>
+                                <option value="milliliters">Milliliters</option>
+                            </select>
+                            <a href="#" class="add">&plus;</a>
+                    </div> 
+                    <div class='field input'>
+                            <label>Title</label>
+                            <input type='text' class ='title' name='title' id='title' maxlength="15" required>
+                    </div>
+                    <div class='field input'>
+                            <label>Method</label>
+                            <textarea class ='method' name='method' id='method' minlength ="10" required></textarea>
+                    </div>
+                    <div class='field'>
+                        <input type='submit' name='submit' class='submit' value='Submit Recipe' required>
+                    </div>
                 </form>
             </div>
     </div>
