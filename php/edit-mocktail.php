@@ -38,7 +38,7 @@
             <h1>Your Recipes</h1>
             <div class="line"></div>
         </div>
-        <button class="owned">Back</button>
+        <button class="owned" onclick="location.href='browse-mocktail.php'">Back</button>
 
     </section>
     <section class = "footer">
