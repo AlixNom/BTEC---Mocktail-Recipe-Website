@@ -78,7 +78,7 @@ main{
 }
 
 main .card{
-    max-width: 500px;
+    max-width: 70%;
     flex:1 1 210px;
     text-align: center;
     height: 400px;
