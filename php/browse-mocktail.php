@@ -40,7 +40,7 @@
         </div>
         <main>
             <?php
-                while($row = $result->fetch_assoc){
+                while($row = $result->fetch_assoc()){
             ?>
             <div class = "card">
                 <div class = "image">
