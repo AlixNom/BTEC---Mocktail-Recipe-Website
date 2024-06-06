@@ -62,15 +62,15 @@
                     </div>
                     <div class='field input'>
                             <label>Serving Amount</label>
-                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" min="1" value="<?php echo $row['servings']?>" required>
+                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15"  min="1" value="<?php echo $row['servings']?>" required>
                     </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
-                            <textarea class ='method' name='method' id='method' minlength ="10" placeholder="Step 1: 100ml of Wine..., Step 2:, Step 3:" value="<?php echo $row['method']?>" required></textarea><br>
+                            <textarea class ='method' name='method' id='method' minlength ="10"  value="<?php echo $row['method']?>" required></textarea><br>
                     </div>
                     <div class='field input'>
                             <label>Description</label>
-                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142"placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" value="<?php echo $row['description']?>" required></textarea><br>
+                            <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142" value="<?php echo $row['description']?>" required></textarea><br>
                     </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
@@ -83,8 +83,6 @@
                 <?php }; ?>
             </div>
     </div>
-    
 
-  
 </body>
 </html>
