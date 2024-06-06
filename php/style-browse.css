@@ -129,11 +129,6 @@ p {
  color: green;
 }
 
-.image{
-  background:black;
-  z-index:100;
-}
-
 .button{
   background: hwb(129 39% 45%);
   height: 30px;
