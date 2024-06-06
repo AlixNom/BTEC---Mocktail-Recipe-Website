@@ -11,8 +11,12 @@ $row = $result->fetch_assoc();
 $json = $row['ingredients'];
 $ingredientArray = json_decode($json, true);
 $ingredients = "";
-foreach ($ingredientArray as $key => $value) {
-    $ingredients = " '$value'";
+foreach ($ingredientArray as $ingredient) {
+    $valIngredient = $ingredient['name'];
+    $valAmount = $ingredient['amount'];
+    $valUnit= $ingredient['unit'];
+
+    $ingredients .= "- $valIngredient   $valAmount $valUnit\n";
 }
 ?>
 <html lang="en">
