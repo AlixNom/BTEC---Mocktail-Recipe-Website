@@ -126,6 +126,9 @@ body{
   padding-bottom: 10px;
   z-index:1;
 }
+.form-box form .label{
+  margin-bottom: 10px;
+}
 .form-box form .field{
   display: flex;
   margin-bottom: 10px;
