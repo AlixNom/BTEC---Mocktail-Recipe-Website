@@ -51,7 +51,7 @@
                     <input type="hidden" name="ingredientArray" id="ingredientArray">
                     <div class="flex-add">
                             <input type ="text" class ="ingredient" id="ingredient" placeholder = "Ingredient"></input>
-                            <input type ="number" class ="amount" id="amount" placeholder = "Amount"></input>
+                            <input type ="number" class ="amount" id="amount" placeholder = "Amount" min="1"></input>
                             <select class = "measurement" id="measurement" >
                                 <option value="">Select Measurement</option>
                                 <option value="ounces">Ounces</option>
@@ -65,7 +65,7 @@
                     </div>
                     <div class='field input'>
                             <label>Serving Amount</label>
-                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" required>
+                            <input type='number' class ='serving' name='serving' id='serving' maxlength="15" placeholder="Per Person" min="1" required>
                     </div><br></br>
                     <div class='field input'>
                             <label>Method</label>
@@ -119,7 +119,7 @@
                 div.dataset.index = index;
                 div.innerHTML = `
                     <input type="text" value="${item.Ingredient}" class="item-input-1">
-                    <input type="number" value="${item.Amount}" class="item-input-2">
+                    <input type="number" value="${item.Amount}" class="item-input-2 min="1">
                     <label class = "item-input-3" >${item.Unit}</label>
 
                 `;
