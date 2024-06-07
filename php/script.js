@@ -7,7 +7,7 @@ const topic = "mocktail";
 let requestURL;
 
 const generateUI = (articles) => {
-    for(let items of articles){
+    for(let item of articles){
         let card = document.createElement("div");
         card.classList.add("news-card");
         card.innerHTML = `<div class = "news-image-container">
