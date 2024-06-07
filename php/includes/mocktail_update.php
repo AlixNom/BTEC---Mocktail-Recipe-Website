@@ -33,7 +33,7 @@ include 'ConnDB.php';
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have updated a recipe!";
-                        $_SESSION['id'] = $row['id'];
+                        $_SESSION['id'] = $id;
                         header("Location: ../edit-mocktail.php");
                         
                     } else {
