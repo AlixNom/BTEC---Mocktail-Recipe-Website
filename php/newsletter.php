@@ -4,7 +4,7 @@
 
     $season = stripslashes($_SESSION['season']);
     $season = mysqli_real_escape_string($conn, $season);
-    $sql = "SELECT * from mocktail_recipes where season = $season";
+    $sql = "SELECT * from mocktail_recipes where seasons = $season";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
