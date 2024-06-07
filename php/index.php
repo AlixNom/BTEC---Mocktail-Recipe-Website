@@ -57,14 +57,14 @@ session_start();
         <div class ="row">
             <div class="col">
                 <img src="img/mocktail-explore2.jpg" alt="">
-                <h4>Cocktails</h4>
-                <p>Dive into the diverse world of cocktail recipes crafted by countless enthusiasts. With such a wide array of options, you’ll always find something new and exciting to try, ensuring you'll never get tired of experimenting and discovering new flavors!</p>
+                <h4>Mocktails</h4>
+                <p>Dive into the diverse world of mocktail recipes crafted by countless enthusiasts. With such a wide array of options, you’ll always find something new and exciting to try, ensuring you'll never get tired of experimenting and discovering new flavors!</p>
                 <a href="browse-mocktail.php" class="ctn">Browse</a>
             </div>
             <div class="col">
                 <img src="img/mocktail-submit.jpg" alt="">
                 <h4>Submit Your Own</h4>
-                <p>Would you like to share your own homemade cocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow cocktail lovers and become the next big hit!</p>
+                <p>Would you like to share your own homemade mocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow cocktail lovers and become the next big hit!</p>
                 <a href="submit-mocktail.php" class="ctn">Make Recipe</a>
             </div>
             
@@ -73,7 +73,7 @@ session_start();
             <div class="col">
                 <img src="img/mocktail-newspaper.jpg" alt="">
                 <h4>Newsletter</h4>
-                <p>about the latest trends and updates in the cocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
+                <p>about the latest trends and updates in the mocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
                 <a href="#" class="ctn">View More</a>
             </div>
             <div class="col">
@@ -87,9 +87,9 @@ session_start();
     </section>
     <section class="tiptricks">
         <div class="tiptricks-content">
-        <h1>SECRETS TO MAKING THE BEST COCKTAIL!</h1>
+        <h1>SECRETS TO MAKING THE BEST MOCKTAIL!</h1>
         <div class="line"></div>
-        <p>Crafting the perfect cocktail is an art form that blends creativity with precision, there are numerous tips and tricks to enhance your cocktail-making skills. Here's a comprehensive guide to elevating your cocktail game:</p>
+        <p>Crafting the perfect mocktail is an art form that blends creativity with precision, there are numerous tips and tricks to enhance your mocktail-making skills. Here's a comprehensive guide to elevating your mocktail game:</p>
         <a href="#" class="ctn"> Learn More </a>
         </div>
     </section>
