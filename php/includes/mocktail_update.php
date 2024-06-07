@@ -27,7 +27,7 @@ include 'ConnDB.php';
             $tempName = $_FILES['image']['tmp_name'];
             $targetPath = "../uploads/".$fileName;
                     //$ingredientsArray = stripslashes($ingredients);
-                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
+                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
                     $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
