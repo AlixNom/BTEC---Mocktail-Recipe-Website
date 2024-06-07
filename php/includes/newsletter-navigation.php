@@ -26,7 +26,7 @@ $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
 $data = json_decode($response, true);
-$data = stripslashes($data);
+//$data = stripslashes($data);
 echo $data['totalResults'];
 // if (isset($data['totalResults'])) {
 //     // Randomly select one article
