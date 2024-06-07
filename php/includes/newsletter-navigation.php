@@ -16,11 +16,11 @@ if ($response === false) {
     die('Error occurred: ' . curl_error($ch));
 }
 
-curl_close($ch);
+
 
 $data = json_decode($response, true);
 print_r($data);
-
+curl_close($ch);
 // if (isset($data['articles'])) {
 
 //     $articles = array_slice($data['articles'], 0, 3);
