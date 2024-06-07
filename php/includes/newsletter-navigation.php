@@ -28,15 +28,15 @@ $_SESSION['season'] = $seasontmp;
 $data = json_decode($response, true);
 //$data = stripslashes($data);
 echo $data['totalResults'];
-// if (isset($data['totalResults'])) {
-//     // Randomly select one article
-//     $randomIndex = array_rand($data['articles']);
-//     $article = $data['articles'][$randomIndex];
+if (isset($data['article'] && count($data['article']) > 0)) {
+    // Randomly select one article
+    $randomIndex = array_rand($data['articles']);
+    $article = $data['articles'][$randomIndex];
 
-//     // Display the selected article
-//     echo "Title: " . $article['title'] . "\n";
-//     echo "Description: " . $article['description'] . "\n";
-//     echo "URL: " . $article['url'] . "\n";
-// } 
+    // Display the selected article
+    echo "Title: " . $article['title'] . "\n";
+    echo "Description: " . $article['description'] . "\n";
+    echo "URL: " . $article['url'] . "\n";
+} 
  //header("Location: ../newsletter.php");
 ?>
