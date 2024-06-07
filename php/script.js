@@ -23,12 +23,7 @@ const generateUI = (articles) => {
     container.appendChild(card);
     }
 };
-const init =  () => {
-    optionsContainer.innerHTML = "";
-    getNews();
-    createOptions();
 
-};
 
 const getNews = async() => {
     container.innerHTML = "";
@@ -38,8 +33,15 @@ const getNews = async() => {
         return false;
     }
     let data = await response.json();
-    generateUI(data.articles)
-}
+    generateUI(data.articles);
+};
+
+const init =  () => {
+    optionsContainer.innerHTML = "";
+    getNews();
+    createOptions();
+
+};
 
 window.onload=() => {
     requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${topic}&apiKey=${apiKey}`;
