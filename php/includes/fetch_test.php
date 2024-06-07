@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php'; // Include your database connection
+include 'ConnDB.php'; // Include your database connection
 
 if(isset($_SESSION['user_id'])) {
     //$user_id = $_SESSION['user_id'];
