@@ -2,7 +2,7 @@
     session_start();
     include 'includes/ConnDB.php';
 
-    $sql = "SELECT * from mocktail_recipes";
+    $sql = "SELECT * from mocktail_recipes where season = Season";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -66,6 +66,7 @@
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
+
 </body>
 
 </html>

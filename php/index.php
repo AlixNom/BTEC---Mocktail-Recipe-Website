@@ -74,7 +74,7 @@ session_start();
                 <img src="img/mocktail-newspaper.jpg" alt="">
                 <h4>Newsletter</h4>
                 <p>about the latest trends and updates in the mocktail world? Keep up with the current mocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
-                <a href="#" class="ctn">View More</a>
+                <a id="newsletter" href="" class="ctn">View More</a>
             </div>
             <div class="col">
                 <img src="img/mocktail-poll.jpg" alt="">
@@ -97,6 +97,13 @@ session_start();
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
+    <script>
+            const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
+
+            //console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
+            const Season = (['Spring', 'Summer', 'Autumn', 'Winter'][getSeason(new Date())]);
+            document.getElementById('newsletter').href = `newsletter-navigation.php?season=${Season}`;
+    </script>
 </body>
 
 </html>
