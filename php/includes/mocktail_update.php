@@ -13,7 +13,7 @@ include 'ConnDB.php';
             $userID = stripslashes($_SESSION['user']);
             $userID = mysqli_real_escape_string($conn, $userID);
             $ingredients = stripslashes($_POST['ingredientArray']);
-            $ingredients = mysqli_real_escape_string($_POST['ingredientArray']);
+            $ingredients = mysqli_real_escape_string($conn,$ingredients);
             $title = stripslashes($_POST['titleMocktail']);
             $title = mysqli_real_escape_string($conn, $title);
             $method = stripslashes($_POST['method']);
