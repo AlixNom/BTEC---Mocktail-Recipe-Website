@@ -36,14 +36,14 @@
         $randomIndex = array_rand($data['articles']);
         $article = $data['articles'][$randomIndex];
 
-        $name = $article['name'] ;
-        $author = $article['author'] ;
-        $title = $article['title'];
-        $desc = $article['description'];
-        $url = $article['url'];
-        $image = $article['urlToImage'];
-        $publishedAT = $article['publishedAt'];
-        $content = $article['content'];
+        $name = stripslashes($article['name']) ;
+        $author = stripslashes($article['author']) ;
+        $title = stripslashes($article['title']);
+        $desc = stripslashes($article['description']);
+        $url = stripslashes($article['url']);
+        $image = stripslashes($article['urlToImage']);
+        $publishedAT = stripslashes($article['publishedAt']);
+        $content = stripslashes($article['content']);
     } else {
         echo "No articles found.\n";
     }
@@ -82,7 +82,10 @@
     <div class = "option-container">
         <img scr="<?php echo $image?>" alt ="">
     </div>
-    <div class = "container"></div>
+    <div class = "heading">
+        <h1><?php echo $title?></h1>
+        <p><?php echo $desc?></p>
+    </div>
     <section class="cocktail-section">
         <div class="title">
             <h1>Seasonal Recipes</h1>
