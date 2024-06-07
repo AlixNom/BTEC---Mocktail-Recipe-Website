@@ -35,6 +35,11 @@
             <div class="line"></div>
         </div>
     </header>
+    <div class = "header-container">
+        <h4>Newsletter</h4>
+    </div>
+    <div class = "option-container"></div>
+    <div class = "container"></div>
     <section class="cocktail-section">
         <div class="title">
             <h1>Seasonal Recipes</h1>
