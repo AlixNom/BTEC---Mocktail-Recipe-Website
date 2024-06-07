@@ -4,7 +4,7 @@ session_start();
 include 'ConnDB.php';    
 
     
-        $data = json_decode($_POST['ingredientArray'],true);
+        //$data = json_decode($_POST['ingredientArray'],true);
 
 
         if (isset($_SESSION['user'])){
@@ -12,7 +12,7 @@ include 'ConnDB.php';
             $mocktailID = mysqli_real_escape_string($conn, $mocktailID);
             $userID = stripslashes($_SESSION['user']);
             $userID = mysqli_real_escape_string($conn, $userID);
-            $ingredients = json_encode($data['data']);
+            $ingredients = json_encode($_POST['ingredientArray']);
             $title = stripslashes($_POST['titleMocktail']);
             $title = mysqli_real_escape_string($conn, $title);
             $method = stripslashes($_POST['method']);
@@ -26,7 +26,7 @@ include 'ConnDB.php';
             $allowedTypes = array('jpg','jpeg','png');
             $tempName = $_FILES['image']['tmp_name'];
             $targetPath = "../uploads/".$fileName;
-                    $ingredientsArray = stripslashes($ingredients);
+                    //$ingredientsArray = stripslashes($ingredients);
                     $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
