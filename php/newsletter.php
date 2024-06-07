@@ -29,17 +29,14 @@
     </div>
     <header>    
         <div class="header-content">
-            <h2>Browse endless amount of mocktails!</h2>
+            <h2>Updated News about Mocktails!</h2>
             <div class="line"></div>
         </div>
     </header>
     <section class="cocktail-section">
         <div class="title">
-            <h1>Recipes</h1>
+            <h1>Seasonal Recipes</h1>
             <div class="line"></div>
-        </div>
-        <button class="owned" onclick = "location.href = 'edit-mocktail.php'">Your Recipes</button>
-        <main>
             <?php
                 while($row = $result->fetch_assoc()){
             ?>
