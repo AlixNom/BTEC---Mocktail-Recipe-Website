@@ -26,6 +26,7 @@ $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
 $data = json_encode($response, true);
+$data = stripslashes($data);
 echo $data
 // if (isset($data['articles']) && count($data['articles']) > 0) {
 //     // Randomly select one article
