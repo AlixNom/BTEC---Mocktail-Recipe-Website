@@ -2,7 +2,9 @@
     session_start();
     include 'includes/ConnDB.php';
 
-    $sql = "SELECT * from mocktail_recipes";
+    $season = stripslashes($_SESSION['season']);
+    $season = mysqli_real_escape_string($conn, $season);
+    $sql = "SELECT * from mocktail_recipes where season = $season";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
