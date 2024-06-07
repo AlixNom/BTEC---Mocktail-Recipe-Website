@@ -16,8 +16,11 @@ const generateUI = (articles) => {
             <div class = "news-title">
                 ${item.title}
             </div>
-            <div class ="news-description"></div>
+            <div class ="news-description">
+            ${item.description || item.content || ""}</div>
+            <a href="${item.url}" target="_blank" class ="view-button">Read More</a>
         </div>`;
+    container.appendChild(card);
     }
 };
 const init =  () => {
@@ -26,6 +29,17 @@ const init =  () => {
     createOptions();
 
 };
+
+const getNews = async() => {
+    container.innerHTML = "";
+    let response = await fetch("requestURL");
+    if(!response.ok) {
+        alert("Data unavailable at the moment. Please wait!");
+        return false;
+    }
+    let data = await response.json();
+    generateUI(data.articles)
+}
 
 window.onload=() => {
     requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${topic}&apiKey=${apiKey}`;
