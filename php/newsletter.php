@@ -84,7 +84,8 @@
     </div>
     <div class = "heading">
         <h1><?php echo $title?></h1>
-        <p><?php echo $desc?></p>
+        <p><?php echo $desc?></p><br>
+        <p><?php echo $content?></p>
     </div>
     <section class="cocktail-section">
         <div class="title">
