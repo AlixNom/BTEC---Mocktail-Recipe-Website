@@ -2,13 +2,14 @@
 session_start();
 include 'ConnDB.php';
 
-$season = stripslashes($_POST['recipe_id']);
-$season = mysqli_real_escape_string($conn, $recipeID);
+$seasontmp = $_GET['season'];
+$_SESSION['season'] = $seasontmp;
 
-$sql = "SELECT * from mocktail_recipes where id = '$recipeID'";
+$season = stripslashes($_SESSION['season']);
+$season = mysqli_real_escape_string($conn, $season);
+
+$sql = "SELECT * from mocktail_recipes'";
 
 
 
-$_SESSION['recipe_uid'] = $recipeID;
-
-header("Location: ../recipe-mocktail.php");?>
+header("Location: ../newsletter.php");?>
