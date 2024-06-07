@@ -28,7 +28,7 @@ $_SESSION['season'] = $seasontmp;
 $data = json_decode($response, true);
 //$data = stripslashes($data);
 echo $data['totalResults'];
-if (isset($data['article'] && count($data['article']) > 0)) {
+if (isset($data['article']) && count($data['article']) > 0) {
     // Randomly select one article
     $randomIndex = array_rand($data['articles']);
     $article = $data['articles'][$randomIndex];
