@@ -76,6 +76,7 @@
             <div class="line"></div>
         </div>
     </header>
+    <button class="owned" onclick = "location.href = 'index.php'">Back</button>
     <div class = "header-container">
         <h4>Newsletter</h4>
     </div>
