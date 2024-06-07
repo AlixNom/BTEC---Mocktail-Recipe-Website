@@ -56,7 +56,7 @@ let dataArray = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch existing ingredients from the database
-    fetch('fetch_test.php')
+    fetch('includes/fetch_test.php')
         .then(response => response.json())
         .then(data => {
             dataArray = data;
