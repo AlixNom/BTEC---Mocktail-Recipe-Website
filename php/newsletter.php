@@ -14,7 +14,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktails&country=uk&apiKey=f72e3318d86b4a52b2eea095123bc312',
+    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktails&apiKey=f72e3318d86b4a52b2eea095123bc312',
     CURLOPT_USERAGENT => $agent,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -30,14 +30,14 @@
     curl_close($curl);
 
     $data = json_decode($response, true);
-    echo $data['totalResults'];
+    //echo $data['totalResults'];
     if (isset($data['articles']) && count($data['articles']) > 0) {
 
         $randomIndex = array_rand($data['articles']);
         $article = $data['articles'][$randomIndex];
 
-        $name = stripslashes($article['name']) ;
-        $author = stripslashes($article['author']) ;
+        //$name = stripslashes($article['name']);
+        $author = stripslashes($article['author']);
         $title = stripslashes($article['title']);
         $desc = stripslashes($article['description']);
         $url = stripslashes($article['url']);
