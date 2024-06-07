@@ -14,7 +14,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://newsapi.org/v2/top-headlines?country=uk&category=mocktail&apiKey=f72e3318d86b4a52b2eea095123bc312',
+    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktails&country=uk&apiKey=f72e3318d86b4a52b2eea095123bc312',
     CURLOPT_USERAGENT => $agent,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -87,7 +87,7 @@
         <h1><?php echo $title?></h1>
         <p><?php echo $desc?></p><br>
         <p><?php echo $content?></p>
-        <button class="owned" onclick = "location.href = '<?php echo $url?>'">View More</button>
+        <button class="owned" onclick = "location.href = '<?php echo $url?>'">View</button>
     </div>
     <section class="cocktail-section">
         <div class="title">
