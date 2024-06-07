@@ -2,7 +2,7 @@
     session_start();
     include 'includes/ConnDB.php';
 
-    $sql = "SELECT * from mocktail_recipes where season = Season";
+    $sql = "SELECT * from mocktail_recipes";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
