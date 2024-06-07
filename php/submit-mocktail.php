@@ -77,6 +77,16 @@
                             <textarea class ='desc' name='desc' id='desc' minlength ="70" maxlength="142"placeholder="Describe your mocktail to enhance the engagement of other mocktail enthusiast" required></textarea><br>
                     </div><br></br>
                     <div class='field input'>
+                            <label>Which Season is Best Suited?</label>
+                            <select class = "season" id="season" >
+                                <option value="">Select A Season</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option>
+                                <option value="Autumn">Autumn</option>
+                                <option value="Winter">Winter</option>
+                            </select><br>
+                    </div><br></br>
+                    <div class='field input'>
                             <label>Image</label>
                             <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"value="" required></input>
                     </div>

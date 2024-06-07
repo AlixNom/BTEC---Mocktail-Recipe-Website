@@ -12,6 +12,8 @@ include 'ConnDB.php';
         if (isset($_SESSION['user'])){
             $userID = stripslashes($_SESSION['user']);
             $userID = mysqli_real_escape_string($conn, $userID);
+            $season = stripslashes($_SESSION['season']);
+            $season = mysqli_real_escape_string($conn, $season);
             $ingredients = json_encode($data['data']);
             $title = stripslashes($_POST['titleMocktail']);
             $title = mysqli_real_escape_string($conn, $title);
@@ -28,11 +30,11 @@ include 'ConnDB.php';
             $targetPath = "../uploads/".$fileName;
             if(in_array($ext, $allowedTypes)){
                 if(move_uploaded_file($tempName, $targetPath)){
-                    $sql = "INSERT INTO mocktail_recipes (uid, title, ingredients, method, image, description, servings) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO mocktail_recipes (uid, title, ingredients, method, image, description, servings, season) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($sql);
                     $ingredientsArray = stripslashes($ingredients);
         
-                    $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
+                    $stmt->bind_param("ssssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings, $season);
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have submitted a recipe!";
