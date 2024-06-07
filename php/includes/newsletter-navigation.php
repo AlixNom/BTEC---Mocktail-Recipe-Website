@@ -43,6 +43,7 @@ if (isset($data['articles']) && count($data['articles']) > 0) {
     echo "Published At: " . $article['publishedAt'] . "\n";
     echo "Content: " . $article['content'] . "\n";
 } else {
-    echo
+    echo "No articles found.\n";
+}
  //header("Location: ../newsletter.php");
 ?>
