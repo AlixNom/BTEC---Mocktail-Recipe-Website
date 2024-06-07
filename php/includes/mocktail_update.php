@@ -21,16 +21,11 @@ include 'ConnDB.php';
             $desc = mysqli_real_escape_string($conn, $desc);
             $servings = stripslashes($_POST['serving']);
             $servings = mysqli_real_escape_string($conn, $servings);
-            $fileName = $_FILES['image']['name'];
-            $ext = pathinfo($fileName, PATHINFO_EXTENSION);
-            $allowedTypes = array('jpg','jpeg','png');
-            $tempName = $_FILES['image']['tmp_name'];
-            $targetPath = "../uploads/".$fileName;
                     //$ingredientsArray = stripslashes($ingredients);
-                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
+                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method',  description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
-                    $stmt->bind_param("sssssss", $userID, $title, $ingredients, $method, $fileName, $desc, $servings);
+                    $stmt->bind_param("ssssss", $userID, $title, $ingredients, $method,  $desc, $servings);
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have updated a recipe!";

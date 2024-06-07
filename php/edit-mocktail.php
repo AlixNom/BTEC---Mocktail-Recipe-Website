@@ -96,7 +96,7 @@
                         <td><?php echo $row['method'];?></td>
                         <td>
                         <!-- <a href="fetch_test.php" class="btn"> <i class="fas fa-edit"></i>Edit</a> -->
-                        <a href="test.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a>
+                        <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a>
                             <!-- <a href="update-mocktail.php?edit=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-edit"></i>Edit</a> -->
                             <a href="edit-mocktail.php?delete=<?php echo $row['id'];?>" class="btn"> <i class="fas fa-trash"></i>Delete</a>
                         </td>

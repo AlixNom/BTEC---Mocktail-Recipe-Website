@@ -51,6 +51,7 @@
                 include 'includes/ConnDB.php';
                 //$id = $_SESSION['id'];
                 $id = $_GET['edit'];
+
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
                 while($row = mysqli_fetch_assoc($sql)){
                     $_SESSION['id'] = $id;
@@ -76,7 +77,7 @@
                     </div><br></br>
                     <div class='field input'>
                             <label>Image</label>
-                            <input type= "file" class ='image' name='image' id='image' accept=".jpeg, .jpg, .png"><?php echo $row['image'];?></input>
+                            <label  class ='image' name='image' id='image'><?php echo $row['image'];?></label>
                     </div>
                     <div class='field'>
                         <input type='submit' name='submit' class='submit' value='Update Recipe' required>
