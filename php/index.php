@@ -102,7 +102,7 @@ session_start();
 
             //console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
             const Season = (['Spring', 'Summer', 'Autumn', 'Winter'][getSeason(new Date())]);
-            document.getElementById('newsletter').href = `newsletter-navigation.php?season=${Season}`;
+            document.getElementById('newsletter').href = `includes/newsletter-navigation.php?season=${Season}`;
     </script>
 </body>
 
