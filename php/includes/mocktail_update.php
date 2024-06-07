@@ -12,8 +12,6 @@ include 'ConnDB.php';
             $mocktailID = mysqli_real_escape_string($conn, $mocktailID);
             $userID = stripslashes($_SESSION['user']);
             $userID = mysqli_real_escape_string($conn, $userID);
-            $ingredients = stripslashes($_POST['ingredientArray']);
-            $ingredients = mysqli_real_escape_string($conn,$ingredients);
             $title = stripslashes($_POST['titleMocktail']);
             $title = mysqli_real_escape_string($conn, $title);
             $method = stripslashes($_POST['method']);
@@ -23,10 +21,10 @@ include 'ConnDB.php';
             $servings = stripslashes($_POST['serving']);
             $servings = mysqli_real_escape_string($conn, $servings);
                     //$ingredientsArray = stripslashes($ingredients);
-                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method',  description = '$desc', servings = '$servings' where id = $mocktailID";
+                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', method = '$method',  description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
-                    $stmt->bind_param("sssssss", $userID, $title, $ingredients, $method,  $desc, $servings, $mocktailID);
+                    $stmt->bind_param("sssss", $userID, $title, $method,  $desc, $servings);
         
                     if ($stmt->execute()) {
                         $_SESSION['status-success'] = "You have updated a recipe!";
