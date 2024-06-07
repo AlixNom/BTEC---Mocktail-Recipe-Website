@@ -5,6 +5,7 @@ const country = "uk";
 const topic = "mocktail";
 
 let requestURL;
+let apiKey = "f72e3318d86b4a52b2eea095123bc312";
 
 const generateUI = (articles) => {
     for(let item of articles){
