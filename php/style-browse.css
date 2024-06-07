@@ -124,6 +124,11 @@ h4 {
   font-size: 2vmin;
   margin: 20px auto;
 }
+h4 {
+  font-size: 1vmin;
+  margin: 20px auto;
+  margin-left: 20px;
+}
 p {
   padding: 0px 40px;
 }
