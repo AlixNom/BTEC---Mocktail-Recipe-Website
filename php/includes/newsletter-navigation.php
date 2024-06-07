@@ -28,15 +28,21 @@ $_SESSION['season'] = $seasontmp;
 $data = json_decode($response, true);
 //$data = stripslashes($data);
 echo $data['totalResults'];
-if (isset($data['article']) && count($data['article']) > 0) {
+if (isset($data['articles']) && count($data['articles']) > 0) {
     // Randomly select one article
     $randomIndex = array_rand($data['articles']);
     $article = $data['articles'][$randomIndex];
 
     // Display the selected article
+    echo "Source: " . $article['source']['name'] . "\n";
+    echo "Author: " . $article['author'] . "\n";
     echo "Title: " . $article['title'] . "\n";
     echo "Description: " . $article['description'] . "\n";
     echo "URL: " . $article['url'] . "\n";
-} 
+    echo "URL to Image: " . $article['urlToImage'] . "\n";
+    echo "Published At: " . $article['publishedAt'] . "\n";
+    echo "Content: " . $article['content'] . "\n";
+} else {
+    echo
  //header("Location: ../newsletter.php");
 ?>
