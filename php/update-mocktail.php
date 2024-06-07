@@ -49,7 +49,8 @@
                 </div>
                 <?php
                 include 'includes/ConnDB.php';
-                $id = $_SESSION['id'];
+                //$id = $_SESSION['id'];
+                $id = $_GET['edit'];
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
                 while($row = mysqli_fetch_assoc($sql)){
                 ?>
