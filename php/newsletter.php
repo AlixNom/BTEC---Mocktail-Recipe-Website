@@ -8,7 +8,48 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
+
+
+    $agent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)";
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktails&apiKey=f72e3318d86b4a52b2eea095123bc312',
+    CURLOPT_USERAGENT => $agent,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+
+    $data = json_decode($response, true);
+    echo $data['totalResults'];
+    if (isset($data['articles']) && count($data['articles']) > 0) {
+
+        $randomIndex = array_rand($data['articles']);
+        $article = $data['articles'][$randomIndex];
+
+        $name = $article['name'] ;
+        $author = $article['author'] ;
+        $title = $article['title'];
+        $desc = $article['description'];
+        $url = $article['url'];
+        $image = $article['urlToImage'];
+        $publishedAT = $article['publishedAt'];
+        $content = $article['content'];
+    } else {
+        echo "No articles found.\n";
+    }
+
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +79,9 @@
     <div class = "header-container">
         <h4>Newsletter</h4>
     </div>
-    <div class = "option-container"></div>
+    <div class = "option-container">
+        <img scr="<?php echo $image?>" alt ="">
+    </div>
     <div class = "container"></div>
     <section class="cocktail-section">
         <div class="title">
