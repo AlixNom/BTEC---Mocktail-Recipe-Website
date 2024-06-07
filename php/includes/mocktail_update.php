@@ -26,10 +26,10 @@ include 'ConnDB.php';
                     $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method',  description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
-                    $stmt->bind_param("ssssss", $userID, $title, $ingredients, $method,  $desc, $servings);
+                    $stmt->bind_param("sssssss", $userID, $title, $ingredients, $method,  $desc, $servings, $mocktailID);
         
                     if ($stmt->execute()) {
-                        $_SESSION['status'] = "You have updated a recipe!";
+                        $_SESSION['status-success'] = "You have updated a recipe!";
                         header("Location: ../edit-mocktail.php");
                         
                     } else {
