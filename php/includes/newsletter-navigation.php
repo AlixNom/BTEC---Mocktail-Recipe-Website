@@ -42,7 +42,7 @@ if (isset($data['articles'])) {
 $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
-echo($data);
+echo(stringify($data));
 
 // header("Location: ../newsletter.php");
 ?>
