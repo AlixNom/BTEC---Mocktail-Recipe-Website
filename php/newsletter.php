@@ -87,6 +87,7 @@
         <h1><?php echo $title?></h1>
         <p><?php echo $desc?></p><br>
         <p><?php echo $content?></p>
+        <button class="owned" onclick = "location.href = '<?php echo $url?>'">Back</button>
     </div>
     <section class="cocktail-section">
         <div class="title">
