@@ -45,5 +45,5 @@ if (isset($data['articles']) && count($data['articles']) > 0) {
 } else {
     echo "No articles found.\n";
 }
- //header("Location: ../newsletter.php");
+ header("Location: ../newsletter.php");
 ?>
