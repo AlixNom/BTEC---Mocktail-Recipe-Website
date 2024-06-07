@@ -53,6 +53,7 @@
                 $id = $_GET['edit'];
                 $sql = mysqli_query($conn, "SELECT * from mocktail_recipes where id = $id");
                 while($row = mysqli_fetch_assoc($sql)){
+                    $_SESSION['id'] = $id;
                 ?>
                 <form action="includes/mocktail-update.php" method="post" enctype="multipart/form-data"> 
                     <label><strong>Important!</strong> Ingredients cannot be updated!</label><br></br>

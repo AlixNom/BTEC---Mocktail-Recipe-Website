@@ -1,14 +1,15 @@
 <?php
 session_start();
 
-include 'ConnDB.php';
-    $id = $_GET['edit'];    
+include 'ConnDB.php';    
 
     
         $data = json_decode($_POST['ingredientArray'],true);
 
 
         if (isset($_SESSION['user'])){
+            $mocktailID = stripslashes($_SESSION['id']);
+            $mocktailID = mysqli_real_escape_string($conn, $mocktailID);
             $userID = stripslashes($_SESSION['user']);
             $userID = mysqli_real_escape_string($conn, $userID);
             $ingredients = json_encode($data['data']);
@@ -26,14 +27,13 @@ include 'ConnDB.php';
             $tempName = $_FILES['image']['tmp_name'];
             $targetPath = "../uploads/".$fileName;
                     $ingredientsArray = stripslashes($ingredients);
-                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $id";
+                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredientsArray', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
                     $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have updated a recipe!";
-                        $_SESSION['id'] = $id;
                         header("Location: ../edit-mocktail.php");
                         
                     } else {
