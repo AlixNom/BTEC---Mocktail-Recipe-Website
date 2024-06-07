@@ -23,7 +23,7 @@ $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
 $data = json_decode($response, true);
-echo $data
+echo stringyfy($data)
 // if (isset($data['articles']) && count($data['articles']) > 0) {
 //     // Randomly select one article
 //     $randomIndex = array_rand($data['articles']);
