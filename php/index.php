@@ -64,7 +64,7 @@ session_start();
             <div class="col">
                 <img src="img/mocktail-submit.jpg" alt="">
                 <h4>Submit Your Own</h4>
-                <p>Would you like to share your own homemade mocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow cocktail lovers and become the next big hit!</p>
+                <p>Would you like to share your own homemade mocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow mocktail lovers and become the next big hit!</p>
                 <a href="submit-mocktail.php" class="ctn">Make Recipe</a>
             </div>
             
@@ -73,7 +73,7 @@ session_start();
             <div class="col">
                 <img src="img/mocktail-newspaper.jpg" alt="">
                 <h4>Newsletter</h4>
-                <p>about the latest trends and updates in the mocktail world? Keep up with the current cocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
+                <p>about the latest trends and updates in the mocktail world? Keep up with the current mocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
                 <a href="#" class="ctn">View More</a>
             </div>
             <div class="col">
