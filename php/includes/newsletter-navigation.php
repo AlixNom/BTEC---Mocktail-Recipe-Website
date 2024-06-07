@@ -3,7 +3,7 @@ session_start();
 include 'ConnDB.php';
 $curl = curl_init();
 
-curl_setopt_array($curl, array(
+$test=curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktail&apiKey=f72e3318d86b4a52b2eea095123bc312',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
@@ -23,7 +23,7 @@ $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
 $data = json_decode($response, true);
-echo stringyfy($data)
+echo $test
 // if (isset($data['articles']) && count($data['articles']) > 0) {
 //     // Randomly select one article
 //     $randomIndex = array_rand($data['articles']);
