@@ -1,3 +1,7 @@
+<?php
+session_start();
+$id = $_GET['edit'];
+$_SESSION['id'] = $id;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
