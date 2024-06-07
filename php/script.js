@@ -11,7 +11,13 @@ const generateUI = (articles) => {
         let card = document.createElement("div");
         card.classList.add("news-card");
         card.innerHTML = `<div class = "news-image-container">
-        <img scr="${item.urlToImage || "./newspaper.jpg"}" alt="" ></div>`
+        <img scr="${item.urlToImage || "./newspaper.jpg"}" alt="" ></div>
+        <div class ="news-content">
+            <div class = "news-title">
+                ${item.title}
+            </div>
+            <div class ="news-description"></div>
+        </div>`;
     }
 };
 const init =  () => {
