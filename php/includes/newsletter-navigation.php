@@ -25,7 +25,7 @@ curl_close($curl);
 $seasontmp = $_GET['season'];
 $_SESSION['season'] = $seasontmp;
 
-$data = json_encode($response, true);
+$data = json_decode($response, true);
 $data = stripslashes($data);
 echo $data['totalResults'];
 // if (isset($data['totalResults'])) {
