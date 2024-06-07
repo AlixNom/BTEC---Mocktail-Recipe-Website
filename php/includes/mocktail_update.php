@@ -21,7 +21,7 @@ include 'ConnDB.php';
             $servings = stripslashes($_POST['serving']);
             $servings = mysqli_real_escape_string($conn, $servings);
                     //$ingredientsArray = stripslashes($ingredients);
-                    $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', method = '$method',  description = '$desc', servings = '$servings' where id = $mocktailID";
+                    $sql = "UPDATE mocktail_recipes SET uid = ? title = ?, method = ?,  description = ?, servings = ? where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
                     $stmt->bind_param("sssss", $userID, $title, $method,  $desc, $servings);
