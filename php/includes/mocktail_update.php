@@ -30,7 +30,7 @@ include 'ConnDB.php';
                     $sql = "UPDATE mocktail_recipes SET uid = '$userID', title = '$title', ingredients = '$ingredients', method = '$method', image = '$fileName', description = '$desc', servings = '$servings' where id = $mocktailID";
                     $stmt = $conn->prepare($sql);
         
-                    $stmt->bind_param("sssssss", $userID, $title, $ingredientsArray, $method, $fileName, $desc, $servings);
+                    $stmt->bind_param("sssssss", $userID, $title, $ingredients, $method, $fileName, $desc, $servings);
         
                     if ($stmt->execute()) {
                         $_SESSION['status'] = "You have updated a recipe!";
