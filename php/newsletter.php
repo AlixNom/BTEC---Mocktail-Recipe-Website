@@ -83,8 +83,8 @@
     <div class = "option-container">
         <img src="uploads/<?php echo $image?>" alt ="">
     </div>
+    <h1><?php echo $title?></h1>
     <div class = "heading">
-        <h1><?php echo $title?></h1>
         <p><?php echo $desc?></p><br>
         <p><?php echo $content?></p>
         <button class="owned" onclick = "location.href = '<?php echo $url?>'">View</button>
