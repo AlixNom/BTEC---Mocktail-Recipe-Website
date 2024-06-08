@@ -82,7 +82,7 @@
     </div>
     <div class = "option-container">
         <h1><?php echo $title?></h1>
-        <img src="<?php echo $image?>" width="300" height="214" alt ="">
+        <img src="<?php echo $image?>" width="400" height="300" alt ="">
     </div>
     <div class = "heading">
         <p><?php echo $desc?></p><br>
