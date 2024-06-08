@@ -323,6 +323,11 @@ body , html {
   border-bottom: 2px gray solid;
 }
 
+.option-container{
+  display: flex;
+  align-items:center;
+}
+
 @media only screen and (max-width:850px){
   .title{
     text-align: center;
