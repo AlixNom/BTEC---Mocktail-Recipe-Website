@@ -105,11 +105,6 @@ main .card .image img{
   object-fit: cover;
 }
 
-.option-container img{
-  width: 400px;
-  height: 350px;
-  object-fit:fill;
-}
 
 main .card .caption{
   padding-left: 1em;
