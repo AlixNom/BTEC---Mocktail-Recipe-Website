@@ -104,6 +104,12 @@ main .card .image img{
   object-fit: cover;
 }
 
+.option-container img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
 main .card .caption{
   padding-left: 1em;
   text-align: left;
