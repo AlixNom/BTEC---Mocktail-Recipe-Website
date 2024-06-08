@@ -316,8 +316,7 @@ body , html {
 }
 
 .option-container{
-  display: flex;
-  align-items:center;
+  margin-left: 100px;
 }
 
 @media only screen and (max-width:850px){
