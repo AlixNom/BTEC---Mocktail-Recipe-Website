@@ -81,7 +81,7 @@
         <h4>Newsletter</h4>
     </div>
     <div class = "option-container">
-        <img scr="<?php echo $image?>" alt ="">
+        <img src="<?php echo $image?>" alt ="">
     </div>
     <div class = "heading">
         <h1><?php echo $title?></h1>
@@ -101,7 +101,7 @@
             ?>
             <div class = "card">
                 <div class = "image">
-                    <img scr="<?php echo $row['image'];?>" alt="">
+                    <img src="<?php echo $row['image'];?>" alt="">
                 </div>
                 <div class="caption">
                     <p class = "name"><?php echo $row['title'];?></p>
