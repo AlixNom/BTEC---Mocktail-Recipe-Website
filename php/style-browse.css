@@ -36,10 +36,7 @@ header {
   font-size:  4vmin;
   color: white;
 }
-.heading h1 {
-  font-size:  2vmin;
-  color: white;
-}
+
 .line{
   width: 150px;
   height:4px;
@@ -135,7 +132,7 @@ h4 {
   margin: 20px auto;
 }
 h1 {
-  font-size: 1vmin;
+  font-size: 100px;
   margin-left: 20px;
 }
 p {
