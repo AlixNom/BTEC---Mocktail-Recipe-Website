@@ -106,8 +106,8 @@ main .card .image img{
 }
 
 .option-container img{
-  max-width: 400px;
-  max-height: 350px;
+  width: 400px;
+  height: 350px;
   object-fit:fill;
 }
 
