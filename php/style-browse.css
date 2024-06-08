@@ -36,6 +36,10 @@ header {
   font-size:  4vmin;
   color: white;
 }
+.heading h1 {
+  font-size:  2vmin;
+  color: white;
+}
 .line{
   width: 150px;
   height:4px;
