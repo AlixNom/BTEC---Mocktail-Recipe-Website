@@ -81,7 +81,7 @@
         <h4>Newsletter</h4>
     </div>
     <div class = "option-container">
-        <img src="<?php echo $image?>" alt ="">
+        <img src="uploads/<?php echo $image?>" alt ="">
     </div>
     <div class = "heading">
         <h1><?php echo $title?></h1>
