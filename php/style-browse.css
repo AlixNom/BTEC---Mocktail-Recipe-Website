@@ -274,7 +274,10 @@ main button:hover{
 }
 
 body , html {
-  overflow-y: hidden;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
 }
 .footer{
   width:100%;

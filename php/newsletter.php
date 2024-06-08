@@ -58,7 +58,7 @@
     <title>Newsletter</title>
 </head>
 
-<body>
+<!-- <body> -->
 
     <div class="nav">
         <div class="logo">
@@ -123,6 +123,6 @@
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
 <script scr="script.js"></script>
-</body>
+<!-- </body> -->
 
 </html>
