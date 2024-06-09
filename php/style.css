@@ -68,7 +68,17 @@ a{
   top: 60px;
   color: green;
  }
- 
+
+
+.btn{
+  background: #363636;
+  color: white;
+  font-weight: 500;
+  width:100%;
+  border: 1px solid #424242;
+  padding: 10px;
+  margin: 10px;
+}
 
 body{
   background:
