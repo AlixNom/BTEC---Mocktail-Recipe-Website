@@ -75,7 +75,7 @@ session_start();
                 <img src="img/mocktail-newspaper.jpg" alt="">
                 <h4>Newsletter</h4>
                 <p>about the latest trends and updates in the mocktail world? Keep up with the current mocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
-                <a id="newsletter" href="" class="ctn">View More</a>
+                <a id="newsletter-explore" href="" class="ctn">View More</a>
             </div>
             <div class="col">
                 <img src="img/mocktail-poll.jpg" alt="">
@@ -104,6 +104,7 @@ session_start();
             //console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
             const Season = (['Spring', 'Summer', 'Autumn', 'Winter'][getSeason(new Date())]);
             document.getElementById('newsletter').href = `includes/newsletter-navigation.php?season=${Season}`;
+            document.getElementById('newsletter-explore').href = `includes/newsletter-navigation.php?season=${Season}`;
     </script>
 </body>
 
