@@ -207,7 +207,7 @@ body{
   color:#363636;
   z-index:1;
 }
-#next{
+.next{
   background-color: hwb(129 39% 45%);
   color: white;
   font-weight: 500;
