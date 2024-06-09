@@ -33,7 +33,7 @@ if(isset($_SESSION['status-warning'])) {
     <div class='login'>
             <div class='form form-box'>
                 <h3>Mocktail Knowledge</h3>
-                <form action=''>
+                <div class="form">
                     <h2 id = "question">Question?</h2>
                     <div class='answer-buttons'>
                         <button class ="btn">Answer 1</button>
@@ -42,7 +42,7 @@ if(isset($_SESSION['status-warning'])) {
                         <button class ="btn">Answer 4</button>
                     </div>
                     <button class ="next">Next</button>
-                </form>
+                </div>
             </div>
         </div>
     <!--<a href='subscribe.php'>Subscribe</a>-->";
