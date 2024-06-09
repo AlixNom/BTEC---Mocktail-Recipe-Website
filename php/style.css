@@ -177,6 +177,21 @@ body{
   z-index:1;
 }
 
+#next{
+  background-color: hwb(129 39% 45%);
+  color: white;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding:10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor:pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
 .button{
   background: hwb(129 39% 45%);
   height: 30px;
