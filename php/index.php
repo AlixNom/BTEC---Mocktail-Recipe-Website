@@ -81,7 +81,7 @@ session_start();
                 <img src="img/mocktail-poll.jpg" alt="">
                 <h4>Polls/Quizzes</h4>
                 <p>Challenge yourself and see how much you really know about the art of mixology, or place your opinions out!</p>
-                <a href="#" class="ctn">View More</a>
+                <a href="quiz.php" class="ctn">View More</a>
             </div>
             
         </div>
