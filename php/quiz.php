@@ -20,7 +20,6 @@ session_start();
             <a class="links" href="login.php">Login</a>
             <a class="links" href="register.php">Not a Member?</a>
         </div>
-    
 </div>
 
 <?php
@@ -51,7 +50,6 @@ if(isset($_SESSION['status-warning'])) {
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
-</body>
+    <script src="functionQuiz.js"></script>
 </body>
 </html>
-<script type="text/javascript" src="onload.js"></script>
