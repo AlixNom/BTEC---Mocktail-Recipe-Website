@@ -42,6 +42,7 @@ if(isset($_SESSION['status-warning'])) {
                         <button class ="btn">Answer 3</button>
                         <button class ="btn">Answer 4</button>
                     </div>
+                    <button class ="next">Next</button>
                 </form>
             </div>
         </div>
