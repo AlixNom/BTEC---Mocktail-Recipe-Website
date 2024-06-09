@@ -76,7 +76,7 @@
             <div class="line"></div>
         </div>
     </header>
-    
+    <section class="cocktail-selection">
     <div class = "header-container">
         <button class="owned" onclick = "location.href = 'index.php'">Back</button>
         <h4>Newsletter</h4>
@@ -91,7 +91,6 @@
         <p><?php echo $content?></p>
         <button class="owned" onclick = "location.href = '<?php echo $url?>'">View</button>
     </div>
-    <section class="cocktail-section">
         <div class="title">
             <h1>Seasonal Recipes</h1>
             <div class="line"></div>
