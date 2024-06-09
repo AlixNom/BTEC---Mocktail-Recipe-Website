@@ -34,14 +34,14 @@ if(isset($_SESSION['status-warning'])) {
             <div class='form form-box'>
                 <h3>Mocktail Knowledge</h3>
                 <div class="form">
-                    <h2 id = "question">Question?</h2>
-                    <div id='answer-buttons'>
+                    <h2 id = "question" class="question">Question?</h2>
+                    <div class="answer-buttons" id='answer-buttons'>
                         <button class ="btn">Answer 1</button>
                         <button class ="btn">Answer 2</button>
                         <button class ="btn">Answer 3</button>
                         <button class ="btn">Answer 4</button>
                     </div>
-                    <button id ="next">Next</button>
+                    <button id ="next" class="next">Next</button>
                 </div>
             </div>
         </div>
