@@ -46,9 +46,9 @@ const questions = [
     },
 ];
 
-const questionElement =document.getElement("question");
-const answerButton =document.getElement("answer-buttons");
-const nextButton =document.getElement("next");
+const questionElement =document.getElementById("question");
+const answerButton =document.getElementById("answer-buttons");
+const nextButton =document.getElementById("next");
 
 let currentQuestionIndex=0;
 let score = 0;
