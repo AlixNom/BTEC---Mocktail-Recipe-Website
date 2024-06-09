@@ -1,50 +1,77 @@
-const container = document.createElement(".container");
-const optionsContainer = document.createElement(".options-container");
+const questions = [
+    {
+        question: "Which glass is traditionally used to serve a Bloody Mary mocktail? ",
+        answers: [
+            {text: "Highball glass", correct: true},
+            {text: "Virgin Mary", correct: false},
+            {text: "Shirley Temple", correct: false},
+            {text: "Virgin Pina Colada", correct: false},
+        ]
+    },
+    {
+        question: "What mocktail was created as a promotional tool for a children’s movie in the 1930s? ",
+        answers: [
+            {text: "Highball glass", correct: false},
+            {text: "Virgin Mary", correct: false},
+            {text: "Shirley Temple", correct: true},
+            {text: "Virgin Pina Colada", correct: false},
+        ]
+    },
+    {
+        question: "What is the most used citrus fruit in mocktails?",
+        answers: [
+            {text: "Lime", correct: false},
+            {text: "Orange", correct: false},
+            {text: "Lemon", correct: true},
+            {text: "Grapefruit", correct: false},
+        ]
+    },
+    {
+        question: " Apple Cider Mocktail is a beverage that is popular in which season?",
+        answers: [
+            {text: "Winter", correct: false},
+            {text: "Autumn", correct: true},
+            {text: "Spring", correct: false},
+            {text: "Summer", correct: false},
+        ]
+    },
+    {
+        question: "Redemption Bar is a famous mocktail bar in which British city? ",
+        answers: [
+            {text: "London", correct: false},
+            {text: "Manchester", correct: true},
+            {text: "Sheffield", correct: false},
+            {text: "Aberdeen", correct: false},
+        ]
+    },
+];
 
-const country = "uk";
-const topic = "mocktail";
+const questionElement =document.getElement("question");
+const answerButton =document.getElement("answer-buttons");
+const nextButton =document.getElement("next");
 
-let requestURL;
-let apiKey = "f72e3318d86b4a52b2eea095123bc312";
+let currentQuestionIndex=0;
+let score = 0;
 
-const generateUI = (articles) => {
-    for(let item of articles){
-        let card = document.createElement("div");
-        card.classList.add("news-card");
-        card.innerHTML = `<div class = "news-image-container">
-        <img scr="${item.urlToImage || "./newspaper.jpg"}" alt="" ></div>
-        <div class ="news-content">
-            <div class = "news-title">
-                ${item.title}
-            </div>
-            <div class ="news-description">
-            ${item.description || item.content || ""}</div>
-            <a href="${item.url}" target="_blank" class ="view-button">Read More</a>
-        </div>`;
-    container.appendChild(card);
-    }
+function startQuiz(){
+    currentQuestionIndex= 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+
 };
 
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-const getNews = async() => {
-    container.innerHTML = "";
-    let response = await fetch("requestURL");
-    if(!response.ok) {
-        alert("Data unavailable at the moment. Please wait!");
-        return false;
-    }
-    let data = await response.json();
-    generateUI(data.articles);
-};
-
-const init =  () => {
-    optionsContainer.innerHTML = "";
-    getNews();
-    createOptions();
-
-};
-
-window.onload=() => {
-    requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${topic}&apiKey=${apiKey}`;
-    init();
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    });
 }
+
+startQuiz();
