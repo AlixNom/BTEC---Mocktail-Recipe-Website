@@ -35,13 +35,13 @@ if(isset($_SESSION['status-warning'])) {
                 <h3>Mocktail Knowledge</h3>
                 <div class="form">
                     <h2 id = "question">Question?</h2>
-                    <div class='answer-buttons'>
+                    <div id='answer-buttons'>
                         <button class ="btn">Answer 1</button>
                         <button class ="btn">Answer 2</button>
                         <button class ="btn">Answer 3</button>
                         <button class ="btn">Answer 4</button>
                     </div>
-                    <button class ="next">Next</button>
+                    <button id ="next">Next</button>
                 </div>
             </div>
         </div>
