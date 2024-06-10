@@ -43,7 +43,7 @@ if(isset($_SESSION['status-warning'])) {
                         <input type='text' name='email' id='email' required>
                     </div>
                     <div class='field'>
-                        <input type='submit' name='submit' class='button'value='Login' required>
+                        <input type='submit' name='submit' class='button'value='Subscribe' required>
                     </div>
                 </form>
             </div>
