@@ -40,7 +40,7 @@ $method = str_replace("\r\n", "<br>", $method);
 <body>
 
 <div class='nav'>
-    <div class='logo'>Logo</div>
+    <div class='logo'>Mocktail</div>
     <div class='nav-links'>
         <a class="links" href="index.php">Home</a>
         <a class="links" href="login.php">Login</a>

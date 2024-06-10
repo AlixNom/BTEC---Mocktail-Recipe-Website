@@ -10,7 +10,7 @@
 <body>
     <div class='nav'>
             <div class='logo'>
-                Logo
+            Mocktail
             </div>
             <div class='nav-links'>
                 <a class="links" href="index.php">Home</a>
