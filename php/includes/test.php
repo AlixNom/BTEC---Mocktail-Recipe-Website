@@ -3,6 +3,7 @@ session_start();
 include 'ConnDB.php';
 
 if (isset($_SESSION['user'])){
+    echo`tes}`;
     $id = stripslashes($_SESSION['user']);
     $id = mysqli_real_escape_string($conn, $id);
 
