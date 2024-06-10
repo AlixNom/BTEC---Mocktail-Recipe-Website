@@ -40,7 +40,11 @@ if(isset($_SESSION['status-warning'])) {
                 <form action='includes/login_validation.php' method='post'>
                     <label for='desc'><strong>By joining our community, you gain access to regular updates on the latest mocktail news, insightful articles, and an ever-changing list of delicious mocktail recipes that are updated every season to keep your taste buds delighted and your gatherings refreshing.</strong></label><br></br>
                     <div class='field input'>
-                        <label for='email'>email</label>
+                        <label for='user'>User</label>
+                        <input type='text' name='user' id='user' required>
+                    </div>
+                    <div class='field input'>
+                        <label for='email'>Email</label>
                         <input type='text' name='email' id='email' required>
                     </div>
                     <div class='field'>
