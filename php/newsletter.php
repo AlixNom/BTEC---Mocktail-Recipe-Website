@@ -14,7 +14,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=mocktail&apiKey=f72e3318d86b4a52b2eea095123bc312',
+    CURLOPT_URL => 'https://newsapi.org/v2/everything?q=Non-Alcoholic&apiKey=f72e3318d86b4a52b2eea095123bc312',
     CURLOPT_USERAGENT => $agent,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
