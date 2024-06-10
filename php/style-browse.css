@@ -159,7 +159,7 @@ p {
   padding: 0px 10px;
   z-index:1;
 }
-.header-content .owned{
+.header-container .owned{
   background: #363636;
   height: 30px;
   color: white;
