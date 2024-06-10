@@ -30,6 +30,7 @@
     <div class = "header-container">
         <button class="owned" onclick = "location.href = 'index.php'">Back</button>
         <h2>Explore</h2>
+        <div class="line"></div>
     </div><br></br>
     <div class = "videos">
         <h3>Healthy Mocktails Tips!</h3><br>
