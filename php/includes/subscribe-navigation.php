@@ -1,6 +1,6 @@
 <?php session_start();
 include 'ConnDB.php';
-
+if (isset($_SESSION['user'])){
 $id = stripslashes($_SESSION['user']);
 $id = mysqli_real_escape_string($conn, $id);
 
@@ -24,7 +24,10 @@ $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe 
             $_SESSION['season'] = $seasontmp;
             echo"test";
             header("Location: ../subscribe.php");}};
-
+         }else{
+            $_SESSION['status-warning'] = "You must be logged in to view your recipe";
+            header("Location: ../login.php");
+         }
 
 mysqli_free_result($stmt);
 mysqli_close($conn);

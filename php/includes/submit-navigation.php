@@ -2,7 +2,7 @@
 session_start();
 include 'ConnDB.php';
 if (isset($_SESSION['user'])){
-    header("Location: ../submit-mocktail.php.php");
+    header("Location: ../submit-mocktail.php");
 
 } else {
 $_SESSION['status-warning'] = "You must be logged in to view your recipe";
