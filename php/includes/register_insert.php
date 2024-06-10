@@ -51,7 +51,7 @@ If($count>0){
             $stmtPass = $conn->prepare($sql);
             $stmtPass->bind_param("sss", $row['id'], $row['id'], $password_hash);
         if ($stmtPass->execute()) {
-            $_SESSION['status'] = "Successfully registered as a user!";
+            $_SESSION['status-successful'] = "Successfully registered as a user!";
             header("Location: ../login.php");}}
     } else {
         $_SESSION['status-warning'] = "Error with registering user!";
