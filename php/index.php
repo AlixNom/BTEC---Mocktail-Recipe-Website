@@ -45,7 +45,7 @@ session_start();
     <?php unset($_SESSION['status-warning']); } ?>
     <header>    
         <div class="header-content">
-            <h2>Enjoy a cocktail with love ones!</h2>
+            <h2>Enjoy a mocktail with love ones!</h2>
             <div class="line"></div>
             <h1>LIVE LAUGH LOVE!</h1>
             <a id = "newsletter"href="" class="ctn">Newsletter</a>
