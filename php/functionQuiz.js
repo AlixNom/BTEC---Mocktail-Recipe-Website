@@ -38,8 +38,8 @@ const questions = [
     {
         question: "Redemption Bar is a famous mocktail bar in which British city? ",
         answers: [
-            {text: "London", correct: false},
-            {text: "Manchester", correct: true},
+            {text: "London", correct: true},
+            {text: "Manchester", correct: false},
             {text: "Sheffield", correct: false},
             {text: "Aberdeen", correct: false},
         ]
