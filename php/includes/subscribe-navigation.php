@@ -20,7 +20,7 @@ $userVal = "SELECT subscribe from mocktail_users where id = '$id', subscribe = '
          }else{
             $seasontmp = $_GET['season'];
             $_SESSION['season'] = $seasontmp;
-            header("Location: ../subscribe.php")}};
+            header("Location: ../subscribe.php");}};
 
 
 $conn -> close();
