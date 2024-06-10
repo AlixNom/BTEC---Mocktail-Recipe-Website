@@ -92,7 +92,7 @@ session_start();
         <h1>SECRETS TO MAKING THE BEST MOCKTAIL!</h1>
         <div class="line"></div>
         <p>Crafting the perfect mocktail is an art form that blends creativity with precision, there are numerous tips and tricks to enhance your mocktail-making skills. Here's a comprehensive guide to elevating your mocktail game:</p>
-        <a href="#" class="ctn"> Learn More </a>
+        <a href="tipsntricks.php" class="ctn"> Learn More </a>
         </div>
     </section>
     <section class = "footer">
