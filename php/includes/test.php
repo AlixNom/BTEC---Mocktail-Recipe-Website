@@ -14,7 +14,7 @@ if (isset($_SESSION['user'])){
             die('Query Error: ' . mysqli_error($conn));
         }
         
-        // $count = mysqli_num_rows($stmt);
+        $count = mysqli_num_rows($stmt);
         // if( $count === 0){
         //     $sql = "SELECT * from mocktail_users where id = '$id'";
         //     $stmt = mysqli_query($conn, $sql);
