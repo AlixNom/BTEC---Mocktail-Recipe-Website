@@ -87,12 +87,12 @@ function resetState(){
 }
 
 function selectAnswer(e){
-    const selectBtn  = e.target;
-    const isCorrect = selectBtn.dataset.correct === "true";
+    const selectedBtn  = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
-        selectBtn.classList.add("correct");
+        selectedBtn.classList.add("correct");
     }else{
-        selectBtn.classList.remove("incorrect");
+        selectedBtn.classList.add("incorrect");
     }
 }
 
