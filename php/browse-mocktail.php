@@ -27,6 +27,13 @@
             <a class="links" href="register.php">Not a Member?</a>
         </div>
     </div>
+    <?php
+    if(isset($_SESSION['status-warning'])) {
+    ?>
+        <div class="alert-error">
+            <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
+        </div>
+    <?php unset($_SESSION['status-warning']); } ?>
     <header>    
         <div class="header-content">
             <h2>Browse endless amount of mocktails!</h2>
