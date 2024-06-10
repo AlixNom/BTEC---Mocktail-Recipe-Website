@@ -55,7 +55,7 @@ $method = str_replace("\r\n", "<br>", $method);
         </div>
         <h3><?php echo $row['title']; ?></h3>
         <form>
-            <div class='image'><img src="<?php echo $row['image']; ?>" alt="Recipe Image"></div>
+            <div class='image'><img src="uploads/<?php echo $row['image']; ?>" alt="Recipe Image"></div>
             <div class='field input'>
                 <label class="creator"><br></br><strong>Made By </strong><?php echo $creatorName;?><br></label><br></br><br></br>
                 <h2>Description</h2>
