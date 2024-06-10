@@ -3,9 +3,10 @@ session_start();
 include 'ConnDB.php';
 
 if (isset($_SESSION['user'])){
-        header("Location: ../login.php");
-        // $id = stripslashes($_SESSION['user']);
-        // $id = mysqli_real_escape_string($conn, $id);
+        
+        $id = stripslashes($_SESSION['user']);
+        $id = mysqli_real_escape_string($conn, $id);
+        echo $id;
 
         // $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe = 'No'";
         // $stmt = mysqli_query($conn, $userVal);
