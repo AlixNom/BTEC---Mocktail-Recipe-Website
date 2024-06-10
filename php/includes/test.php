@@ -3,7 +3,7 @@ session_start();
 include 'ConnDB.php';
 
 if (isset($_SESSION['user'])){
-        echo`tes}`;
+        header("Location: ../login.php");
         // $id = stripslashes($_SESSION['user']);
         // $id = mysqli_real_escape_string($conn, $id);
 
