@@ -25,9 +25,7 @@
     ?>
         <div class="alert-success">
             <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
-            <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            </button>
+
         </div>
     <?php unset($_SESSION['status']); } ?>
     <?php
@@ -35,9 +33,7 @@
     ?>
     <div class="alert-error">
         <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
-        <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-        </button>
+  
     </div>
     <?php unset($_SESSION['status-warning']); } ?>
     <div class='login'>

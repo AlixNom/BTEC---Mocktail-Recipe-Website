@@ -26,9 +26,6 @@ session_start();
     ?>
     <div class="alert-success">
         <strong>Hey! You have logged in as:</strong> <?php echo $_SESSION['username'];?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
     </div>
     <?php unset($_SESSION['username']); } ?>
     <?php
@@ -36,9 +33,7 @@ session_start();
     ?>
         <div class="alert-success">
             <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+
         </div>
     <?php unset($_SESSION['status']); } ?>
     <?php
