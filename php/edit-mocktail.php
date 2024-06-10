@@ -39,7 +39,6 @@
     ?>
         <div class="alert-success">
             <strong>Hey!</strong> <?php echo $_SESSION['status-success'];?>
-            <span aria-hidden="true">&times;</span>
         </div>
     <?php unset($_SESSION['status-success']); } ?>
 
