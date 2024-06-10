@@ -31,6 +31,6 @@ if (isset($_SESSION['user'])){
             header("Location: ../login.php");
          }
 
-// mysqli_free_result($stmt);
-// mysqli_close($conn);
+mysqli_free_result($stmt);
+mysqli_close($conn);
 
