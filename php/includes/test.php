@@ -21,9 +21,6 @@ $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe 
             $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
             header("Location: ../register.php");
          }else{
-            $seasontmp = $_GET['season'];
-            $_SESSION['season'] = $seasontmp;
-            echo"test";
             header("Location: ../subscribe.php");}};
          }else{
             $_SESSION['status-warning'] = "You must be logged in to view your recipe";
