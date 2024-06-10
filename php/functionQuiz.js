@@ -74,7 +74,7 @@ function showQuestion(){
         answerButton.appendChild(button);
         if(answer.correct){
             button.dataset.correct = answer.correct;
-        }
+        };
         button.addEventListener("click",selectedAnswer);
     });
 }
