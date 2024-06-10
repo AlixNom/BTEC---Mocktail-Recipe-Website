@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 include 'ConnDB.php';
 if (isset($_SESSION['user'])){
 $id = stripslashes($_SESSION['user']);
@@ -25,7 +26,7 @@ $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe 
             echo"test";
             header("Location: ../subscribe.php");}};
          }else{
-            $_SESSION['status-warning'] = "You must be logged in to view your recipe";
+            $_SESSION['status-warning'] = "You must be logged in to view the newsletter";
             header("Location: ../login.php");
          }
 

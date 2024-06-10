@@ -1,43 +1,35 @@
-<?php
+<?php 
 session_start();
-
 include 'ConnDB.php';
+if (isset($_SESSION['user'])){
+$id = stripslashes($_SESSION['user']);
+$id = mysqli_real_escape_string($conn, $id);
 
-    $data = json_decode($_POST['ingredientArray'],true);
-
-
-    if (isset($_SESSION['user'])){
-        $userID = stripslashes($_SESSION['user']);
-        $userID = mysqli_real_escape_string($conn, $userID);
-        $ingredients = json_encode($data['data']);
-        $method = stripslashes($_POST['method']);
-        $method = mysqli_real_escape_string($conn, $method);
-        
-
+$userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe = 'No'";
+    $stmt = mysqli_query($conn, $userVal);
+    if (!$stmt) {
+        die('Query Error: ' . mysqli_error($conn));
+    }
     
-        $sql = "INSERT INTO mocktail_recipes (uid, ingredients, method) VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $ingredientsArray = stripslashes($ingredients);
+    $count = mysqli_num_rows($stmt);
+    if( $count === 0){
+        $sql = "SELECT * from mocktail_users where id = '$id'";
+        $stmt = mysqli_query($conn, $sql);
+         $count = mysqli_num_rows($stmt);
+         echo`row count ${$count}`;
+         if( $count === 0){
+            $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
+            header("Location: ../register.php");
+         }else{
+            $seasontmp = $_GET['season'];
+            $_SESSION['season'] = $seasontmp;
+            echo"test";
+            header("Location: ../subscribe.php");}};
+         }else{
+            $_SESSION['status-warning'] = "You must be logged in to view your recipe";
+            header("Location: ../login.php");
+         }
 
-        $stmt->bind_param("sss", $userID, $ingredientsArray, $method);
-
-        if ($stmt->execute()) {
-            $_SESSION['status'] = "You have submitted a recipe!";
-            header("Location: ../index.php");
-        } else {
-            $_SESSION['status-warning'] = "Was not able to submit recipe!";
-            header("Location: ../submit_mocktail.php");
-        }
-
-        $stmt->close();
-} else {
-    $_SESSION['status-warning'] = "You must be logged in to submit a recipe";
-    header("Location: ../submit_mocktail.php");
-        
-}
-
-
-
-$conn->close();
-
+mysqli_free_result($stmt);
+mysqli_close($conn);
 
