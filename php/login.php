@@ -33,6 +33,13 @@ if(isset($_SESSION['status-warning'])) {
         <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
     </div>
 <?php unset($_SESSION['status-warning']); } ?>
+<?php
+if(isset($_SESSION['status-succesfull'])) {
+?>
+    <div class="alert-success">
+        <strong>Hey!</strong> <?php echo $_SESSION['status-successful'];?>
+    </div>
+<?php unset($_SESSION['status-successful']); } ?>
 
     <div class='login'>
             <div class='form form-box'>
