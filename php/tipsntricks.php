@@ -28,7 +28,7 @@
     </header>
     <section class="cocktail-selection">
     <div class = "header-container">
-        <button class="owned" onclick = "location.href = 'index.php'">Back</button><br>
+        <button class="owned" onclick = "location.href = 'index.php'">Back</button><br></br>
         <h2>Explore</h2>
     </div><br></br>
     <div class = "videos">
