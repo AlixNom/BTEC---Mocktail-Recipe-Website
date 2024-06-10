@@ -38,7 +38,7 @@ if(isset($_SESSION['status-warning'])) {
             <div class='form form-box'>
                 <h3>Subscribe to Newsletter</h3>
                 <form action='includes/login_validation.php' method='post'>
-                    <label for='desc'>Joining our community allows to see the updates on mocktail related news, and list of mocktails that change every season!</label>
+                    <label for='desc'>By joining our community, you gain access to regular updates on the latest mocktail news, insightful articles, and an ever-changing list of delicious mocktail recipes that are updated every season to keep your taste buds delighted and your gatherings refreshing.</label>
                     <div class='field input'>
                         <label for='email'>email</label>
                         <input type='text' name='email' id='email' required>
