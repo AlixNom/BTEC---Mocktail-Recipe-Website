@@ -5,7 +5,7 @@ $id = stripslashes($_SESSION['user']);
 $id = mysqli_real_escape_string($conn, $id);
 $defaultVal = 'No';
 
-$userVal = "SELECT subscribe from mocktail_users where id = '$id', subscribe = '${defaultVal}'";
+$userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe = '${defaultVal}'";
 
 
     $stmt = mysqli_query($conn, $userVal);
