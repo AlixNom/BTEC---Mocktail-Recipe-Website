@@ -29,9 +29,10 @@
     <section class="cocktail-selection">
     <div class = "header-container">
         <button class="owned" onclick = "location.href = 'index.php'">Back</button>
-        <h4>Explore</h4>
+        <h2>Explore</h2>
     </div>
     <div class = "videos">
+        <h3></h3>
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6JQDazdbZ4w?si=a6724x1jvCGlsCkC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </section>
