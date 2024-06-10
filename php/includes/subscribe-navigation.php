@@ -16,7 +16,7 @@ $userVal = "SELECT subscribe from mocktail_users where id = '$id', subscribe = '
          $count = mysqli_num_rows($stmt);
          if( $count === 0){
             $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
-            header("Location: ../register.php")
+            header("Location: ../register.php");
          }else{
             $seasontmp = $_GET['season'];
             $_SESSION['season'] = $seasontmp;
