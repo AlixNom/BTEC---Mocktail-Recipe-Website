@@ -6,7 +6,7 @@ if (isset($_SESSION['user'])){
 
 } else {
 $_SESSION['status-warning'] = "You must be logged in to view your recipe";
-header("Location: ../index.php");
+header("Location: ../lopgin.php");
     
 }
 
