@@ -15,6 +15,7 @@ if (isset($_SESSION['user'])){
         }
         
         $count = mysqli_num_rows($stmt);
+        echo $count;
         // if( $count === 0){
         //     $sql = "SELECT * from mocktail_users where id = '$id'";
         //     $stmt = mysqli_query($conn, $sql);
