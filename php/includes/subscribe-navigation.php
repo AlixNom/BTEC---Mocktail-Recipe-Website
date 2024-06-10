@@ -4,7 +4,7 @@ include 'ConnDB.php';
 $id = stripslashes($_SESSION['user']);
 $id = mysqli_real_escape_string($conn, $id);
 
-$userVal = "SELECT subscribe from mocktail_users where id = '$id', subscribe = 'No'";
+$userVal = "SELECT subscribe from mocktail_users where id = '$id', subscribe = No";
 
 
     $stmt = mysqli_query($conn, $userVal);
