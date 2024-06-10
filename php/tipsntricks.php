@@ -28,13 +28,16 @@
     </header>
     <section class="cocktail-selection">
     <div class = "header-container">
-        <button class="owned" onclick = "location.href = 'index.php'">Back</button>
+        <button class="owned" onclick = "location.href = 'index.php'">Back</button><br>
         <h2>Explore</h2>
-        <div class="line"></div>
     </div><br></br>
     <div class = "videos">
         <h3>Healthy Mocktails Tips!</h3><br>
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6JQDazdbZ4w?si=a6724x1jvCGlsCkC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div><br></br>
+    <div class = "videos">
+        <h3>4 Mocktails to try at Home!</h3><br>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5wgvpo-xBnA?si=n7wCQAlvb0jCx7Xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </section>
     <section class = "footer">
