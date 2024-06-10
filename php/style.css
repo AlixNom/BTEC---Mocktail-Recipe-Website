@@ -204,7 +204,6 @@ body{
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   outline: none;
-  color:#363636;
   z-index:1;
 }
 #next{
@@ -244,11 +243,11 @@ body{
   padding: 0px 10px;
   z-index:1;
 }
-.correct{
+.form-box .form .answer-buttons .correct{
   background: #9aeabc;
   z-index:100;
 }
-.incorrect{
+.form-box .form .answer-buttons .incorrect{
   background: #ff9393;
   z-index:100;
 }
