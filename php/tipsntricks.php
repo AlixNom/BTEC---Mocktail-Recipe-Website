@@ -22,14 +22,14 @@
     </div>
     <header>    
         <div class="header-content">
-            <h2>The Daily News headlines about mocktails!</h2>
+            <h2>Secret Tips and Tricks!</h2>
             <div class="line"></div>
         </div>
     </header>
     <section class="cocktail-selection">
     <div class = "header-container">
         <button class="owned" onclick = "location.href = 'index.php'">Back</button>
-        <h4>Newsletter</h4>
+        <h4>Explore</h4>
     </div>
    
     </section>
