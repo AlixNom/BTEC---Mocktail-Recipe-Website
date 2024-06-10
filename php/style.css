@@ -245,10 +245,12 @@ body{
 }
 .form-box .form .answer-buttons .correct{
   background: #9aeabc;
+  color: #363636;
   z-index:100;
 }
 .form-box .form .answer-buttons .incorrect{
   background: #ff9393;
+  color: #363636;
   z-index:100;
 }
 .button:hover{
