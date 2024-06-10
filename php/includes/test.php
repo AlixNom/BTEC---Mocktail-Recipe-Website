@@ -21,11 +21,11 @@ if (isset($_SESSION['user'])){
             $stmt = mysqli_query($conn, $sql);
             $count1 = mysqli_num_rows($stmt);
             echo $count1;
-            if( $count1 === 0){
-                $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
-                header("Location: ../register.php");
-            }else{
-                header("Location: ../subscribe.php");}}
+            // if( $count1 === 0){
+            //     $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
+            //     header("Location: ../register.php");
+            // }else{
+            //     header("Location: ../subscribe.php");}}
          }else{
             $_SESSION['status-warning'] = "You must be logged in to view your recipe";
             header("Location: ../login.php");
