@@ -104,6 +104,13 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You Scored ${score} of ${questions.length}!`;
+    nextButton.innerHTML = "Restart!";
+    nextButton.style.display="block";
+}
+
 function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex <questions.length){
