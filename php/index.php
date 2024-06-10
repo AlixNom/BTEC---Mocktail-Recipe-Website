@@ -103,12 +103,8 @@ session_start();
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
     <script>
-            $('.close').click(function() {
-                $(this).parent('.alert').hide();
-            });
             const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
 
-            //console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
             const Season = (['Spring', 'Summer', 'Autumn', 'Winter'][getSeason(new Date())]);
             document.getElementById('newsletter').href = `includes/newsletter-navigation.php?season=${Season}`;
             document.getElementById('newsletter-explore').href = `includes/newsletter-navigation.php?season=${Season}`;
