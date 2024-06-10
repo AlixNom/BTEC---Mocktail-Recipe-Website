@@ -103,8 +103,8 @@ session_start();
             const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
 
             const Season = (['Spring', 'Summer', 'Autumn', 'Winter'][getSeason(new Date())]);
-            document.getElementById('newsletter').href = `includes/newsletter-navigation.php?season=${Season}`;
-            document.getElementById('newsletter-explore').href = `includes/newsletter-navigation.php?season=${Season}`;
+            document.getElementById('newsletter').href = `includes/subscribe-navigation.php?season=${Season}`;
+            document.getElementById('newsletter-explore').href = `includes/subscribe-navigation.php?season=${Season}`;
     </script>
 
 </body>
