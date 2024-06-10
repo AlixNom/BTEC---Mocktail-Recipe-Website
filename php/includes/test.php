@@ -6,7 +6,7 @@ if (isset($_SESSION['user'])){
     $id = stripslashes($_SESSION['user']);
     $id = mysqli_real_escape_string($conn, $id);
 
-    $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe = 'No'";
+    $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' ";
     $stmt = mysqli_query($conn, $userVal);
     if (!$stmt) {
         die('Query Error: ' . mysqli_error($conn));
