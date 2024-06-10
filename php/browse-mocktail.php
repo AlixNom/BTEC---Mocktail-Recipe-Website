@@ -38,7 +38,7 @@
             <h1>Recipes</h1>
             <div class="line"></div>
         </div>
-        <button class="owned" onclick = "location.href = 'edit-mocktail.php'">Your Recipes</button>
+        <button class="owned" onclick = "location.href = 'includes/recipe-navigation.php'">Your Recipes</button>
         <main>
             <?php
                 while($row = $result->fetch_assoc()){
