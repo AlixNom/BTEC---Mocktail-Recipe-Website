@@ -72,6 +72,10 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButton.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click",selectedAnswer);
     });
 }
 
@@ -79,6 +83,16 @@ function resetState(){
     nextButton.style.display = "none";
     while(answerButton.firstChild){
         answerButton.removeChild(answerButton.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectBtn  = e.target;
+    const isCorrect = selectBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectBtn.classList.add("correct");
+    }else{
+        selectBtn.classList.remove("incorrect");
     }
 }
 
