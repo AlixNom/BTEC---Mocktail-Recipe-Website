@@ -3,10 +3,13 @@ include 'ConnDB.php';
 
 $id = stripslashes($_SESSION['user']);
 $id = mysqli_real_escape_string($conn, $id);
-$defaultVal = 'No';
 
 $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe = 'No'";
     $stmt = mysqli_query($conn, $userVal);
+    if (!$stmt) {
+        die('Query Error: ' . mysqli_error($conn));
+    }
+    
     $count = mysqli_num_rows($stmt);
     if( $count === 0){
         $sql = "SELECT * from mocktail_users where id = '$id'";
@@ -23,5 +26,5 @@ $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe 
             header("Location: ../subscribe.php");}};
 
 
-$conn -> close();
-$stmt->close();
+mysqli_free_result($stmt);
+mysqli_close($conn);
