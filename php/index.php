@@ -26,6 +26,9 @@ session_start();
     ?>
     <div class="alert-success">
         <strong>Hey! You have logged in as:</strong> <?php echo $_SESSION['username'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <?php unset($_SESSION['username']); } ?>
     <?php
@@ -33,14 +36,20 @@ session_start();
     ?>
         <div class="alert-success">
             <strong>Hey!</strong> <?php echo $_SESSION['status'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     <?php unset($_SESSION['status']); } ?>
     <?php
     if(isset($_SESSION['status-warning'])) {
     ?>
-    <div class="alert-error">
-        <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
-    </div>
+        <div class="alert-error">
+            <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     <?php unset($_SESSION['status-warning']); } ?>
     <header>    
         <div class="header-content">
@@ -99,6 +108,9 @@ session_start();
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
     <script>
+            $('.close').click(function() {
+                $(this).parent('.alert').hide();
+            });
             const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
 
             //console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
@@ -106,6 +118,7 @@ session_start();
             document.getElementById('newsletter').href = `includes/newsletter-navigation.php?season=${Season}`;
             document.getElementById('newsletter-explore').href = `includes/newsletter-navigation.php?season=${Season}`;
     </script>
+
 </body>
 
 </html>

@@ -7,7 +7,6 @@
 </head>
 <body>
 
-    <!---might be better to separate the form and validation--->
     <div class="nav">
         <div class="logo">
             <p>Logo</p>
@@ -85,6 +84,11 @@
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
+    <script>
+        $('.close').click(function() {
+            $(this).parent('.alert').hide();
+        });
+    </script>
 </body>
 </body>
 </html>

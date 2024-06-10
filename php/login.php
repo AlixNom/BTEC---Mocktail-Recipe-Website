@@ -30,6 +30,9 @@ if(isset($_SESSION['status-warning'])) {
 ?>
     <div class="alert-error">
         <strong>Invalid!</strong> <?php echo $_SESSION['status-warning'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 <?php unset($_SESSION['status-warning']); } ?>
 
@@ -60,7 +63,10 @@ if(isset($_SESSION['status-warning'])) {
         <p>East Riding College, Beverley, UK | Phone: +44 74751 15553 | Email: alixzulueta@gmail.com</p>
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
-</body>
+    <script>
+        $('.close').click(function() {
+            $(this).parent('.alert').hide();
+        });
+    </script>
 </body>
 </html>
-<script type="text/javascript" src="onload.js"></script>
