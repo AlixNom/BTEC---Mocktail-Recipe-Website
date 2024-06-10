@@ -246,9 +246,11 @@ body{
 }
 .correct{
   background: #9aeabc;
+  z-index:100;
 }
 .incorrect{
   background: #ff9393;
+  z-index:100;
 }
 .button:hover{
   opacity: 0.8;
