@@ -91,6 +91,7 @@ function selectAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct");
+        score++;
     }else{
         selectedBtn.classList.add("incorrect");
     }
@@ -102,5 +103,20 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex <questions.length){
+        showQuestion();
+    }
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else {
+        startQuiz();
+    }
+});
 
 startQuiz();

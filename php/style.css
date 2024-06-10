@@ -91,9 +91,11 @@ a{
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-.form-box .form .answer-buttons button:hover{
+.form-box .form .answer-buttons button:hover:not([disabled]){
  background:grey;
  color: white;}
+.form-box .form .answer-buttons button:disabled{
+ cursor: no-drop;}
 
 
 body{
