@@ -216,6 +216,11 @@ p {
   z-index: 100;
   color: white;
 }
+.nav .logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index:1;
+}
 .nav .nav-links{
   display: flex;
   width: 250px;
