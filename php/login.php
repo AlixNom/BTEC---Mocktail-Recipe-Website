@@ -65,9 +65,11 @@ if(isset($_SESSION['status-warning'])) {
         <p>Copyright © 2024 Alexis Zulueta</p>
     </section>
     <script>
+         $(document).ready(function() {
         $('.close').click(function() {
             $(this).parent('.alert').hide();
         });
+    });
     </script>
 </body>
 </html>
