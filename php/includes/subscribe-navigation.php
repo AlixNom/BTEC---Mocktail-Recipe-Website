@@ -29,7 +29,9 @@ if (isset($_SESSION['user'])){
                 $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
                 header("Location: ../register.php");
             }else{
-                header("Location: ../subscribe.php");}}
+                header("Location: ../subscribe.php");}}else{
+                    header("Location: ../newsletter.php");
+                }
          }else{
             $_SESSION['status-warning'] = "You must be logged in to view your recipe";
             header("Location: ../login.php");
