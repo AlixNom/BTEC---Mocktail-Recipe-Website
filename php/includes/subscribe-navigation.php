@@ -12,6 +12,7 @@ $userVal = "SELECT subscribe from mocktail_users WHERE id = '$id' AND subscribe 
         $sql = "SELECT * from mocktail_users where id = '$id'";
         $stmt = mysqli_query($conn, $sql);
          $count = mysqli_num_rows($stmt);
+         echo`row count ${$count}`;
          if( $count === 0){
             $_SESSION['status-warning'] = "You must register first before you can subscribe subscribe";
             header("Location: ../register.php");
