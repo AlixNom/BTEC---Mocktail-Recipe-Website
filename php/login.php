@@ -1,7 +1,5 @@
 <?php
 session_start();
-//require_once('includes/register_insert.php')
-//include('includes/register_insert.php');
 ?>
 <html lang="en">
 <head>
