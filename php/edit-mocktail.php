@@ -86,7 +86,7 @@
                         }
                 ?>
                     <tr>
-                        <td><img scr="uploads/<?php echo $row['image'];?>" alt ="" height = "100"></td>
+                        <td><img src="uploads/<?php echo $row['image'];?>" alt ="" height = "100"></td>
                         <td><?php echo $row['title'];?></td>
                         <td><?php echo $row['id'];?></td>
                         <td><?php echo $row['description'];?></td>
