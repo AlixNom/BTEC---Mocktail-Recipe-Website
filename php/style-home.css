@@ -79,6 +79,7 @@ section{
   width:50%;
   flex-direction:column ;
   align-items: center;
+  margin: 40px 0;
 }
 .row .col img{
   width: 400px;
