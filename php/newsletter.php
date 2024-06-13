@@ -102,7 +102,7 @@
             ?>
             <div class = "card">
                 <div class = "image">
-                    <img src="<?php echo $row['image'];?>" alt="">
+                    <img src="uploads/<?php echo $row['image'];?>" alt="">
                 </div>
                 <div class="caption">
                     <p class = "name"><?php echo $row['title'];?></p>
