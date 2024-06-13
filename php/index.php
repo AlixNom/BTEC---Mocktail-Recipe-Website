@@ -58,13 +58,13 @@ session_start();
         </div>
         <div class ="row">
             <div class="col">
-                <img src="img/mocktail-explore2.jpg" width="400px" height="300px" alt="">
+                <img src="img/mocktail-explore2.jpg" width="400" height="300" alt="">
                 <h4>Mocktails</h4>
                 <p>Dive into the diverse world of mocktail recipes crafted by countless enthusiasts. With such a wide array of options, you’ll always find something new and exciting to try, ensuring you'll never get tired of experimenting and discovering new flavors!</p>
                 <a href="browse-mocktail.php" class="ctn">Browse</a>
             </div>
             <div class="col">
-                <img src="img/mocktail-submit.jpg" width="400px" height="300px" alt="">
+                <img src="img/mocktail-submit.jpg" width="400" height="300" alt="">
                 <h4>Submit Your Own</h4>
                 <p>Would you like to share your own homemade mocktail recipes for others to enjoy and appreciate? Join our vibrant community of mixology enthusiasts and showcase your unique creations. Your inventive concoctions could inspire fellow mocktail lovers and become the next big hit!</p>
                 <a href="includes/submit-navigation.php" class="ctn">Make Recipe</a>
@@ -73,13 +73,13 @@ session_start();
         </div>
         <div class ="row">
             <div class="col">
-                <img src="img/mocktail-newspaper.jpg" width="400px" height="300px" alt="">
+                <img src="img/mocktail-newspaper.jpg" width="400" height="300" alt="">
                 <h4>Newsletter</h4>
                 <p>about the latest trends and updates in the mocktail world? Keep up with the current mocktail updates and discover new recipes, techniques, and innovations in mixology.</p>
                 <a id="newsletter-explore" href="" class="ctn">View More</a>
             </div>
             <div class="col">
-                <img src="img/mocktail-poll.jpg" width="400px" height="300px" alt="">
+                <img src="img/mocktail-poll.jpg" width="400" height="300" alt="">
                 <h4>Polls/Quizzes</h4>
                 <p>Challenge yourself and see how much you really know about the art of mixology, or place your opinions out!</p>
                 <a href="quiz.php" class="ctn">View More</a>
