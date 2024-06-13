@@ -82,7 +82,7 @@ section{
 .row .col img{
   width: 400px;
   height: 275px;
-  object-fit: cover;
+  object-fit: fill;
 }
 .cocktail-section .row{
   margin-top: 50px;
