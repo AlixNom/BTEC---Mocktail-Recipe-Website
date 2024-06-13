@@ -71,6 +71,7 @@ section{
 
 .row{
   display: flex;
+  width: 450px;
   align-items: center;
   justify-content: space-between;
 }
